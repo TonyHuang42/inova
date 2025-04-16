@@ -83,8 +83,8 @@
 
     <div class="bg-black text-white">
         <div class="container">
-            <div class="row section-padding gy-xxl-0 gy-4">
-                <div class="col-xxl-5 col-sm-6">
+            <div class="row section-padding gx-xl-5 gy-xxl-0 gy-4">
+                <div class="col-xxl-5 col-xl-6">
                     <h3>Add-Ons That Keep You Going</h3>
                     <p class="pt-3">Extend what your phone can do with add-ons made for performance. From power to storage, our swappable batteries, battery chargers, and microSD cards keep you ready for everyday.</p>
                     <a class="button button--filled" href="" target="_self">
@@ -93,16 +93,18 @@
                     </a>
                 </div>
 
-                <div class="col-xxl-2 col-sm-6 offset-xxl-1">
-                    <img src="{{ asset('img/home/battery.jpg') }}" alt="battery" class="img-fluid">
-                </div>
-
-                <div class="col-xxl-2 col-sm-6">
-                    <img src="{{ asset('img/home/battery_charger.jpg') }}" alt="battery charger" class="img-fluid">
-                </div>
-
-                <div class="col-xxl-2 col-sm-6">
-                    <img src="{{ asset('img/home/microSD_card.jpg') }}" alt="microSD card" class="img-fluid">
+                <div class="col-xxl-7 col-xl-6">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="{{ asset('img/home/inova_accessory_battery.jpg') }}" alt="inova accessory battery" class="img-fluid">
+                        </div>
+                        <div class="col-4">
+                            <img src="{{ asset('img/home/inova_accessory_charger.jpg') }}" alt="inova accessory charger" class="img-fluid">
+                        </div>
+                        <div class="col-4">
+                            <img src="{{ asset('img/home/inova_accessory_microSDcard.jpg') }}" alt="inova accessory microSD card" class="img-fluid">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -121,7 +123,7 @@
                 if (rect.top < window.innerHeight && rect.bottom > 0) {
                     const scrollPos = window.scrollY;
                     const offset = banner.offsetTop;
-                    const yPos = (scrollPos - offset) * 0.07;
+                    const yPos = (scrollPos - offset) * 0.02;
                     img.style.transform = `translateY(${yPos}px)`;
                 }
             });
