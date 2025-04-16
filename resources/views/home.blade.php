@@ -64,11 +64,11 @@
         <div class="container">
             <div class="row section-padding">
                 <div class="col-lg-7">
-                    <h2>Follow the digital trends & lead the changes with us</h2>
+                    <h2>Technology That Serves People, Not Just Performance</h2>
                 </div>
 
                 <div class="col-lg-5 border-start-lg ps-lg-5">
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum dele niti atque corrupti quos dolores et quas molestias.</p>
+                    <p>INOVA creates devices with a clear purpose - empowering you with the tools to stay connected, get things done, and enjoy the moments that matter the most.</p>
                 </div>
             </div>
         </div>
@@ -84,6 +84,10 @@
                 <div class="col-xl-3 col-sm-6">
                     <h3>Add-Ons That Keep You Going</h3>
                     <p class="pt-5">Extend what your phone can do with add-ons made for performance. From power to storage, our swappable batteries, battery chargers, and microSD cards keep you ready for whatever the day demands.</p>
+                    <a class="button button--filled" href="" target="_self">
+                        <span>Discover our products</span>
+                        <i class="fa-solid fa-caret-right"></i>
+                    </a>
                 </div>
 
                 <div class="col-xl-3 col-sm-6">
@@ -104,5 +108,4 @@
 @endsection
 
 @push('scripts')
-
 @endpush
