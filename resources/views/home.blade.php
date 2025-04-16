@@ -13,7 +13,7 @@
         <div class="container raised-section">
             <h1 class="mb-5 text-center">Building Bridges, Not Just Devices</h1>
 
-            <div class="row text-center gx-lg-5 bottom-padding">
+            <div class="row pt-3 text-center gx-lg-5 bottom-padding">
                 <div class="col-12 col-lg-4">
                     <img src="{{ asset('img/home/icon_accessible.svg') }}" alt="accessibility" class="values-icon">
                     <h3 class="pt-2">Accessibility</h3>
@@ -34,8 +34,9 @@
     </div>
 
     <div class="home-user-banner home-user-banner-1">
-        <div class="container">
-            <div class="home-banner-content">
+        <img src="{{ asset('img/home/inova_phone_teenage.jpg') }}" alt="Teen Device" class="banner-bg-img">
+        <div class="container-fluid">
+            <div class="home-banner-content ps-sm-5">
                 <h2>A Confident First Device for Young Minds</h2>
                 <p>Long-lasting and easy to use, Northlight helps young minds explore technology safely - without overwhelming features.</p>
             </div>
@@ -43,8 +44,9 @@
     </div>
 
     <div class="home-user-banner home-user-banner-2">
-        <div class="container d-flex justify-content-end">
-            <div class="home-banner-content">
+        <img src="{{ asset('img/home/inova_phone_senior.jpg') }}" alt="Senior Device" class="banner-bg-img">
+        <div class="container-fluid d-flex justify-content-end">
+            <div class="home-banner-content pe-sm-5">
                 <h2>Simple Features That Help Seniors Stay Close</h2>
                 <p>Easy to hold, hear, and understand—Northlight helps seniors stay connected with loved ones and manage everyday tasks.</p>
             </div>
@@ -52,8 +54,9 @@
     </div>
 
     <div class="home-user-banner home-user-banner-3">
-        <div class="container">
-            <div class="home-banner-content">
+        <img src="{{ asset('img/home/inova_phone_business.jpg') }}" alt="Business Device" class="banner-bg-img">
+        <div class="container-fluid">
+            <div class="home-banner-content ps-sm-5">
                 <h2>A Reliable Solution for Modern Business Needs</h2>
                 <p>Northlight helps manage business on the go with dual SIMs, secure data, and features designed to keep your operations smooth.</p>
             </div>
@@ -108,5 +111,20 @@
 @endsection
 
 @push('scripts')
+    <script>
+        window.addEventListener('scroll', function() {
+            const banners = document.querySelectorAll('.home-user-banner');
+            banners.forEach(banner => {
+                const img = banner.querySelector('.banner-bg-img');
+                const rect = banner.getBoundingClientRect();
 
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    const scrollPos = window.scrollY;
+                    const offset = banner.offsetTop;
+                    const yPos = (scrollPos - offset) * 0.07;
+                    img.style.transform = `translateY(${yPos}px)`;
+                }
+            });
+        });
+    </script>
 @endpush

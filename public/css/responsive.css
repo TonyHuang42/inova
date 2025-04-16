@@ -7,12 +7,40 @@
 }
 
 @media only screen and (max-width: 1199px) {
+    .raised-section {
+        margin-top: -150px;
+    }
 
+    .home-user-banner {
+        height: 500px;
+    }
 }
 
 @media only screen and (max-width: 991px) {
     .row {
         --bs-gutter-y: 1.5rem;
+    }
+
+    .section-padding {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    /* .section-padding-sm {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    } */
+
+    .bottom-padding {
+        padding-bottom: 50px;
+    }
+
+    .bottom-padding-sm {
+        padding-bottom: 25px;
+    }
+
+    .top-padding {
+        padding-top: 50px;
     }
 
     .border-start-lg {
@@ -25,7 +53,9 @@
 }
 
 @media only screen and (max-width: 767px) {
-
+    .home-user-banner {
+        padding-top: 25px;
+    }
 }
 
 @media only screen and (max-width: 575px) {
@@ -38,6 +68,6 @@
     }
 
     .raised-section {
-        margin-top: 0;
+        margin-top: -25px;
     }
 }
