@@ -13,7 +13,6 @@
         <div class="container">
             <h1 class="mb-5 text-center d-block d-xl-none">Building Bridges, Not Just Devices</h1>
 
-            {{-- <a href="/about-us#purpose" class="text-white"> --}}
             <div class="row text-center gx-lg-5 bottom-padding">
                 <div class="col-12 col-lg-4">
                     <img src="{{ asset('img/home/icon_accessible.svg') }}" alt="accessibility" class="values-icon">
@@ -31,40 +30,32 @@
                     <p class="mb-0">INOVA products are designed to support more than individuals— we build tools that help people stay in touch, support each other, and grow together.</p>
                 </div>
             </div>
-            {{-- </a>
-            <div class="row bottom-padding pt-5">
-                <div class="col-12 text-center">
-                    <a class="learn-more-button" href="/about-us">Learn More</a>
-                </div>
-            </div> --}}
         </div>
-
-
     </div>
 
-    <div class="home-banner-2">
+    <div class="home-user-banner home-user-banner-1">
         <div class="container">
             <div class="home-banner-content">
-                <h2>Incredible sharpness of sound and perfect tune</h2>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.</p>
+                <h2>A Confident First Device for Young Minds</h2>
+                <p>Long-lasting and easy to use, Northlight helps young minds explore technology safely - without overwhelming features</p>
             </div>
         </div>
     </div>
 
-    <div class="home-banner-3">
+    <div class="home-user-banner home-user-banner-2">
         <div class="container d-flex justify-content-end">
             <div class="home-banner-content">
-                <h2>Incredible sharpness of sound and perfect tune</h2>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.</p>
+                <h2>A Reliable Solution for Modern Business Needs</h2>
+                <p>Northlight helps manage business on the go with dual SIMs, secure data, and features designed to keep your operations smooth</p>
             </div>
         </div>
     </div>
 
-    <div class="home-banner-4">
+    <div class="home-user-banner home-user-banner-3">
         <div class="container">
             <div class="home-banner-content">
-                <h2>Incredible sharpness of sound and perfect tune</h2>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.</p>
+                <h2>Simple Features That Help Seniors Stay Close</h2>
+                <p>Easy to hold, hear, and understand—Northlight helps seniors stay connected with loved ones and manage everyday tasks.</p>
             </div>
         </div>
     </div>
@@ -91,23 +82,27 @@
         <div class="container">
             <div class="row section-padding gy-xl-0 gy-4">
                 <div class="col-xl-3 col-sm-6">
-                    <h3>Developing wired & wireless tech</h3>
-                    <p class="pt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ip aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                    <h3>Add-Ons That Keep You Going</h3>
+                    <p class="pt-5">Extend what your phone can do with add-ons made for performance. From power to storage, our swappable batteries, battery chargers, and microSD cards keep you ready for whatever the day demands.</p>
                 </div>
 
                 <div class="col-xl-3 col-sm-6">
-                    <img src="{{ asset('img/home/img_1.jpg') }}" alt="battery" class="img-fluid">
+                    <img src="{{ asset('img/home/battery.jpg') }}" alt="battery" class="img-fluid">
                 </div>
 
                 <div class="col-xl-3 col-sm-6">
-                    <img src="{{ asset('img/home/img_2.jpg') }}" alt="battery charger" class="img-fluid">
+                    <img src="{{ asset('img/home/battery_charger.jpg') }}" alt="battery charger" class="img-fluid">
                 </div>
 
                 <div class="col-xl-3 col-sm-6">
-                    <img src="{{ asset('img/home/img_3.jpg') }}" alt="microSD Card" class="img-fluid">
+                    <img src="{{ asset('img/home/microSD_card.jpg') }}" alt="microSD card" class="img-fluid">
                 </div>
             </div>
         </div>
     </div>
 
 @endsection
+
+@push('scripts')
+
+@endpush

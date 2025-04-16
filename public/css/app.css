@@ -119,24 +119,25 @@ a {
     padding-bottom: 50px;
 }
 
-.home-banner-2,
-.home-banner-3,
-.home-banner-4 {
+.home-user-banner {
     color: white;
-    background-image: url("../img/home/inova_phone_teenage.jpg");
     background-size: cover;
-    background-position: 60% center;
     background-repeat: no-repeat;
     padding-top: 45px;
     height: 600px;
 }
 
-.home-banner-3 {
+.home-user-banner-1{
+    background-image: url("../img/home/inova_phone_teenage.jpg");
+    background-position: 60% center;
+}
+
+.home-user-banner-2 {
     background-image: url("../img/home/inova_phone_senior.jpg");
     background-position: 20% center;
 }
 
-.home-banner-4 {
+.home-user-banner-3 {
     background-image: url("../img/home/inova_phone_business.jpg");
     background-position: 80% center;
 }
