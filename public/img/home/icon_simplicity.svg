@@ -2,7 +2,7 @@
 <svg id="fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
     <defs>
         <style>
-            .cls-1{stroke-miterlimit:10;}.cls-1,.cls-2{fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:round;}.cls-2{stroke-linejoin:round;}</style>
+            .cls-1{stroke-miterlimit:10;}.cls-1,.cls-2{fill:none;stroke:#b6b6b6;stroke-width:2;stroke-linecap:round;}.cls-2{stroke-linejoin:round;}</style>
     </defs>
     <line class="cls-1" x1="19.25193" y1="45.68162" x2="8.76766" y2="45.68162" />
     <line class="cls-1" x1="21.37086" y1="34.47951" x2="16.1867" y2="32.45081" />

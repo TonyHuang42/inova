@@ -54,11 +54,31 @@
                 <!-- Navbar Content -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav d-flex justify-content-start w-100 gap-0 column-gap-4">
-                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/northlight">Phone</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/support">Support</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/news">News</a></li>
-                    </ul>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="/">
+                                @if (request()->is('/')) <i class="fa-solid fa-caret-right me-1"></i> @endif
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->is('northlight') ? 'active' : '' }}" href="/northlight">
+                                @if (request()->is('northlight')) <i class="fa-solid fa-caret-right me-1"></i> @endif
+                                Phone
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->is('support') ? 'active' : '' }}" href="/support">
+                                @if (request()->is('support')) <i class="fa-solid fa-caret-right me-1"></i> @endif
+                                Support
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->is('news') ? 'active' : '' }}" href="/news">
+                                @if (request()->is('news')) <i class="fa-solid fa-caret-right me-1"></i> @endif
+                                News
+                            </a>
+                        </li>
+                    </ul>                    
                 </div>
             </div>
         </nav>

@@ -6,10 +6,11 @@ h1 {
     font-family: "Manrope";
     font-weight: 600;
     font-size: 70px;
+    font-size: clamp(3rem, 6vw, 4.375rem);
 }
 
 h2 {
-    font-size: 42px;
+    font-size: clamp(2rem, 5vw, 2.625rem);
     font-weight: 200;
 }
 
@@ -35,6 +36,28 @@ p {
 
 a {
     text-decoration: none;
+}
+
+.section-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.section-padding-sm {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.top-padding {
+    padding-top: 100px;
+}
+
+.bottom-padding {
+    padding-bottom: 100px;
+}
+
+.bottom-padding-sm {
+    padding-bottom: 50px;
 }
 
 .navbar {
@@ -73,7 +96,7 @@ a {
 }
 
 .home-banner-container {
-    margin-top: -56px;
+    margin-top: -106px;
     position: relative;
     display: block;
     width: 100%;
@@ -91,65 +114,6 @@ a {
     pointer-events: none;
 }
 
-.home-banner {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.section-padding {
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-
-.section-padding-sm {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.top-padding {
-    padding-top: 100px;
-}
-
-.bottom-padding {
-    padding-bottom: 100px;
-}
-
-.bottom-padding-sm {
-    padding-bottom: 50px;
-}
-
-.home-user-banner {
-    color: white;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 45px;
-    height: 600px;
-}
-
-.home-user-banner-1 {
-    background-image: url("../img/home/inova_phone_teenage.jpg");
-    background-position: 60% center;
-}
-
-.home-user-banner-2 {
-    background-image: url("../img/home/inova_phone_senior.jpg");
-    background-position: 20% center;
-}
-
-.home-user-banner-3 {
-    background-image: url("../img/home/inova_phone_business.jpg");
-    background-position: 80% center;
-}
-
-.home-banner-content {
-    max-width: 520px;
-}
-
-.values-icon {
-    width: 50px;
-}
-
 .home-banner-container-text {
     width: 100%;
     text-align: center;
@@ -159,6 +123,51 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+}
+
+.home-banner {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.raised-section {
+    margin-top: -200px;
+    position: relative;
+    z-index: 2;
+}
+
+.home-user-banner {
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 45px;
+    height: 600px;
+    transition: background-position 0.3s ease-out;
+}
+
+.home-user-banner-1 {
+    background-image: url("../img/home/inova_phone_teenage.jpg");
+    background-position: 60% bottom;
+}
+
+.home-user-banner-2 {
+    background-image: url("../img/home/inova_phone_senior.jpg");
+    background-position: 20% center;
+}
+
+.home-user-banner-3 {
+    background-image: url("../img/home/inova_phone_business.jpg");
+    background-position: 65% bottom;
+}
+
+.home-banner-content {
+    max-width: 520px;
+}
+
+.values-icon {
+    width: 50px;
 }
 
 .border-start-lg {

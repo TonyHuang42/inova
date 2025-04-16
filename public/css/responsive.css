@@ -18,6 +18,10 @@
     .border-start-lg {
         border-left: none;
     }
+
+    .raised-section {
+        margin-top: -100px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -30,6 +34,10 @@
     }
 
     .home-banner-container {
+        margin-top: 0;
+    }
+
+    .raised-section {
         margin-top: 0;
     }
 }
