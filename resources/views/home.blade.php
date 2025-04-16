@@ -6,12 +6,12 @@
 @section('content')
     <div class="home-banner-container">
         <img class="home-banner" src="{{ asset('img/home/banner_home.jpg') }}" alt="Banner">
-        <h2 class="mb-0 home-banner-container-text d-none d-lg-block" style="font-family: Manrope; font-weight: 600; font-size: 70px;">Building Bridges, Not Just Devices</h2>
+        <h1 class="mb-0 home-banner-container-text d-none d-xl-block">Building Bridges, Not Just Devices</h1>
     </div>
 
     <div class="bg-black text-white">
         <div class="container">
-            <h2 class="mb-5 text-center d-block d-lg-none" style="font-family: Manrope; font-weight: 600; font-size: 70px;">Building Bridges, Not Just Devices</h2>
+            <h1 class="mb-5 text-center d-block d-xl-none">Building Bridges, Not Just Devices</h1>
 
             {{-- <a href="/about-us#purpose" class="text-white"> --}}
             <div class="row text-center gx-lg-5 bottom-padding">
@@ -76,7 +76,7 @@
                     <h2>Follow the digital trends & lead the changes with us</h2>
                 </div>
 
-                <div class="col-lg-5 border-start ps-5">
+                <div class="col-lg-5 border-start-lg ps-lg-5">
                     <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum dele niti atque corrupti quos dolores et quas molestias.</p>
                 </div>
             </div>
@@ -84,27 +84,27 @@
     </div>
 
     <div class="home-banner-5">
-        <img src="{{ asset('img/home/banner_northlight.png') }}" alt="" class="img-fluid">
+        <img src="{{ asset('img/home/banner_northlight.png') }}" alt="northlight" class="w-100">
     </div>
 
     <div class="bg-black text-white">
         <div class="container">
-            <div class="row section-padding">
-                <div class="col-lg-3">
+            <div class="row section-padding gy-xl-0 gy-4">
+                <div class="col-xl-3 col-sm-6">
                     <h3>Developing wired & wireless tech</h3>
                     <p class="pt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ip aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
                 </div>
 
-                <div class="col-lg-3">
-                    <img src="{{ asset('img/home/img_1.jpg') }}" alt="" class="img-fluid">
+                <div class="col-xl-3 col-sm-6">
+                    <img src="{{ asset('img/home/img_1.jpg') }}" alt="battery" class="img-fluid">
                 </div>
 
-                <div class="col-lg-3">
-                    <img src="{{ asset('img/home/img_2.jpg') }}" alt="" class="img-fluid">
+                <div class="col-xl-3 col-sm-6">
+                    <img src="{{ asset('img/home/img_2.jpg') }}" alt="battery charger" class="img-fluid">
                 </div>
 
-                <div class="col-lg-3">
-                    <img src="{{ asset('img/home/img_3.jpg') }}" alt="" class="img-fluid">
+                <div class="col-xl-3 col-sm-6">
+                    <img src="{{ asset('img/home/img_3.jpg') }}" alt="microSD Card" class="img-fluid">
                 </div>
             </div>
         </div>

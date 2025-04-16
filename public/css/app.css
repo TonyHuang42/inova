@@ -1,9 +1,11 @@
-:root {
-    --bs-border-color: #444;
-}
-
 body {
     font-family: "Space Grotesk", sans-serif;
+}
+
+h1 {
+    font-family: Manrope;
+    font-weight: 600;
+    font-size: 70px;
 }
 
 h2 {
@@ -36,7 +38,7 @@ a {
 }
 
 .navbar {
-    background-color: transparent;
+    background-color: transparent !important;
     z-index: 10;
 }
 
@@ -123,20 +125,20 @@ a {
     color: white;
     background-image: url("../img/home/inova_phone_teenage.jpg");
     background-size: cover;
-    background-position: 60% 50%;
+    background-position: 60% center;
     background-repeat: no-repeat;
-    padding: 100px 0;
+    padding-top: 45px;
     height: 600px;
 }
 
 .home-banner-3 {
     background-image: url("../img/home/inova_phone_senior.jpg");
-    background-position: 20% 50%;
+    background-position: 20% center;
 }
 
 .home-banner-4 {
     background-image: url("../img/home/inova_phone_business.jpg");
-    background-position: 80% 50%;
+    background-position: 80% center;
 }
 
 .home-banner-content {
@@ -156,4 +158,8 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+}
+
+.border-start-lg {
+    border-left: 1px solid #444;
 }

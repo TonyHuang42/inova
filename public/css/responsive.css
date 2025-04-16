@@ -11,7 +11,13 @@
 }
 
 @media only screen and (max-width: 991px) {
+    .row {
+        --bs-gutter-y: 1.5rem;
+    }
 
+    .border-start-lg {
+        border-left: none;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -19,5 +25,11 @@
 }
 
 @media only screen and (max-width: 575px) {
+    .navbar {
+        background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+    }
 
+    .home-banner-container {
+        margin-top: 0;
+    }
 }

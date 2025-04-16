@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg id="fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
     <defs>
-        <style>
-            .cls-1{fill:#ffffff;}.cls-2{fill:none;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:3.00013px;}</style>
+        <style>.cls-1{fill:none;stroke:#ffffff;stroke-linecap:round;stroke-miterlimit:10;}</style>
     </defs>
-    <rect class="cls-2" x="4.5" y="4.5" width="91" height="91" rx="45.49995" ry="45.49995" />
+    <rect class="cls-1" x="4.5" y="4.5" width="91" height="91" rx="45.49995" ry="45.49995" />
     <path class="cls-1"
         d="M50.00727,30.00551c4.49389,0,8.14427-3.65038,8.14427-8.14427s-3.65038-8.14427-8.14427-8.14427-8.14427,3.65038-8.14427,8.14427,3.65038,8.14427,8.14427,8.14427Z" />
     <path class="cls-1"

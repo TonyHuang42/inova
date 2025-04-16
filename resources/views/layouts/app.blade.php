@@ -9,7 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
-    {{-- <link rel="stylesheet" href="{{ asset('font/stylesheet.css') }}"> --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,22 +41,22 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm">
+        <nav class="navbar navbar-expand-sm bg-dark" data-bs-theme="dark">
             <div class="container d-flex justify-content-between align-items-center">
-                <a class="navbar-brand me-5" href="/">
+                <a class="navbar-brand me-5 d-flex align-items-center gap-2" href="/">
                     <img src="{{ asset('img/logo/inova_logo.svg') }}" alt="logo" class="logo">
                     <img src="{{ asset('img/logo/iNova_workmark.svg') }}" alt="logo" class="logo">
                 </a>
                 <!-- Toggle Button -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
+                    <i class="fas fa-bars text-white"></i>
                 </button>
                 <!-- Navbar Content -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav d-flex justify-content-start w-100 gap-4">
+                    <ul class="navbar-nav d-flex justify-content-start w-100 gap-0 column-gap-4">
                         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/about-us">Phone</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/academics">Support</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/northlight">Phone</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/support">Support</a></li>
                         <li class="nav-item"><a class="nav-link" href="/news">News</a></li>
                     </ul>
                 </div>
