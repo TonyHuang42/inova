@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/logo/favicon/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/logo/favicon/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/logo/favicon/favicon-16X16.png') }}">
@@ -43,7 +44,8 @@
     <header>
         <nav class="navbar navbar-expand-sm">
             <div class="container d-flex justify-content-between align-items-center">
-                <a class="navbar-brand me-0" href="/">
+                <a class="navbar-brand me-5" href="/">
+                    <img src="{{ asset('img/logo/inova_logo.svg') }}" alt="logo" class="logo">
                     <img src="{{ asset('img/logo/iNova_workmark.svg') }}" alt="logo" class="logo">
                 </a>
                 <!-- Toggle Button -->
@@ -52,7 +54,7 @@
                 </button>
                 <!-- Navbar Content -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav d-flex justify-content-center w-100 gap-5">
+                    <ul class="navbar-nav d-flex justify-content-start w-100 gap-4">
                         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="/about-us">Phone</a></li>
                         <li class="nav-item"><a class="nav-link" href="/academics">Support</a></li>
@@ -68,19 +70,6 @@
     <section class="footer">
         <div class="mt-auto" style="background-color: #232323;">
             <div class="container">
-                {{-- <nav class="nav" style="height: 80px;">
-                    <a class="logo-container" href="/">
-                        <img src="{{ asset('img/logo/inova_logo_silver.svg') }}" alt="logo" class="logo">
-                    </a>
-                    <div class="nav-links nav-links-white">
-                        <a href="/" class="first-nav underline-link">HOME</a>
-                        <a href="/northlight" class="first-nav underline-link">PHONE</a>
-                        <!-- <a href="/accessories" class="first-nav underline-link">ACCESSORIES</a> -->
-                        <a href="/support" class="first-nav underline-link">SUPPORT</a>
-                        <a href="/about-us" class="first-nav underline-link">ABOUT</a>
-                    </div>
-                </nav>
-                <div class="horizontal-line"></div> --}}
                 <div class="copyright">
                     <p class="m-0">Copyright © <strong>INOVA DIGITAL SOLUTIONS INC.</strong> All Rights Reserved</p>
                     <div class="terms">
