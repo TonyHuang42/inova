@@ -1,3 +1,7 @@
+:root {
+    --bs-dark-rgb: 0, 0, 0;
+}
+
 body {
     font-family: "Space Grotesk", sans-serif;
 }
@@ -61,7 +65,7 @@ a {
 }
 
 .navbar {
-    background-color: transparent !important;
+    /* background-color: transparent !important; */
     z-index: 10;
 }
 
@@ -213,4 +217,9 @@ a {
 
 .button.button--filled:hover {
     background-position: 0 0, 150% 0;
+}
+
+.banner-video-container {
+    width: 100vw;
+    height: 100vh;
 }
