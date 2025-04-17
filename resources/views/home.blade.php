@@ -15,7 +15,7 @@
         </div>
 
         <div class="container raised-section">
-            <h1 class="mb-5 text-center">More Features, Less Cost.</h1>
+            <h1 class="mb-5 text-center">More Features,<br>Less Cost.</h1>
 
             <div class="row pt-3 text-center gx-lg-5 bottom-padding">
                 <div class="col-12 col-lg-4">
