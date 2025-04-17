@@ -53,6 +53,31 @@
         top: 0;
         left: 0;
     }
+
+    .highlight-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        pointer-events: none;
+    }
+
+    @media only screen and (max-width: 1199px) {
+        .phone-banner-features {
+            max-height: 60px;
+        }
+    }
+
+    @media only screen and (max-width: 991px) {
+        .phone-banner-features {
+            max-height: 45px;
+        }
+    }
+
+    @media only screen and (max-width: 167) {
+        .phone-banner-features {
+            max-height: 50px;
+        }
+    }
 </style>
 
 <div class="northlight-banner-container">

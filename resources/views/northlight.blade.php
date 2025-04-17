@@ -4,6 +4,7 @@
 @section('meta_description', 'INOVA')
 
 @push('styles')
+    <link rel="stylesheet" href="{{ asset('css/custom-container.css') }}">
     <style>
         .section {
             height: 100vh;
@@ -12,8 +13,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
-            color: white;
+            /* font-size: 3rem;
+            color: white; */
             transition: all 0.3s ease;
         }
 
@@ -28,7 +29,7 @@
         }
 
         .section-3 {
-            /* background: #e74c3c; */
+            background: #0B212C;
             z-index: 3;
         }
     </style>
@@ -38,6 +39,7 @@
     <div class="section section-1">
         @include('inc.northlight-banner')
     </div>
+
     <div class="section section-2">
         <div class="banner-video-container">
             <video playsinline="" loop="" muted="" autoplay="true" data-wf-ignore="true" data-object-fit="cover">
@@ -45,7 +47,8 @@
             </video>
         </div>
     </div>
+
     <div class="section section-3">
-        <img src="{{ asset('img/northlight/Screenshot.png') }}" alt="">
+        @include('inc.northlight-features')
     </div>
 @endsection

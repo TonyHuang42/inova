@@ -3,6 +3,10 @@
 @section('title', 'INOVA')
 @section('meta_description', 'INOVA')
 
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('css/custom-container.css') }}">
+@endpush
+
 @section('content')
     <div class="bg-black text-white">
         <div class="home-banner-container">
@@ -11,23 +15,23 @@
         </div>
 
         <div class="container raised-section">
-            <h1 class="mb-5 text-center">Building Bridges, Not Just Devices</h1>
+            <h1 class="mb-5 text-center">More Features, Less Cost.</h1>
 
             <div class="row pt-3 text-center gx-lg-5 bottom-padding">
                 <div class="col-12 col-lg-4">
                     <img src="{{ asset('img/home/icon_accessible.svg') }}" alt="accessibility" class="values-icon">
-                    <h3 class="pt-2">Accessibility</h3>
-                    <p class="mb-0">We believe everyone deserves access to reliable technology. That’s why our products are built to welcome more people into a world of connection.</p>
+                    <h3 class="pt-2">Essentials without the Premium Price Tag</h3>
+                    <p class="mb-0">We believe useful everyday tech shouldn’t be out of reach. That’s why we focus on what matters—and price it fairly for everyday people.</p>
                 </div>
                 <div class="col-12 col-lg-4">
                     <img src="{{ asset('img/home/icon_simplicity.svg') }}" alt="simplicity" class="values-icon">
-                    <h3 class="pt-2">Simplicity</h3>
-                    <p class="mb-0">We design technology that works for you, not against you. Our devices are clear, comfortable, and easy to use—built to simplify life, not overwhelm it.</p>
+                    <h3 class="pt-2">Replace Your Battery, Not Your Entire Phone</h3>
+                    <p class="mb-0">We design for longevity, not landfill. Our phones let you easily and quickly swap batteries anytime, so they last longer and waste less.</p>
                 </div>
                 <div class="col-12 col-lg-4">
                     <img src="{{ asset('img/home/icon_community.svg') }}" alt="community" class="values-icon">
-                    <h3 class="pt-2">Community</h3>
-                    <p class="mb-0">INOVA products are designed to support more than individuals— we build tools that help people stay in touch, support each other, and grow together.</p>
+                    <h3 class="pt-2">Two Number, More Storage, One Phone</h3>
+                    <p class="mb-0">Life isn’t one-size-fits-all. That’s why we make space for both your work and personal life—plus extra room to grow when needed.</p>
                 </div>
             </div>
         </div>
@@ -37,8 +41,8 @@
         <img src="{{ asset('img/home/inova_phone_teenage.jpg') }}" alt="Teen Device" class="banner-bg-img">
         <div class="container-fluid">
             <div class="home-banner-content ms-sm-5">
-                <h2>A Confident First Device for Young Minds</h2>
-                <p>Long-lasting and easy to use, Northlight helps young minds explore technology safely - without overwhelming features.</p>
+                <h2>A First Phone with All the Right Features</h2>
+                <p>Affordable and simple, Northlight offers the must-have features for young users learning responsibility—without the clutter.</p>
             </div>
         </div>
     </div>
@@ -47,8 +51,8 @@
         <img src="{{ asset('img/home/inova_phone_senior.jpg') }}" alt="Senior Device" class="banner-bg-img">
         <div class="container-fluid d-flex justify-content-end">
             <div class="home-banner-content me-sm-5">
-                <h2>Simple Features That Help Seniors Stay Close</h2>
-                <p>Easy to hold, hear, and understand—Northlight helps seniors stay connected with loved ones and manage everyday tasks.</p>
+                <h2>Easy to Hear. Easy to Hold. Easy to Love.</h2>
+                <p>Northlight keeps seniors confidently connected with loud audio, easy grip, clear visuals, and everyday features they actually use.</p>
             </div>
         </div>
     </div>
@@ -57,8 +61,8 @@
         <img src="{{ asset('img/home/inova_phone_business.jpg') }}" alt="Business Device" class="banner-bg-img">
         <div class="container-fluid">
             <div class="home-banner-content ms-sm-5">
-                <h2>A Reliable Solution for Modern Business Needs</h2>
-                <p>Northlight helps manage business on the go with dual SIMs, secure data, and features designed to keep your operations smooth.</p>
+                <h2>Store Business Data Safely, Without the Cloud</h2>
+                <p>Keep business files safe with local microSD storage—no risky cloud access. With dual SIM and long battery life, it's made for work.</p>
             </div>
         </div>
     </div>
@@ -82,15 +86,17 @@
     </div>
 
     <div class="bg-black text-white">
-        <div class="container">
+        <div class="custom-container">
             <div class="row section-padding gx-xl-5 gy-xxl-0 gy-4">
-                <div class="col-xxl-5 col-xl-6">
-                    <h3>Add-Ons to Keep You Powered, Connected, Prepared</h3>
-                    <p class="pt-3">Extend what your phone can do with add-ons made for performance. From power to storage, our swappable batteries, battery chargers, and microSD cards keep you ready for everyday.</p>
-                    <a class="button button--filled" href="" target="_self">
-                        <span>Discover our products</span>
-                        <i class="fa-solid fa-caret-right"></i>
-                    </a>
+                <div class="col-xxl-5 col-xl-6 d-flex flex-column">
+                    <h3>Helpful Extras to Keep You Ready and Running</h3>
+                    <div class="mt-auto">
+                        <p class="pt-3">Extend what your phone can do with add-ons made for performance. From power to storage, our swappable batteries, battery chargers, and microSD cards keep you ready for everyday.</p>
+                        <a class="button button--filled" href="" target="_self">
+                            <span>Discover our products</span>
+                            <i class="fa-solid fa-caret-right"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="col-xxl-7 col-xl-6">
@@ -109,7 +115,6 @@
             </div>
         </div>
     </div>
-
 @endsection
 
 @push('scripts')
