@@ -65,8 +65,9 @@ a {
 }
 
 .navbar {
-    /* background-color: transparent !important; */
+    background-color: transparent !important;
     z-index: 10;
+    margin-bottom: -56px;
 }
 
 .navbar .nav-link {
@@ -100,7 +101,7 @@ a {
 }
 
 .home-banner-container {
-    margin-top: -106px;
+    margin-top: -50px;
     position: relative;
     display: block;
     width: 100%;

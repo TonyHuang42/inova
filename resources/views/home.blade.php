@@ -36,7 +36,7 @@
     <div class="home-user-banner home-user-banner-1">
         <img src="{{ asset('img/home/inova_phone_teenage.jpg') }}" alt="Teen Device" class="banner-bg-img">
         <div class="container-fluid">
-            <div class="home-banner-content ps-sm-5">
+            <div class="home-banner-content ms-sm-5">
                 <h2>A Confident First Device for Young Minds</h2>
                 <p>Long-lasting and easy to use, Northlight helps young minds explore technology safely - without overwhelming features.</p>
             </div>
@@ -46,7 +46,7 @@
     <div class="home-user-banner home-user-banner-2">
         <img src="{{ asset('img/home/inova_phone_senior.jpg') }}" alt="Senior Device" class="banner-bg-img">
         <div class="container-fluid d-flex justify-content-end">
-            <div class="home-banner-content pe-sm-5">
+            <div class="home-banner-content me-sm-5">
                 <h2>Simple Features That Help Seniors Stay Close</h2>
                 <p>Easy to hold, hear, and understand—Northlight helps seniors stay connected with loved ones and manage everyday tasks.</p>
             </div>
@@ -56,7 +56,7 @@
     <div class="home-user-banner home-user-banner-3">
         <img src="{{ asset('img/home/inova_phone_business.jpg') }}" alt="Business Device" class="banner-bg-img">
         <div class="container-fluid">
-            <div class="home-banner-content ps-sm-5">
+            <div class="home-banner-content ms-sm-5">
                 <h2>A Reliable Solution for Modern Business Needs</h2>
                 <p>Northlight helps manage business on the go with dual SIMs, secure data, and features designed to keep your operations smooth.</p>
             </div>
@@ -85,7 +85,7 @@
         <div class="container">
             <div class="row section-padding gx-xl-5 gy-xxl-0 gy-4">
                 <div class="col-xxl-5 col-xl-6">
-                    <h3>Add-Ons That Keep You Going</h3>
+                    <h3>Add-Ons to Keep You Powered, Connected, Prepared</h3>
                     <p class="pt-3">Extend what your phone can do with add-ons made for performance. From power to storage, our swappable batteries, battery chargers, and microSD cards keep you ready for everyday.</p>
                     <a class="button button--filled" href="" target="_self">
                         <span>Discover our products</span>

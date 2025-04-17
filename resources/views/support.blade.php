@@ -36,7 +36,7 @@
 
 @section('content')
     <div class="section section-1">
-        @include('inc.northlight-banner')
+        <img src="{{ asset('img/home/banner_northlight.png') }}" alt="">
     </div>
     <div class="section section-2">
         <div class="banner-video-container">
