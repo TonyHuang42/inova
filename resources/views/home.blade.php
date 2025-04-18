@@ -10,8 +10,8 @@
 @section('content')
     <div class="bg-black text-white">
         <div class="home-banner-container">
-            <img class="home-banner" src="{{ asset('img/home/banner_home.jpg') }}" alt="Banner">
-            {{-- <h1 class="mb-0 home-banner-container-text d-none d-xl-block">Building Bridges, Not Just Devices</h1> --}}
+            {{-- <img class="home-banner" src="{{ asset('img/home/banner_home.jpg') }}" alt="Banner"> --}}
+            <video src="{{ asset('video/INOVA.mp4') }}" autoplay muted data-wf-ignore="true" class="img-fluid"></video>
         </div>
 
         <div class="container raised-section">

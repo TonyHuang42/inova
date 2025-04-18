@@ -82,9 +82,9 @@
                     </div>
                     <div class="col-md-6 d-flex align-items-center">
                         <div>
-                            <img src="{{ asset('img/northlight/icons/icons_memory.svg') }}" alt="Chip" class="support-icon">
-                            <h3 class="my-2 theme-color">Reliable Chip</h3>
-                            <p class="key-features-description">Northlight runs on the <strong>MediaTek Helio A22</strong>, a <strong>2.0GHz quad-core processor</strong> built on efficient <strong>12nm</strong> architecture for smooth and consistent performance. Whether messaging, streaming, or multitasking, it delivers dependable speed without overheating or battery drain. Manufactured by <strong>TSMC</strong>, the world’s leading chipmaker, it ensures <strong>stability, security</strong>, and everyday <strong>efficiency</strong>.</p>
+                            {{-- <img src="{{ asset('img/northlight/icons/icons_memory.svg') }}" alt="Chip" class="support-icon"> --}}
+                            <p class="my-2 theme-color">Reliable Chip</p>
+                            <h3 class="key-features-description" style="font-size: 40px;">Northlight runs on the <strong>MediaTek Helio A22</strong>, a <strong>2.0GHz quad-core processor</strong> built on efficient <strong>12nm</strong> architecture for smooth and consistent performance. </h3>
                         </div>
                     </div>
                 </div>

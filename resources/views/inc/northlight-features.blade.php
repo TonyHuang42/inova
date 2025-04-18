@@ -310,7 +310,7 @@
 </style>
 
 <!-- Desktop Engineering Drawing -->
-<div class="bg-color overflow-hidden">
+<div class="bg-color overflow-hidden" style="z-index: 10;">
     <div class="custom-container">
         {{-- <h1 class="text-white text-center" style="padding-top: 50px;">Beyond the Essentials</h1> --}}
         <div class="features-container-desktop" id="engineering-drawing-section">
@@ -663,7 +663,7 @@
 </div>
 
 <!-- Mobile Engineering Drawing -->
-<div class="bg-color">
+<div class="bg-color" style="z-index: 10;">
     <div class="container mobile-container-padding" id="engineering-drawing-section-mobile">
         <div class="features-container-mobile">
             <div class="image-wrapper-mobile">

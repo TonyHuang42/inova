@@ -8,7 +8,7 @@
 
 @media only screen and (max-width: 1199px) {
     .raised-section {
-        margin-top: -150px;
+        margin-top: -100px;
     }
 
     .home-user-banner {
@@ -48,7 +48,7 @@
     }
 
     .raised-section {
-        margin-top: -100px;
+        margin-top: -50px;
     }
 }
 
@@ -69,6 +69,6 @@
     }
 
     .raised-section {
-        margin-top: -25px;
+        margin-top: 0;
     }
 }
