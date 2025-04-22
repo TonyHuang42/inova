@@ -20,17 +20,17 @@
             <div class="row pt-3 text-center gx-lg-5 bottom-padding">
                 <div class="col-12 col-lg-4">
                     <img src="{{ asset('img/home/icon_accessible.svg') }}" alt="accessibility" class="values-icon">
-                    <h3 class="pt-2">Essentials without the Premium Price Tag</h3>
+                    <h4 class="pt-2">Essentials without the Premium Price Tag</h4>
                     <p class="mb-0">We believe useful everyday tech shouldn’t be out of reach. That’s why we focus on what matters—and price it fairly for everyday people.</p>
                 </div>
                 <div class="col-12 col-lg-4">
                     <img src="{{ asset('img/home/icon_simplicity.svg') }}" alt="simplicity" class="values-icon">
-                    <h3 class="pt-2">Replace Your Battery, Not Your Entire Phone</h3>
+                    <h4 class="pt-2">Replace Your Battery, Not Your Entire Phone</h4>
                     <p class="mb-0">We design for longevity, not landfill. Our phones let you easily and quickly swap batteries anytime, so they last longer and waste less.</p>
                 </div>
                 <div class="col-12 col-lg-4">
                     <img src="{{ asset('img/home/icon_community.svg') }}" alt="community" class="values-icon">
-                    <h3 class="pt-2">Two Number, More Storage, One Phone</h3>
+                    <h4 class="pt-2">Two Number, More Storage, One Phone</h4>
                     <p class="mb-0">Life isn’t one-size-fits-all. That’s why we make space for both your work and personal life—plus extra room to grow when needed.</p>
                 </div>
             </div>
@@ -89,7 +89,7 @@
         <div class="custom-container">
             <div class="row section-padding gx-xl-5 gy-xxl-0 gy-4">
                 <div class="col-xxl-5 col-xl-6 d-flex flex-column">
-                    <h3>Helpful Extras to Keep You Ready and Running</h3>
+                    <h4>Helpful Extras to Keep You Ready and Running</h4>
                     <div class="mt-auto">
                         <p class="pt-3">Extend what your phone can do with add-ons made for performance. From power to storage, our swappable batteries, battery chargers, and microSD cards keep you ready for everyday.</p>
                         <a class="button button--filled" href="" target="_self">

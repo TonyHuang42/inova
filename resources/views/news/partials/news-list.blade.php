@@ -3,9 +3,9 @@
         <div class="col-lg-4">
             <div class="text-start">
                 <div class="sub-title">{{ $article->category->name }}</div>
-                <h3 class="mb-3">
+                <h4 class="mb-3">
                     <a href="{{ route('news.show', $article->slug) }}" class="text-black">{{ $article->title }}</a>
-                </h3>
+                </h4>
                 <p class="mb-0">{{ $article->created_at->format('j F, Y') }}</p>
             </div>
         </div>
