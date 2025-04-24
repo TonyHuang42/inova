@@ -19,17 +19,17 @@
 
             <div class="row pt-3 text-center gx-lg-5 bottom-padding">
                 <div class="col-12 col-lg-4">
-                    <img src="{{ asset('img/home/icon_accessible.svg') }}" alt="accessibility" class="values-icon">
+                    <img src="{{ asset('img/home/icon_humanfocus.svg') }}" alt="accessibility" class="values-icon">
                     <h4 class="pt-2">Essentials without the Premium Price Tag</h4>
                     <p class="mb-0">We believe useful everyday tech shouldn’t be out of reach. That’s why we focus on what matters—and price it fairly for everyday people.</p>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <img src="{{ asset('img/home/icon_simplicity.svg') }}" alt="simplicity" class="values-icon">
+                    <img src="{{ asset('img/home/icon_longevity.svg') }}" alt="simplicity" class="values-icon">
                     <h4 class="pt-2">Replace Your Battery, Not Your Entire Phone</h4>
                     <p class="mb-0">We design for longevity, not landfill. Our phones let you easily and quickly swap batteries anytime, so they last longer and waste less.</p>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <img src="{{ asset('img/home/icon_community.svg') }}" alt="community" class="values-icon">
+                    <img src="{{ asset('img/home/icon_extraroom.svg') }}" alt="community" class="values-icon">
                     <h4 class="pt-2">Two Number, More Storage, One Phone</h4>
                     <p class="mb-0">Life isn’t one-size-fits-all. That’s why we make space for both your work and personal life—plus extra room to grow when needed.</p>
                 </div>

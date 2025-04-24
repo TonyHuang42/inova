@@ -3,15 +3,15 @@
         position: relative;
         width: 100%;
         padding-bottom: 50%;
-        height: 100vh;
+        /* height: 100vh; */
         overflow: hidden;
-        /* min-height: 900px; */
+        min-height: 900px;
     }
 
     .phone-banner {
         width: 100%;
-        height: 100vh;
-        /* min-height: 900px; */
+        /* height: 100vh; */
+        min-height: 900px;
         object-fit: cover;
         position: absolute;
         top: 0;

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/custom-container.css') }}">
     <style>
         .northlight-banner-section {
-            height: 100vh;
+            /* height: 100vh; */
             min-height: 900px;
             position: sticky;
             top: 0;
@@ -34,7 +34,8 @@
 
         .fullscreen-video {
             width: 100%;
-            height: 100vh;
+            /* height: 100vh; */
+            min-height: 900px;
             object-fit: cover;
             display: block;
         }

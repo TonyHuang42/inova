@@ -45,7 +45,7 @@
             <div class="container d-flex justify-content-between align-items-center">
                 <a class="navbar-brand me-5 d-flex align-items-center gap-2" href="/">
                     <img src="{{ asset('img/logo/inova_logo.svg') }}" alt="logo" class="logo">
-                    <img src="{{ asset('img/logo/iNova_workmark.svg') }}" alt="logo" class="logo">
+                    <img src="{{ asset('img/logo/iNova_workmark.svg') }}" alt="logo" class="inova">
                 </a>
                 <!-- Toggle Button -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">

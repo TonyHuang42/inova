@@ -99,6 +99,10 @@ a {
 }
 
 .logo {
+    height: 20px;
+}
+
+.inova {
     height: 15px;
 }
 
@@ -201,7 +205,7 @@ a {
 }
 
 .values-icon {
-    width: 50px;
+    width: 60px;
 }
 
 .border-start-lg {

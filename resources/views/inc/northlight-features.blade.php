@@ -310,7 +310,7 @@
 </style>
 
 <!-- Desktop Engineering Drawing -->
-<div class="bg-color overflow-hidden" style="z-index: 10;">
+<div class="bg-color overflow-hidden">
     <div class="custom-container">
         {{-- <h1 class="text-white text-center" style="padding-top: 50px;">Beyond the Essentials</h1> --}}
         <div class="features-container-desktop" id="engineering-drawing-section">
