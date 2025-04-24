@@ -15,23 +15,23 @@
         </div>
 
         <div class="container raised-section">
-            <h1 class="mb-5 text-center">More Features,<br>Less Cost.</h1>
+            <h1 class="mb-5 text-center">Essential Technology. <br>Exceptional Value.</h1>
 
             <div class="row pt-3 text-center gx-lg-5 bottom-padding">
                 <div class="col-12 col-lg-4">
-                    <img src="{{ asset('img/home/icon_humanfocus.svg') }}" alt="accessibility" class="values-icon">
-                    <h4 class="pt-2">Essentials without the Premium Price Tag</h4>
-                    <p class="mb-0">We believe useful everyday tech shouldn’t be out of reach. That’s why we focus on what matters—and price it fairly for everyday people.</p>
+                    <img src="{{ asset('img/home/icon_longevity.svg') }}" alt="accessibility" class="values-icon">
+                    <h4 class="pt-2">Replaceable Battery</h4>
+                    <p class="mb-0">Power up in seconds. Swap batteries anytime and extend your phone’s life—no tools, no charge time, no need to replace the whole device.</p>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <img src="{{ asset('img/home/icon_longevity.svg') }}" alt="simplicity" class="values-icon">
-                    <h4 class="pt-2">Replace Your Battery, Not Your Entire Phone</h4>
-                    <p class="mb-0">We design for longevity, not landfill. Our phones let you easily and quickly swap batteries anytime, so they last longer and waste less.</p>
+                    <img src="{{ asset('img/home/icon_extraroom.svg') }}" alt="simplicity" class="values-icon">
+                    <h4 class="pt-2">Dual SIM + MicroSD</h4>
+                    <p class="mb-0">Experience dual SIM capabilities and expand your storage with microSD at the same time, fully control how you connect and store data</p>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <img src="{{ asset('img/home/icon_extraroom.svg') }}" alt="community" class="values-icon">
-                    <h4 class="pt-2">Two Number, More Storage, One Phone</h4>
-                    <p class="mb-0">Life isn’t one-size-fits-all. That’s why we make space for both your work and personal life—plus extra room to grow when needed.</p>
+                    <img src="{{ asset('img/home/icon_humanfocus.svg') }}" alt="community" class="values-icon">
+                    <h4 class="pt-2">Reliable Chip</h4>
+                    <p class="mb-0">Northlight runs on a reliable MediaTek chip made by TSMC— the trusted chipmaker behind many major tech brands in the industry.</p>
                 </div>
             </div>
         </div>
@@ -41,7 +41,7 @@
         <img src="{{ asset('img/home/inova_phone_teenage.jpg') }}" alt="Teen Device" class="banner-bg-img">
         <div class="container-fluid">
             <div class="home-banner-content ms-sm-5">
-                <h2>A First Phone with All the Right Features</h2>
+                <h2>The Right Feature. The Right Price. The Right Start.</h2>
                 <p>Affordable and simple, Northlight offers the must-have features for young users learning responsibility—without the clutter.</p>
             </div>
         </div>
@@ -61,8 +61,8 @@
         <img src="{{ asset('img/home/inova_phone_business.jpg') }}" alt="Business Device" class="banner-bg-img">
         <div class="container-fluid">
             <div class="home-banner-content ms-sm-5">
-                <h2>Store Business Data Safely, Without the Cloud</h2>
-                <p>Keep business files safe with local microSD storage—no risky cloud access. With dual SIM and long battery life, it's made for work.</p>
+                <h2>Stay Powered. Stay Connected. Stay Secure.</h2>
+                <p>Dual SIMs for coverage and connectivity, microSD for offline data security, and a swappable battery for backup power anywhere.</p>
             </div>
         </div>
     </div>
@@ -71,11 +71,11 @@
         <div class="container">
             <div class="row section-padding">
                 <div class="col-lg-7">
-                    <h2>Technology That Serves People, Not Just Performance</h2>
+                    <h2>We Designed Northlight For You, Not For Trends</h2>
                 </div>
 
                 <div class="col-lg-5 border-start-lg ps-lg-5">
-                    <p>INOVA creates devices with a clear purpose - empowering you with the tools to stay connected, get things done, and enjoy the moments that matter the most.</p>
+                    <p>We created Northlight for one reason: to cut through the noise. It’s built to do what matters—connect, last, and simplify life without unnecessary extras.</p>
                 </div>
             </div>
         </div>
@@ -89,9 +89,9 @@
         <div class="custom-container">
             <div class="row section-padding gx-xl-5 gy-xxl-0 gy-4">
                 <div class="col-xxl-5 col-xl-6 d-flex flex-column">
-                    <h4>Helpful Extras to Keep You Ready and Running</h4>
+                    <h4>Simple Add-Ons That Make a Big Difference</h4>
                     <div class="mt-auto">
-                        <p class="pt-3">Extend what your phone can do with add-ons made for performance. From power to storage, our swappable batteries, battery chargers, and microSD cards keep you ready for everyday.</p>
+                        <p class="pt-3">Don’t upgrade your phone—upgrade your setup. Swappable batteries, microSD cards, and fast chargers keep you powered, backed up, and in control.</p>
                         <a class="button button--filled" href="" target="_self">
                             <span>Discover our products</span>
                             <i class="fa-solid fa-caret-right"></i>
