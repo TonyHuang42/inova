@@ -14,7 +14,7 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 8px;
+            /* margin-bottom: 8px; */
             position: relative;
         }
 
@@ -30,28 +30,38 @@
         }
 
         .toggle-content {
-            margin-bottom: 0;
             max-height: 0;
             overflow: hidden;
             opacity: 0;
-            transition: max-height 0.3s ease-out, opacity 0.3s ease-out, margin-bottom 0.3s ease-out;
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
         }
 
         .toggle-content.open {
-            margin-bottom: 1rem;
-            max-height: 500px;
+            max-height: 100px;
+            opacity: 1;
+        }
+
+        .partnership-toggle-content.open {
+            max-height: 600px;
             opacity: 1;
         }
 
         .form-control, .form-control:focus {
             background-color: transparent;
             color: white;
-            border: 1px solid #b6b6b6;
+            border: none;
+            border-bottom: 1px solid #282828;
+            border-radius: 0;
+            box-shadow: none;
         }
 
         .form-control::placeholder {
             color: #b6b6b6;
             opacity: 1;
+        }
+
+        a {
+            color: #fff;
         }
     </style>
 @endpush
@@ -138,14 +148,18 @@
                                 <h3>Partnership Opportunities</h3>
                                 <i class="fa-solid fa-angle-right arrow position-static"></i>
                             </div>
-                            <div class="toggle-content">
-                                {{-- @if (session('success'))
+                            <div class="toggle-content partnership-toggle-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p class="text-white">Email: <a href="mailto:partnership@example.com">partnership@example.com</a></p>
+                                <p class="text-white">Phone: <a href="tel:1234567890">(123) 456-7890</a></p>
+                                
+                                @if (session('success'))
                                     <div class="alert alert-success">{{ session('success') }}</div>
-                                @endif --}}
+                                @endif
 
                                 {{-- <form action="{{ route('contact.submit') }}" method="POST"> --}}
                                 <form>
-                                    {{-- @csrf --}}
+                                    @csrf
                                     <div class="row gy-xl-0">
                                         <div class="col-xl-6">
                                             <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
