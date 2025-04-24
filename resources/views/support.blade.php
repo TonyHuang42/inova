@@ -20,7 +20,7 @@
 
         .toggle-container .arrow {
             position: relative;
-            top: 7px;
+            top: 8px;
             margin-left: 10px;
             transition: transform 0.3s ease;
         }
@@ -40,6 +40,17 @@
         .toggle-content.open {
             margin-bottom: 1rem;
             max-height: 500px;
+            opacity: 1;
+        }
+
+        .form-control, .form-control:focus {
+            background-color: transparent;
+            color: white;
+            border: 1px solid #b6b6b6;
+        }
+
+        .form-control::placeholder {
+            color: #b6b6b6;
             opacity: 1;
         }
     </style>
@@ -121,7 +132,7 @@
                 </div>
 
                 <div class="col-lg-4">
-                    <div class="faq">
+                    <div class="contact">
                         <div class="faq-item">
                             <div class="toggle-container align-items-center">
                                 <h3>Partnership Opportunities</h3>
@@ -135,26 +146,29 @@
                                 {{-- <form action="{{ route('contact.submit') }}" method="POST"> --}}
                                 <form>
                                     {{-- @csrf --}}
-                                    <div class="row gy-md-0">
-                                        <div class="col-md-6">
+                                    <div class="row gy-xl-0">
+                                        <div class="col-xl-6">
                                             <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
                                         </div>
-                                        <div class="col-md-6 mt-md-0 mt-3">
+                                        <div class="col-xl-6 mt-xl-0 mt-3">
                                             <input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
                                         </div>
-                                        <div class="col-md-6 mt-3">
+                                        <div class="col-xl-6 mt-3">
                                             <input type="email" name="email" class="form-control" placeholder="Email Address" required>
                                         </div>
-                                        <div class="col-md-6 mt-3">
+                                        <div class="col-xl-6 mt-3">
                                             <input type="tel" name="phone" class="form-control" placeholder="Phone Number" required>
                                         </div>
                                         <div class="col-12 mt-3">
                                             <textarea name="message" class="form-control" rows="4" placeholder="Message" required></textarea>
                                         </div>
                                     </div>
-                                    <button type="submit" class="button mt-3">
-                                        <span class="button-text">SEND MESSAGE</span>
-                                    </button>
+                                    <div type="submit" class="mt-3">
+                                        <a class="button button--filled" href="" target="_self">
+                                            <span>Send Message</span>
+                                            <i class="fa-solid fa-caret-right"></i>
+                                        </a>
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -168,7 +182,7 @@
 
 @push('scripts')
     <script>
-        document.querySelectorAll(".faq").forEach(section => {
+        document.querySelectorAll(".faq, .contact").forEach(section => {
             const toggleContainers = section.querySelectorAll(".toggle-container");
 
             toggleContainers.forEach((container, index) => {
