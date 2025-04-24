@@ -257,3 +257,8 @@ a {
 .support-icon {
     width: 70px;
 }
+
+.support-banner {
+    background: url('../img/support/p5-img-01.jpg') no-repeat center center/cover;
+    height: 550px;
+}
