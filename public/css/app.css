@@ -262,3 +262,8 @@ a {
     background: url('../img/support/p5-img-01.jpg') no-repeat center center/cover;
     height: 550px;
 }
+
+.social-icon {
+    color: #b6b6b6;
+    font-size: 32px;
+}

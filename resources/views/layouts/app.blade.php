@@ -39,7 +39,7 @@
     </style>
 </head>
 
-<body>
+<body class="overflow-x-hidden">
     <header>
         <nav class="navbar navbar-expand-sm bg-dark" data-bs-theme="dark">
             <div class="container d-flex justify-content-between align-items-center">
