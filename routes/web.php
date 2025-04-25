@@ -9,7 +9,7 @@ use App\Http\Controllers\AdminAuthController;
 
 Route::get('/', function () {return view('home');});
 Route::get('/northlight', function () {return view('northlight');});
-Route::get('/spec', function () {return view('inc.spec');});
+Route::get('/northlight-spec', function () {return view('inc.northlight-spec');});
 Route::get('/accessories', function () {return view('accessories');});
 Route::get('/support', function () {return view('support');});
 Route::get('/about-us', function () {return view('about');});

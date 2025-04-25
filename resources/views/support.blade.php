@@ -77,13 +77,13 @@
     <div class="bg-black text-white">
         <div class="container">
             <div class="row section-padding gx-lg-5">
-                <div class="col-lg-8">
+                <div class="col-xl-7 col-lg-8">
                     <h3>Frequently Asked Questions</h3>
                     <p>Before reaching out, take a look at some of the most common questions we get. From SIM card setup to microSD storage, these answers can help you get started quickly and confidently.</p>
                     <div class="faq pt-3">
                         <div class="faq-item">
                             <div class="toggle-container">
-                                <h4>Can I use two SIM cards and a microSD card at the same time?</h4>
+                                <h4>Can I use dual SIMs and a microSD at the same time?</h4>
                                 <i class="fa-solid fa-angle-right arrow"></i>
                             </div>
                             <p class="toggle-content">Yes, Northlight supports dual SIM and a microSD card simultaneously. You don’t have to sacrifice one for the other.</p>
@@ -155,7 +155,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4">
+                <div class="offset-xl-1 col-lg-4">
                     {{-- <div class="contact">
                         <div class="faq-item">
                             <div class="toggle-container align-items-center">
