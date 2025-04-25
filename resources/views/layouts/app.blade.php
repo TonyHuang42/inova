@@ -67,9 +67,9 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}" href="/contact">
-                                @if (request()->is('contact')) <i class="fa-solid fa-caret-right me-1"></i> @endif
-                                Contact
+                            <a class="nav-link {{ request()->is('support') ? 'active' : '' }}" href="/support">
+                                @if (request()->is('support')) <i class="fa-solid fa-caret-right me-1"></i> @endif
+                                Support
                             </a>
                         </li>
                         <li class="nav-item">

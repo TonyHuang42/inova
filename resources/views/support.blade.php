@@ -101,6 +101,27 @@
         ul {
             color: #b6b6b6;
         }
+
+        .form-container{
+            background-color: #191919;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 675px;
+        }
+
+        @media only screen and (max-width: 1199px) {
+            .form-container{
+                height: 790px;
+            }
+        }
+
+        @media only screen and (max-width: 991px) {
+            .form-container{
+                height: auto;
+                padding: 48px 24px;
+            }
+        }
     </style>
 @endpush
 
@@ -187,7 +208,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-3 offset-xl-1 col-lg-4 d-flex flex-column justify-content-center" style="background-color: #191919;">
+                <div class="form-container col-xl-3 offset-xl-1 col-lg-4">
                     {{-- <div class="contact">
                         <div class="faq-item">
                             <div class="toggle-container align-items-center">
@@ -359,12 +380,12 @@
                 // }
 
                 container.addEventListener("click", function() {
-                    toggleContainers.forEach(item => {
-                        if (item !== this) {
-                            item.classList.remove("active");
-                            item.nextElementSibling.classList.remove("open");
-                        }
-                    });
+                    // toggleContainers.forEach(item => {
+                    //     if (item !== this) {
+                    //         item.classList.remove("active");
+                    //         item.nextElementSibling.classList.remove("open");
+                    //     }
+                    // });
 
                     const isActive = this.classList.contains("active");
 

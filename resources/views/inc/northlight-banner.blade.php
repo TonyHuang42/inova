@@ -81,8 +81,11 @@
 </style>
 
 <div class="northlight-banner-container">
-    <img src="{{ asset('img/northlight/banner/BG.jpg') }}" alt="banner" class="phone-banner">
-    <img src="{{ asset('img/northlight/banner/phone.png') }}" alt="phone" class="phone-banner-phone">
+    {{-- <img src="{{ asset('img/northlight/banner/BG.jpg') }}" alt="banner" class="phone-banner">
+    <img src="{{ asset('img/northlight/banner/phone.png') }}" alt="phone" class="phone-banner-phone"> --}}
+    <video playsinline loop muted autoplay data-wf-ignore="true" class="phone-banner">
+        <source src="{{ asset('video/Northlight.mp4') }}" type="video/mp4" />
+    </video>
     <img src="{{ asset('img/northlight/banner/northlight.png') }}" alt="northlight" class="phone-banner-northlight">
     <img src="{{ asset('img/northlight/banner/slogan.png') }}" alt="slogan" class="phone-banner-slogan">
 

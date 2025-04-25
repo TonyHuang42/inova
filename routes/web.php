@@ -11,7 +11,7 @@ Route::get('/', function () {return view('home');});
 Route::get('/northlight', function () {return view('northlight');});
 Route::get('/northlight-spec', function () {return view('inc.northlight-spec');});
 Route::get('/accessories', function () {return view('accessories');});
-Route::get('/contact', function () {return view('contact');});
+Route::get('/support', function () {return view('support');});
 Route::get('/about-us', function () {return view('about');});
 Route::get('/terms-of-use', function () {return view('terms');});
 Route::get('/privacy-policy', function () {return view('privacy');});
