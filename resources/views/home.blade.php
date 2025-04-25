@@ -19,18 +19,18 @@
 
             <div class="row pt-3 text-center gx-lg-5 bottom-padding">
                 <div class="col-12 col-lg-4">
-                    <img src="{{ asset('img/home/inova_feature_1.svg') }}" alt="accessibility" class="values-icon">
-                    <h4 style="margin-top: -25px;">Replaceable Battery</h4>
-                    <p class="mb-0">Power up in seconds. Swap batteries anytime and extend your phone’s life—no tools, no charge time, no need to replace the whole device.</p>
+                    <img src="{{ asset('img/home/inova_feature_1.svg') }}" alt="accessibility" style="width: 60px; margin-top: 10px;">
+                    <h4 style="padding-top: 30px;">Replaceable Battery</h4>
+                    <p class="mb-0" style="margin-top: 20px;">Power up in seconds. Swap batteries anytime and extend your phone’s life—no tools, no charge time, no need to replace the whole device.</p>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <img src="{{ asset('img/home/inova_feature_2.svg') }}" alt="simplicity" class="values-icon">
-                    <h4 style="margin-top: -25px;">Dual SIM + MicroSD</h4>
+                    <img src="{{ asset('img/home/inova_feature_2.svg') }}" alt="simplicity" style="width: 90px;">
+                    <h4>Dual SIM + MicroSD</h4>
                     <p class="mb-0">Experience dual SIM capabilities and expand your storage with microSD at the same time, fully control how you connect and store data</p>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <img src="{{ asset('img/home/inova_feature_3.svg') }}" alt="community" class="values-icon" style="width: 120px; margin-top: 15px;">
-                    <h4 style="margin-top: -20px;">Reliable Chip</h4>
+                    <img src="{{ asset('img/home/inova_feature_3.svg') }}" alt="community" style="width: 80px; margin-top: 8px;">
+                    <h4 style="padding-top: 1px;">Reliable Chip</h4>
                     <p class="mb-0">Northlight runs on a reliable MediaTek chip made by TSMC— the trusted chipmaker behind many major tech brands in the industry.</p>
                 </div>
             </div>

@@ -68,7 +68,7 @@
         }
 
         .toggle-content.open {
-            max-height: 200px;
+            max-height: 72px;
             opacity: 1;
         }
 
@@ -116,7 +116,7 @@
                         <div class="faq-item">
                             <div class="toggle-container">
                                 <h4 class="faq-question">Can I use dual SIMs and a microSD at the same time?</h4>
-                                <i class="fa-solid fa-caret-up arrow"></i>
+                                <i class="fa-solid fa-caret-down arrow"></i>
                             </div>
                             <p class="toggle-content">Yes, Northlight supports dual SIMs and a microSD card simultaneously. You don’t have to sacrifice one for the other.</p>
                         </div>
@@ -124,7 +124,7 @@
                         <div class="faq-item">
                             <div class="toggle-container">
                                 <h4 class="faq-question">How do I replace my battery?</h4>
-                                <i class="fa-solid fa-caret-up arrow"></i>
+                                <i class="fa-solid fa-caret-down arrow"></i>
                             </div>
                             <p class="toggle-content">Simply remove your phone case and you will see the battery with a slot at the bottom. Lift the bottom of the battery up and replace it with a new one. </p>
                         </div>
@@ -132,7 +132,7 @@
                         <div class="faq-item">
                             <div class="toggle-container">
                                 <h4 class="faq-question">How do I know which SIM card I'm using?</h4>
-                                <i class="fa-solid fa-caret-up arrow"></i>
+                                <i class="fa-solid fa-caret-down arrow"></i>
                             </div>
                             <p class="toggle-content">You can check and switch your active SIM through your phone’s SIM settings. Go to Settings > Network & Internet > SIMs to manage preferences for calls, texts, and data. </p>
                         </div>
@@ -140,7 +140,7 @@
                         <div class="faq-item">
                             <div class="toggle-container">
                                 <h4 class="faq-question">How do I manage storage with a microSD card?</h4>
-                                <i class="fa-solid fa-caret-up arrow"></i>
+                                <i class="fa-solid fa-caret-down arrow"></i>
                             </div>
                             <p class="toggle-content">Once inserted, your microSD card will appear in your device storage settings. In the Files app, you can move images, downloads, documents, videos, and audio between internal and external storage. Note that apps cannot be moved to external storage. </p>
                         </div>
@@ -148,7 +148,7 @@
                         <div class="faq-item">
                             <div class="toggle-container">
                                 <h4 class="faq-question">How do I access files saved on my microSD card?</h4>
-                                <i class="fa-solid fa-caret-up arrow"></i>
+                                <i class="fa-solid fa-caret-down arrow"></i>
                             </div>
                             <p class="toggle-content">You can access those files by inserting the microSD card back into your phone, or by using a microSD card reader connected to a laptop, PC, or other devices. </p>
                         </div>
@@ -156,7 +156,7 @@
                         <div class="faq-item">
                             <div class="toggle-container">
                                 <h4 class="faq-question">What is the storage capacity?</h4>
-                                <i class="fa-solid fa-caret-up arrow"></i>
+                                <i class="fa-solid fa-caret-down arrow"></i>
                             </div>
                             <p class="toggle-content">Northlight comes with 32GB of built-in storage and supports microSD cards up to 512GB for additional space. </p>
                         </div>
@@ -164,7 +164,7 @@
                         <div class="faq-item">
                             <div class="toggle-container">
                                 <h4 class="faq-question">How do I remove or insert my SIM or microSD card?</h4>
-                                <i class="fa-solid fa-caret-up arrow"></i>
+                                <i class="fa-solid fa-caret-down arrow"></i>
                             </div>
                             <div class="toggle-content">
                                 <p>Remove the phone case to access the slots at the top-right corner. There are three slots:</p>
@@ -177,22 +177,22 @@
                             </div>
                         </div>
 
-                        <div class="faq-item">
+                        <div class="faq-item mb-0">
                             <div class="toggle-container">
                                 <h4 class="faq-question">Where can I buy INOVA products?</h4>
-                                <i class="fa-solid fa-caret-up arrow"></i>
+                                <i class="fa-solid fa-caret-down arrow"></i>
                             </div>
                             <p class="toggle-content">We’re currently available on the Best Buy Marketplace. You can find us on the Best Buy website or contact us directly at sales@i-nova.ca for more details. </p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-xl-3 offset-xl-1 col-lg-4">
+                <div class="col-xl-3 offset-xl-1 col-lg-4 d-flex flex-column justify-content-center" style="background-color: #191919;">
                     {{-- <div class="contact">
                         <div class="faq-item">
                             <div class="toggle-container align-items-center">
                                 <h3>Partnership Opportunities</h3>
-                                <i class="fa-solid fa-caret-up arrow position-static"></i>
+                                <i class="fa-solid fa-caret-down arrow position-static"></i>
                             </div>
                             <div class="toggle-content partnership-toggle-content">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -237,8 +237,8 @@
                         <h3 class="mb-3">Get in Touch</h3>
                         {{-- <h4>Interested in working with us or carrying INOVA products?</h4> --}}
                         <p>Whether you're looking to purchase, become a distributor, or explore business opportunities, we’d love to hear from you. Use the form below or reach us directly by phone or email. </p>
-                        <p class="text-white">Email: <a href="mailto:partnership@example.com">partnership@example.com</a></p>
-                        <p class="text-white">Phone: <a href="tel:1234567890">(123) 456-7890</a></p>
+                        <p class="text-white">Email: <a href="mailto:marketing@i-nova.ca">marketing@i-nova.ca</a></p>
+                        {{-- <p class="text-white">Phone: <a href="tel:1234567890">(123) 456-7890</a></p> --}}
                     </div>
                     <div class="row">
                         @if (session('success'))

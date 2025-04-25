@@ -204,9 +204,9 @@ a {
     max-width: 520px;
 }
 
-.values-icon {
-    width: 140px;
-}
+/* .values-icon {
+    width: 80px;
+} */
 
 .border-start-lg {
     border-left: 1px solid #444;
