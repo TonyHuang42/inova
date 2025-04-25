@@ -4,6 +4,11 @@
 @section('meta_description', 'INOVA')
 @push('styles')
     <style>
+        .navbar {
+            background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+            margin-bottom: 0;
+        }
+
         .spec {
             background-image: url('../img/northlight/img_spec.png');
             background-size: cover;

@@ -3,6 +3,15 @@
 @section('title', 'Terms of Use - INOVA')
 @section('meta_description', 'INOVA')
 
+@push('styles')
+    <style>
+        .navbar {
+            background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+            margin-bottom: 0;
+        }
+    </style>
+@endpush
+
 @section('content')
     <div class="container">
         <div class="row">

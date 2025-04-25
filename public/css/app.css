@@ -25,12 +25,12 @@ h1 {
 }
 
 h2 {
-    font-family: "Bropotic", sans-serif;
+    /* font-family: "Bropotic", sans-serif;
     transform: scaleX(0.75);
     transform-origin: left;
-    width: 133.33%;
+    width: 133.33%; */
     /* font-size: clamp(2rem, 5vw, 2.625rem); */
-    font-size: 30px;
+    font-size: 42px;
     font-weight: 200;
 }
 
