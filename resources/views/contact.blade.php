@@ -74,6 +74,7 @@
 
         .form-control,
         .form-control:focus {
+            /* padding-left: 0; */
             background-color: transparent;
             color: white;
             border: none;
@@ -102,8 +103,8 @@
     <div class="bg-black text-white">
         <div class="container">
             <div class="row section-padding gx-lg-5">
-                <div class="col-xl-7 col-lg-8">
-                    <h3>Frequently Asked Questions</h3>
+                <div class="col-lg-8">
+                    <h3 class="mb-3">Frequently Asked Questions</h3>
                     <p>Before reaching out, take a look at some of the most common questions we get. From SIM card setup to microSD storage, these answers can help you get started quickly and confidently.</p>
                     <div class="faq pt-3">
                         <div class="faq-item">
@@ -111,7 +112,7 @@
                                 <h4 class="faq-question">Can I use dual SIMs and a microSD at the same time?</h4>
                                 <i class="fa-solid fa-caret-up arrow"></i>
                             </div>
-                            <p class="toggle-content">Yes, Northlight supports dual SIM and a microSD card simultaneously. You don’t have to sacrifice one for the other.</p>
+                            <p class="toggle-content">Yes, Northlight supports dual SIMs and a microSD card simultaneously. You don’t have to sacrifice one for the other.</p>
                         </div>
 
                         <div class="faq-item">
@@ -180,7 +181,7 @@
                     </div>
                 </div>
 
-                <div class="offset-xl-1 col-lg-4">
+                <div class="col-xl-3 offset-xl-1 col-lg-4">
                     {{-- <div class="contact">
                         <div class="faq-item">
                             <div class="toggle-container align-items-center">
@@ -225,11 +226,49 @@
                             </div>
                         </div>
                     </div> --}}
-                    <img src="{{ asset('img/support/p5-img-02.jpg') }}" alt="" class="img-fluid d-none d-lg-block">
+                    {{-- <img src="{{ asset('img/support/p5-img-02.jpg') }}" alt="" class="img-fluid d-none d-lg-block"> --}}
+                    <div class="row bottom-padding-sm">
+                        <h3 class="mb-3">Get in Touch</h3>
+                        {{-- <h4>Interested in working with us or carrying INOVA products?</h4> --}}
+                        <p>Whether you're looking to purchase, become a distributor, or explore business opportunities, we’d love to hear from you. Use the form below or reach us directly by phone or email. </p>
+                        <p class="text-white">Email: <a href="mailto:partnership@example.com">partnership@example.com</a></p>
+                        <p class="text-white">Phone: <a href="tel:1234567890">(123) 456-7890</a></p>
+                    </div>
+                    <div class="row">
+                        @if (session('success'))
+                            <div class="alert alert-success">{{ session('success') }}</div>
+                        @endif
+                        <form>
+                            @csrf
+                            <div class="row gy-0">
+                                <div class="col-6">
+                                    <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
+                                </div>
+                                <div class="col-6 mt-3">
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                </div>
+                                <div class="col-6 mt-3">
+                                    <input type="tel" name="phone" class="form-control" placeholder="Phone" required>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <textarea name="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+                                </div>
+                            </div>
+                            <div type="submit" class="mt-4">
+                                <a class="button button--filled" href="" target="_self">
+                                    <span>Send Message</span>
+                                    <i class="fa-solid fa-caret-right"></i>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
 
-            <div class="row bottom-padding">
+            {{-- <div class="row bottom-padding">
                 <div class="col-xl-5 col-lg-6">
                     <h3 class="mb-3">Get in Touch</h3>
                     <h4>Interested in working with us or carrying INOVA products?</h4>
@@ -268,37 +307,33 @@
                         </div>
                     </form>
                 </div>
-            </div>
+            </div> --}}
 
             <div class="row bottom-padding">
                 <div class="col-lg col-12">
-                    <h3 class="mb-3">Follow us on</h3>
-                    <a href="" class="d-inline-flex align-items-center gap-3 mb-3">
+                    <h3 class="mb-3">Accessories</h3>
+                    <p>For more power, data, and everyday convenience.</p>
+                    {{-- <a href="" class="d-inline-flex align-items-center gap-3 mb-3">
                         <i class="fa-brands fa-instagram social-icon"></i>
                         <p class="mb-0">@INOVA</p>
                     </a><br>
                     <a href="" class="d-inline-flex align-items-center gap-3">
                         <i class="fa-brands fa-square-facebook social-icon"></i>
                         <p class="mb-0">@INOVA</p>
-                    </a>
+                    </a> --}}
                 </div>
 
-                <div class="col-lg col-md-3 col-6">
-                    <img src="{{ asset('img/support/instagram-img-01.jpg') }}" alt="" class="img-fluid">
+                <div class="col-lg col-4">
+                    <img src="{{ asset('img/home/inova_accessory_battery.jpg') }}" alt="" class="img-fluid">
                 </div>
 
-                <div class="col-lg col-md-3 col-6">
-                    <img src="{{ asset('img/support/instagram-img-02.jpg') }}" alt="" class="img-fluid">
+                <div class="col-lg col-4">
+                    <img src="{{ asset('img/home/inova_accessory_charger.jpg') }}" alt="" class="img-fluid">
                 </div>
 
-                <div class="col-lg col-md-3 col-6">
-                    <img src="{{ asset('img/support/instagram-img-03.jpg') }}" alt="" class="img-fluid">
+                <div class="col-lg col-4">
+                    <img src="{{ asset('img/home/inova_accessory_microSDcard.jpg') }}" alt="" class="img-fluid">
                 </div>
-
-                <div class="col-lg col-md-3 col-6">
-                    <img src="{{ asset('img/support/instagram-img-04.jpg') }}" alt="" class="img-fluid">
-                </div>
-
             </div>
         </div>
     </div>
