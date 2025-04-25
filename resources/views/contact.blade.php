@@ -39,8 +39,13 @@
             position: relative;
         }
 
+        .toggle-container.active {
+            border-bottom: 1px solid #282828;
+        }
+
         .arrow {
             font-size: 20px;
+            margin-top: -4px;
         }
 
         .toggle-container .arrow {
@@ -54,6 +59,7 @@
         }
 
         .toggle-content {
+            margin-top: 8px;
             padding-left: 52px;
             max-height: 0;
             overflow: hidden;
