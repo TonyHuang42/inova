@@ -15,7 +15,7 @@
         </div>
 
         <div class="container raised-section">
-            <h1 class="mb-5 text-center">Essential Technology. <br>Exceptional Value.</h1>
+            <h1 class="mb-5 text-center home-slogan">Essential Technology. <br>Exceptional Value.</h1>
 
             <div class="row pt-3 text-center gx-lg-5 bottom-padding">
                 <div class="col-12 col-lg-4">
@@ -24,14 +24,14 @@
                     <p class="mb-0" style="margin-top: 20px;">Power up in seconds. Swap batteries anytime and extend your phone’s life—no tools, no charge time, no need to replace the whole device.</p>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <img src="{{ asset('img/home/inova_feature_2.svg') }}" alt="simplicity" style="width: 90px;">
-                    <h4>Dual SIM + MicroSD</h4>
-                    <p class="mb-0">Experience dual SIM capabilities and expand your storage with microSD at the same time, fully control how you connect and store data</p>
+                    <img src="{{ asset('img/home/inova_feature_2.svg') }}" alt="simplicity" style="width: 80px;">
+                    <h4 style="padding-top: 20px;">Dual SIM + MicroSD</h4>
+                    <p class="mb-0" style="margin-top: 20px;">Experience dual SIM capabilities and expand your storage with microSD at the same time, fully control how you connect and store data</p>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <img src="{{ asset('img/home/inova_feature_3.svg') }}" alt="community" style="width: 80px; margin-top: 8px;">
-                    <h4 style="padding-top: 1px;">Reliable Chip</h4>
-                    <p class="mb-0">Northlight runs on a reliable MediaTek chip made by TSMC— the trusted chipmaker behind many major tech brands in the industry.</p>
+                    <img src="{{ asset('img/home/inova_feature_3.svg') }}" alt="community" style="width: 70px; margin-top: 8px;">
+                    <h4 style="padding-top: 22px;">Reliable Chip</h4>
+                    <p class="mb-0" style="margin-top: 20px;">Northlight runs on a reliable MediaTek chip made by TSMC— the trusted chipmaker behind many major tech brands in the industry.</p>
                 </div>
             </div>
         </div>
@@ -90,8 +90,8 @@
             <div class="row section-padding gx-xl-5 gy-xxl-0 gy-4">
                 <div class="col-xxl-5 col-xl-6 d-flex flex-column">
                     <h4>Simple Add-Ons That Make a Big Difference</h4>
-                    <div class="mt-auto">
-                        <p class="pt-3">Don’t upgrade your phone—upgrade your setup. Swappable batteries, microSD cards, and fast chargers keep you powered, backed up, and in control.</p>
+                    <p class="pt-3">Don’t upgrade your phone—upgrade your setup. Swappable batteries, microSD cards, and fast chargers keep you powered, backed up, and in control.</p>
+                    <div class="pt-4">
                         <a class="button button--filled" href="" target="_self">
                             <span>Discover our products</span>
                             <i class="fa-solid fa-caret-right"></i>

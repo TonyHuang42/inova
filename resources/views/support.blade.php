@@ -10,11 +10,24 @@
         }
 
         .faq-question {
+            font-size: 22px;
             display: flex;
             align-items: center;
+            background: #fff;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(99deg, #616161 0, #fff0 50%);
+            background-size: 200% 100%;
+            background-position-x: 100%;
+            transition: background-position .8s cubic-bezier(.25,.1,.14,.91);
+        }
+
+        .faq-question:hover {
+            background-position-x: 0;
         }
 
         .faq-question::before {
+            font-size: 22px;
             counter-increment: faq-counter;
             content: counter(faq-counter, decimal-leading-zero);
             margin-right: 1.5rem;
@@ -44,7 +57,7 @@
         }
 
         .arrow {
-            font-size: 20px;
+            font-size: 24px;
             margin-top: -4px;
         }
 
@@ -67,16 +80,10 @@
             transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
         }
 
-        .toggle-content.open {
-            max-height: 72px;
-            opacity: 1;
-        }
-
-        .partnership-toggle-content.open {
-            /* max-height: 600px; */
-            max-height: 300px;
-            opacity: 1;
-        }
+        /* .toggle-content.open {
+                    max-height: 72px;
+                    opacity: 1;
+            } */
 
         .form-control,
         .form-control:focus {
@@ -91,7 +98,8 @@
 
         .form-control::placeholder {
             color: #b6b6b6;
-            opacity: 1;
+            opacity: 0.5;
+            font-weight: 100;
         }
 
         a {
@@ -102,22 +110,28 @@
             color: #b6b6b6;
         }
 
-        .form-container{
+        .form-container {
             background-color: #191919;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            height: 675px;
+            height: 636px;
+        }
+
+        @media only screen and (max-width: 1399px) {
+            .form-container {
+                height: 655px;
+            }
         }
 
         @media only screen and (max-width: 1199px) {
-            .form-container{
-                height: 790px;
+            .form-container {
+                height: 710px;
             }
         }
 
         @media only screen and (max-width: 991px) {
-            .form-container{
+            .form-container {
                 height: auto;
                 padding: 48px 24px;
             }
@@ -187,7 +201,7 @@
                                 <h4 class="faq-question">How do I remove or insert my SIM or microSD card?</h4>
                                 <i class="fa-solid fa-caret-down arrow"></i>
                             </div>
-                            <div class="toggle-content">
+                            <div class="toggle-content question-7">
                                 <p>Remove the phone case to access the slots at the top-right corner. There are three slots:</p>
                                 <ul>
                                     <li>Nano-SIM (top slot)</li>
@@ -254,14 +268,14 @@
                         </div>
                     </div> --}}
                     {{-- <img src="{{ asset('img/support/p5-img-02.jpg') }}" alt="" class="img-fluid d-none d-lg-block"> --}}
-                    <div class="row bottom-padding-sm">
+                    <div class="row">
                         <h3 class="mb-3">Get in Touch</h3>
                         {{-- <h4>Interested in working with us or carrying INOVA products?</h4> --}}
                         <p>Whether you're looking to purchase, become a distributor, or explore business opportunities, we’d love to hear from you. Use the form below or reach us directly by phone or email. </p>
                         <p class="text-white">Email: <a href="mailto:marketing@i-nova.ca">marketing@i-nova.ca</a></p>
                         {{-- <p class="text-white">Phone: <a href="tel:1234567890">(123) 456-7890</a></p> --}}
                     </div>
-                    <div class="row">
+                    <div class="row mt-1">
                         @if (session('success'))
                             <div class="alert alert-success">{{ session('success') }}</div>
                         @endif
@@ -281,7 +295,7 @@
                                     <input type="tel" name="phone" class="form-control" placeholder="Phone" required>
                                 </div>
                                 <div class="col-12 mt-3">
-                                    <textarea name="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+                                    <textarea name="message" class="form-control" rows="3" placeholder="Message" required></textarea>
                                 </div>
                             </div>
                             <div type="submit" class="mt-4">
@@ -350,16 +364,20 @@
                     </a> --}}
                 </div>
 
-                <div class="col-lg col-4">
+                <div class="col-lg col-md-3 col-6">
                     <img src="{{ asset('img/home/inova_accessory_battery.jpg') }}" alt="" class="img-fluid">
                 </div>
 
-                <div class="col-lg col-4">
+                <div class="col-lg col-md-3 col-6">
                     <img src="{{ asset('img/home/inova_accessory_charger.jpg') }}" alt="" class="img-fluid">
                 </div>
 
-                <div class="col-lg col-4">
+                <div class="col-lg col-md-3 col-6">
                     <img src="{{ asset('img/home/inova_accessory_microSDcard.jpg') }}" alt="" class="img-fluid">
+                </div>
+
+                <div class="col-lg col-md-3 col-6">
+                    <img src="{{ asset('img/support/instagram-img-03.jpg') }}" alt="" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -371,9 +389,8 @@
         document.querySelectorAll(".faq").forEach(section => {
             const toggleContainers = section.querySelectorAll(".toggle-container");
 
-            toggleContainers.forEach((container, index) => {
+            toggleContainers.forEach(container => {
                 const content = container.nextElementSibling;
-
                 // if (index === 0) {
                 //     container.classList.add("active");
                 //     content.classList.add("open");
@@ -390,10 +407,12 @@
                     const isActive = this.classList.contains("active");
 
                     if (isActive) {
-                        content.classList.remove("open");
+                        content.style.maxHeight = null;
+                        content.style.opacity = 0;
                         this.classList.remove("active");
                     } else {
-                        content.classList.add("open");
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        content.style.opacity = 1;
                         this.classList.add("active");
                     }
                 });

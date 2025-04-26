@@ -13,13 +13,19 @@ body {
     font-family: "Space Grotesk", sans-serif;
 }
 
-h1 {
+.home-slogan {
     font-family: "Bropotic", sans-serif;
     transform: scaleX(0.75);
     transform-origin: left;
     width: 133.33%;
     font-weight: 600;
     font-size: 50px;
+    letter-spacing: 5px;
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 64px;
     letter-spacing: 5px;
     /* font-size: clamp(3rem, 6vw, 4.375rem); */
 }
