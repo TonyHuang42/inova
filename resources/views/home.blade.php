@@ -82,7 +82,8 @@
     </div>
 
     <div class="home-banner-5">
-        <img src="{{ asset('img/home/banner_northlight.png') }}" alt="northlight" class="w-100">
+        {{-- <img src="{{ asset('img/home/banner_northlight.png') }}" alt="northlight" class="w-100"> --}}
+        @include('inc.northlight-banner')
     </div>
 
     <div class="bg-black text-white">
