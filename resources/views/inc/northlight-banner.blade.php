@@ -2,7 +2,7 @@
     .northlight-banner-container {
         position: relative;
         width: 100%;
-        padding-bottom: 50%;
+        padding-bottom: 56.24%;
         /* height: 100vh; */
         overflow: hidden;
         min-height: 900px;

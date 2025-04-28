@@ -19,18 +19,18 @@
 
             <div class="row pt-3 text-center gx-lg-5 bottom-padding">
                 <div class="col-12 col-lg-4">
-                    <img src="{{ asset('img/home/inova_feature_1.svg') }}" alt="accessibility" style="width: 60px; margin-top: 10px;">
-                    <h4 style="padding-top: 30px;">Replaceable Battery</h4>
+                    <img src="{{ asset('img/home/inova_feature_1.svg') }}" alt="accessibility" style="width: 100px; margin-top: 9px;">
+                    <h4 style="padding-top: 1px;">Replaceable Battery</h4>
                     <p class="mb-0" style="margin-top: 20px;">Power up in seconds. Swap batteries anytime and extend your phone’s life—no tools, no charge time, no need to replace the whole device.</p>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <img src="{{ asset('img/home/inova_feature_2.svg') }}" alt="simplicity" style="width: 80px;">
-                    <h4 style="padding-top: 20px;">Dual SIM + MicroSD</h4>
+                    <img src="{{ asset('img/home/inova_feature_2.svg') }}" alt="simplicity" style="width: 110px;">
+                    <h4 style="padding-top: 0px;">Dual SIM + MicroSD</h4>
                     <p class="mb-0" style="margin-top: 20px;">Experience dual SIM capabilities and expand your storage with microSD at the same time, fully control how you connect and store data</p>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <img src="{{ asset('img/home/inova_feature_3.svg') }}" alt="community" style="width: 70px; margin-top: 8px;">
-                    <h4 style="padding-top: 22px;">Reliable Chip</h4>
+                    <img src="{{ asset('img/home/inova_feature_3.svg') }}" alt="community" style="width: 95px; margin-top: 13px;">
+                    <h4 style="padding-top: 2px;">Reliable Chip</h4>
                     <p class="mb-0" style="margin-top: 20px;">Northlight runs on a reliable MediaTek chip made by TSMC— the trusted chipmaker behind many major tech brands in the industry.</p>
                 </div>
             </div>

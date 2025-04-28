@@ -81,9 +81,9 @@
         }
 
         /* .toggle-content.open {
-                    max-height: 72px;
-                    opacity: 1;
-            } */
+                max-height: 72px;
+                opacity: 1;
+        } */
 
         .form-control,
         .form-control:focus {
