@@ -72,12 +72,12 @@
                                 Support
                             </a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link {{ request()->is('news') ? 'active' : '' }}" href="/news">
                                 @if (request()->is('news')) <i class="fa-solid fa-caret-right me-1"></i> @endif
                                 News
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>                    
                 </div>
             </div>

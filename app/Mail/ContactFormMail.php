@@ -15,7 +15,8 @@ class ContactFormMail extends Mailable
 
     public function build()
     {
-        return $this->subject('KEG Contact Form Submission')
+        return $this->subject('INOVA Contact Form Submission')
+                    ->replyTo($this->data['email'], $this->data['name'])
                     ->view('emails.contact')
                     ->with('data', $this->data);
     }

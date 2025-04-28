@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\AdminAuthController;
-//use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ContactController;
 
 //Route::resource('news', NewsController::class);
 
@@ -16,6 +16,7 @@ Route::get('/about-us', function () {return view('about');});
 Route::get('/terms-of-use', function () {return view('terms');});
 Route::get('/privacy-policy', function () {return view('privacy');});
 Route::get('/admin/create', function () {return view('admin.create');});
+Route::post('/support/submit', [ContactController::class, 'submit'])->name('support.submit');
 
 // Admin Authentication Routes
 Route::get('admin', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');

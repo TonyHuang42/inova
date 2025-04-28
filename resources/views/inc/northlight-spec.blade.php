@@ -77,6 +77,7 @@
     .spec-toggle .arrow {
         font-size: 24px;
         margin-left: 24px;
+        margin-top: 5px;
         transition: transform 0.3s ease;
     }
 
@@ -93,7 +94,7 @@
 <div class="container">
     <hr>
     <div id="spec-toggle" class="spec-toggle">
-        <h3>Specifications</h3>
+        <h3 class="mb-0">Specifications</h3>
         <i class="fa-solid fa-caret-down arrow"></i>
     </div>
 </div>

@@ -22,7 +22,7 @@
             transition: background-position .8s cubic-bezier(.25, .1, .14, .91);
         }
 
-        .faq-question:hover {
+        .toggle-container:hover .faq-question{
             background-position-x: 0;
         }
 
@@ -226,145 +226,44 @@
                 </div>
 
                 <div class="form-container col-xl-3 offset-xl-1 col-lg-4">
-                    {{-- <div class="contact">
-                        <div class="faq-item">
-                            <div class="toggle-container align-items-center">
-                                <h3>Partnership Opportunities</h3>
-                                <i class="fa-solid fa-caret-down arrow position-static"></i>
-                            </div>
-                            <div class="toggle-content partnership-toggle-content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <p class="text-white">Email: <a href="mailto:partnership@example.com">partnership@example.com</a></p>
-                                <p class="text-white">Phone: <a href="tel:1234567890">(123) 456-7890</a></p>
-                                
-                                @if (session('success'))
-                                    <div class="alert alert-success">{{ session('success') }}</div>
-                                @endif
-
-                                <form>
-                                    @csrf
-                                    <div class="row gy-xl-0">
-                                        <div class="col-xl-6">
-                                            <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
-                                        </div>
-                                        <div class="col-xl-6 mt-xl-0 mt-3">
-                                            <input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
-                                        </div>
-                                        <div class="col-xl-6 mt-3">
-                                            <input type="email" name="email" class="form-control" placeholder="Email Address" required>
-                                        </div>
-                                        <div class="col-xl-6 mt-3">
-                                            <input type="tel" name="phone" class="form-control" placeholder="Phone Number" required>
-                                        </div>
-                                        <div class="col-12 mt-3">
-                                            <textarea name="message" class="form-control" rows="4" placeholder="Message" required></textarea>
-                                        </div>
-                                    </div>
-                                    <div type="submit" class="mt-3">
-                                        <a class="button button--filled" href="" target="_self">
-                                            <span>Send Message</span>
-                                            <i class="fa-solid fa-caret-right"></i>
-                                        </a>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div> --}}
-                    {{-- <img src="{{ asset('img/support/p5-img-02.jpg') }}" alt="" class="img-fluid d-none d-lg-block"> --}}
                     <div class="row">
                         <h3 class="mb-3">Get in Touch</h3>
                         {{-- <h4>Interested in working with us or carrying INOVA products?</h4> --}}
                         <p>Whether you're looking to purchase, become a distributor, or explore business opportunities, we’d love to hear from you. Use the form below or reach us directly by phone or email. </p>
                         <p class="text-white">Email: <a href="mailto:marketing@i-nova.ca">marketing@i-nova.ca</a></p>
-                        {{-- <p class="text-white">Phone: <a href="tel:1234567890">(123) 456-7890</a></p> --}}
                     </div>
                     <div class="row mt-1">
                         @if (session('success'))
                             <div class="alert alert-success">{{ session('success') }}</div>
                         @endif
-                        <form>
+                        <form action="{{ route('support.submit') }}" method="POST">
                             @csrf
                             <div class="row gy-0">
-                                <div class="col-6">
-                                    <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
+                                <div class="col-lg-12 col-6">
+                                    <input type="text" name="name" class="form-control" placeholder="Name" required>
                                 </div>
-                                <div class="col-6">
-                                    <input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
-                                </div>
-                                <div class="col-6 mt-3">
+                                <div class="col-lg-12 col-6 mt-lg-3">
                                     <input type="email" name="email" class="form-control" placeholder="Email" required>
-                                </div>
-                                <div class="col-6 mt-3">
-                                    <input type="tel" name="phone" class="form-control" placeholder="Phone" required>
                                 </div>
                                 <div class="col-12 mt-3">
                                     <textarea name="message" class="form-control" rows="3" placeholder="Message" required></textarea>
                                 </div>
                             </div>
                             <div type="submit" class="mt-4">
-                                <a class="button button--filled" href="" target="_self">
+                                <button type="submit" class="button button--filled">
                                     <span>Send Message</span>
                                     <i class="fa-solid fa-caret-right"></i>
-                                </a>
+                                </button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
 
-            {{-- <div class="row bottom-padding">
-                <div class="col-xl-5 col-lg-6">
-                    <h3 class="mb-3">Get in Touch</h3>
-                    <h4>Interested in working with us or carrying INOVA products?</h4>
-                    <p>Whether you're looking to purchase, become a distributor, or explore business opportunities, we’d love to hear from you. Use the form below or reach us directly by phone or email. </p>
-                    <p class="text-white">Email: <a href="mailto:partnership@example.com">partnership@example.com</a></p>
-                    <p class="text-white">Phone: <a href="tel:1234567890">(123) 456-7890</a></p>
-                </div>
-                <div class="offset-xl-1 col-lg-6">
-                    @if (session('success'))
-                        <div class="alert alert-success">{{ session('success') }}</div>
-                    @endif
-                    <form>
-                        @csrf
-                        <div class="row gy-0">
-                            <div class="col-6">
-                                <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
-                            </div>
-                            <div class="col-6">
-                                <input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
-                            </div>
-                            <div class="col-6 mt-3">
-                                <input type="email" name="email" class="form-control" placeholder="Email Address" required>
-                            </div>
-                            <div class="col-6 mt-3">
-                                <input type="tel" name="phone" class="form-control" placeholder="Phone Number" required>
-                            </div>
-                            <div class="col-12 mt-3">
-                                <textarea name="message" class="form-control" rows="4" placeholder="Message" required></textarea>
-                            </div>
-                        </div>
-                        <div type="submit" class="mt-3">
-                            <a class="button button--filled" href="" target="_self">
-                                <span>Send Message</span>
-                                <i class="fa-solid fa-caret-right"></i>
-                            </a>
-                        </div>
-                    </form>
-                </div>
-            </div> --}}
-
             <div class="row bottom-padding">
                 <div class="col-lg col-12">
                     <h3 class="mb-3">Accessories</h3>
                     <p>For more power, data, and everyday convenience.</p>
-                    {{-- <a href="" class="d-inline-flex align-items-center gap-3 mb-3">
-                        <i class="fa-brands fa-instagram social-icon"></i>
-                        <p class="mb-0">@INOVA</p>
-                    </a><br>
-                    <a href="" class="d-inline-flex align-items-center gap-3">
-                        <i class="fa-brands fa-square-facebook social-icon"></i>
-                        <p class="mb-0">@INOVA</p>
-                    </a> --}}
                 </div>
 
                 <div class="col-lg col-md-3 col-6">
