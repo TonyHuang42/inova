@@ -65,7 +65,7 @@
         <div class="row section-padding">
             <div class="col-12">
                 <div class="col-12">
-                    <h1 class="fw-bold text-center mb-3">What Makes It Truly Different</h1>
+                    <h1 class="text-center mb-3">What Makes It Truly Different</h1>
                 </div>
                 {{-- <div class="col-12">
                     <p class="mb-0">Northlight is designed to be practical, dependable, and easy to live with. It brings together the essentials—performance, storage, flexibility, and power—in a way that makes sense for everyday use. From the processor to the battery, every part is thoughtfully chosen to help you stay connected, productive, and in control—whether at home, at work, or on the move. Built for simplicity, shaped by purpose, and ready to meet the demands of real life. No clutter, no distractions—just the features you need, when you need them.</p>
@@ -128,4 +128,6 @@
             </div>
         </div>
     </div>
+
+    @include('inc.northlight-spec')
 @endsection

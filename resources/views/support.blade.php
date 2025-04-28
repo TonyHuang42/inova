@@ -19,7 +19,7 @@
             background-image: linear-gradient(99deg, #616161 0, #fff0 50%);
             background-size: 200% 100%;
             background-position-x: 100%;
-            transition: background-position .8s cubic-bezier(.25,.1,.14,.91);
+            transition: background-position .8s cubic-bezier(.25, .1, .14, .91);
         }
 
         .faq-question:hover {
@@ -32,7 +32,10 @@
             content: counter(faq-counter, decimal-leading-zero);
             margin-right: 1.5rem;
             flex-shrink: 0;
-            color: #b6b6b6;
+            color: #999;
+            background: none;
+            -webkit-background-clip: border-box;
+            -webkit-text-fill-color: initial;
         }
 
         .faq-question span {

@@ -1,5 +1,14 @@
 @extends('layouts.app')
 
+@push('styles')
+    <style>
+        .navbar {
+            background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+            margin-bottom: 0;
+        }
+    </style>
+@endpush
+
 @section('content')
     <section class="container">
         <div class="section-padding-sm bottom-padding">
