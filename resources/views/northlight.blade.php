@@ -72,13 +72,11 @@
                 </div> --}}
             </div>
         </div>
-        <div class="row bottom-padding gx-xl-0 gx-lg-5">
-            <div class="col-lg-4 d-flex align-items-center justify-content-center">
-                <div class="highlight-features-img-wrap">
-                    <img src="{{ asset('img/northlight/Inova_spec_parts_chip.png') }}" alt="chip" class="img-fluid">
-                </div>
+        <div class="row bottom-padding-sm gx-lg-5">
+            <div class="col-lg-5 d-flex align-items-center justify-content-center justify-content-lg-start">
+                <img src="{{ asset('img/northlight/Inova_spec_parts_chip.png') }}" alt="chip" style="max-width: 350px;">
             </div>
-            <div class="col-xxl-6 offset-xxl-2 col-xl-7 offset-xl-1 col-lg-8 d-flex align-items-center">
+            <div class="col-lg-7 d-flex align-items-center">
                 <div>
                     <p class="my-2 theme-color">RELIABLE CHIP</p>
                     <h3 class="key-features-description">2.0GHz <strong>quad-core MediaTek Helio A22</strong>, built on <strong>12nm</strong> architecture, delivers stable, efficient performance. <strong>TSMC</strong> made for trusted quality.</h3>
@@ -86,27 +84,23 @@
             </div>
         </div>
 
-        <div class="row bottom-padding gx-xl-0 gx-lg-5">
-            <div class="col-xxl-6 col-xl-7 col-lg-8 d-flex align-items-center order-2 order-lg-1">
+        <div class="row bottom-padding-sm gx-xl-0 gx-lg-5">
+            <div class="col-lg-7 d-flex align-items-center order-2 order-lg-1">
                 <div>
                     <p class="my-2 theme-color">REPLACEABLE BATTERY</p>
                     <h3 class="key-features-description">Includes a <strong>2500mAh removable battery</strong> with <strong>tool-free latch</strong> for quick swaps. Easily replace degraded units to extend your device’s lifespan.</h3>
                 </div>
             </div>
-            <div class="col-lg-4 offset-xxl-2 offset-xl-1 d-flex align-items-center justify-content-center order-1 order-lg-2">
-                <div class="highlight-features-img-wrap">
-                    <img src="{{ asset('img/northlight/Inova_spec_parts_battery.png') }}" alt="battery" class="img-fluid">
-                </div>
+            <div class="col-lg-5 d-flex align-items-center justify-content-center justify-content-lg-end order-1 order-lg-2">
+                <img src="{{ asset('img/northlight/Inova_spec_parts_battery.png') }}" alt="battery" style="max-width: 350px;">
             </div>
         </div>
 
-        <div class="row bottom-padding gx-xl-0 gx-lg-5">
-            <div class="col-lg-4 d-flex align-items-center justify-content-center">
-                <div class="highlight-features-img-wrap">
-                    <img src="{{ asset('img/northlight/Inova_spec_parts_dualSIM.png') }}" alt="dual SIM cards" class="img-fluid">
-                </div>
+        <div class="row bottom-padding-sm gx-xl-0 gx-lg-5">
+            <div class="col-lg-5 d-flex align-items-center justify-content-center justify-content-lg-start">
+                <img src="{{ asset('img/northlight/Inova_spec_parts_dualSIM.png') }}" alt="dual SIM cards" style="max-width: 350px;">
             </div>
-            <div class="col-xxl-6 offset-xxl-2 col-xl-7 offset-xl-1 col-lg-8 d-flex align-items-center">
+            <div class="col-lg-7 d-flex align-items-center">
                 <div>
                     <p class="my-2 theme-color">DUAL SIMs</p>
                     <h3 class="key-features-description">Supports <strong>Micro + Nano SIMs</strong> with <strong>simultaneous microSD</strong> use. Dual active lines with software switching—no slot-sharing or physical swaps.</h3>
@@ -114,16 +108,16 @@
             </div>
         </div>
 
-        <div class="row bottom-padding gx-xl-0 gx-lg-5">
-            <div class="col-xxl-6 col-xl-7 col-lg-8 d-flex align-items-center order-2 order-lg-1">
+        <div class="row bottom-padding-sm gx-xl-0 gx-lg-5">
+            <div class="col-lg-7 d-flex align-items-center order-2 order-lg-1">
                 <div>
                     <p class="my-2 theme-color">microSD CARD</p>
                     <h3 class="key-features-description">Expandable storage via <strong>microSD card up to 512GB</strong>. Plug-and-play support, no formatting needed. Data stored <strong>physically</strong>, not online.</h3>
                 </div>
             </div>
-            <div class="col-lg-4 offset-xxl-2 offset-xl-1 d-flex align-items-center justify-content-center order-1 order-lg-2">
+            <div class="col-lg-5 d-flex align-items-center justify-content-center justify-content-lg-end order-1 order-lg-2">
                 <div class="highlight-features-img-wrap">
-                    <img src="{{ asset('img/northlight/Inova_spec_parts_microSD.png') }}" alt="microSD" class="img-fluid">
+                    <img src="{{ asset('img/northlight/Inova_spec_parts_microSD.png') }}" alt="microSD" style="max-width: 350px;">
                 </div>
             </div>
         </div>
