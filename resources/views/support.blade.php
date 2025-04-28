@@ -231,10 +231,11 @@
                         {{-- <h4>Interested in working with us or carrying INOVA products?</h4> --}}
                         <p>Whether you're looking to purchase, become a distributor, or explore business opportunities, we’d love to hear from you. Use the form below or reach us directly by phone or email. </p>
                         <p class="text-white">Email: <a href="mailto:marketing@i-nova.ca">marketing@i-nova.ca</a></p>
+                        {{-- <div class="alert alert-secondary">Your message has been sent!</div> --}}
                     </div>
                     <div class="row mt-1">
                         @if (session('success'))
-                            <div class="alert alert-success">{{ session('success') }}</div>
+                            <div class="alert alert-secondary">{{ session('success') }}</div>
                         @endif
                         <form action="{{ route('support.submit') }}" method="POST">
                             @csrf
