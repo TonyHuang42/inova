@@ -19,7 +19,7 @@
 
             <div class="row pt-3 text-center gx-lg-5 bottom-padding">
                 <div class="col-12 col-lg-4">
-                    <img src="{{ asset('img/home/inova_feature_1.svg') }}" alt="accessibility" style="width: 70px; margin-top: 9px;">
+                    <img src="{{ asset('img/home/inova_feature_1.svg') }}" alt="accessibility" style="width: 73px; margin-top: 6px;">
                     <h4 style="padding-top: 11px;">Replaceable Battery</h4>
                     <p class="mb-0" style="margin-top: 20px;">Power up in seconds. Swap batteries anytime and extend your phone’s life—no tools, no charge time, no need to replace the whole device.</p>
                 </div>
@@ -41,8 +41,8 @@
         <img src="{{ asset('img/home/inova_phone_teenage.jpg') }}" alt="Teen Device" class="banner-bg-img">
         <div class="container-fluid">
             <div class="home-banner-content ms-sm-5">
-                <h2>The Right Feature. <br>The Right Price. <br>The Right Start.</h2>
-                <p>Affordable and simple, Northlight offers the must-have features for young users learning responsibility—without the clutter.</p>
+                <h2>The Right Features-At The Right Price</h2>
+                <p>Most phones are too complex and pricey or too limited. Northlight gives young users the just right features—at the just right price.</p>
             </div>
         </div>
     </div>
@@ -51,8 +51,8 @@
         <img src="{{ asset('img/home/inova_phone_senior.jpg') }}" alt="Senior Device" class="banner-bg-img">
         <div class="container-fluid d-flex justify-content-end">
             <div class="home-banner-content me-sm-5">
-                <h2>Easy to Hear. <br>Easy to Hold. <br>Easy to Love.</h2>
-                <p>Northlight keeps seniors confidently connected with loud audio, easy grip, clear visuals, and everyday features they actually use.</p>
+                <h2>Bring Back the Features You Missed</h2>
+                <p>Bringing back trusted features like headphone jacks and swappable batteries—so even seniors can easily pick it up.</p>
             </div>
         </div>
     </div>
@@ -61,8 +61,8 @@
         <img src="{{ asset('img/home/inova_phone_business.jpg') }}" alt="Business Device" class="banner-bg-img">
         <div class="container-fluid">
             <div class="home-banner-content ms-sm-5">
-                <h2>Stay Powered. <br>Stay Connected. <br>Stay Secure.</h2>
-                <p>Dual SIMs for coverage and connectivity, microSD for offline data security, and a swappable battery for backup power anywhere.</p>
+                <h2>Your Device. Your Data. Your Choice.</h2>
+                <p>Manage two numbers with Dual SIMs and secure files locally with microSD—your work, your data, protected and under your control.</p>
             </div>
         </div>
     </div>
@@ -71,7 +71,7 @@
         <div class="container">
             <div class="row section-padding">
                 <div class="col-lg-7">
-                    <h2>We Designed Northlight For You, Not For Trends</h2>
+                    <h2>It's Not About Less - It's About Enough</h2>
                 </div>
 
                 <div class="col-lg-5 border-start-lg ps-lg-5">

@@ -63,7 +63,7 @@
                         <li class="nav-item">
                             <a class="nav-link {{ request()->is('northlight') ? 'active' : '' }}" href="/northlight">
                                 @if (request()->is('northlight')) <i class="fa-solid fa-caret-right me-1"></i> @endif
-                                Phone
+                                Product
                             </a>
                         </li>
                         <li class="nav-item">
