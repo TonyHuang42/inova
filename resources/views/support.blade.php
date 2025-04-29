@@ -228,10 +228,8 @@
                 <div class="form-container col-xl-3 offset-xl-1 col-lg-4">
                     <div class="row">
                         <h3 class="mb-3">Get in Touch</h3>
-                        {{-- <h4>Interested in working with us or carrying INOVA products?</h4> --}}
-                        <p>Whether you're looking to purchase, become a distributor, or explore business opportunities, we’d love to hear from you. Use the form below or reach us directly by phone or email. </p>
+                        <p>Whether you're looking to purchase, become a distributor, or explore business opportunities, we’d love to hear from you. Use the form below or reach us directly by email. </p>
                         <p class="text-white">Email: <a href="mailto:marketing@i-nova.ca">marketing@i-nova.ca</a></p>
-                        {{-- <div class="alert alert-secondary">Your message has been sent!</div> --}}
                     </div>
                     <div class="row mt-1">
                         @if (session('success'))
@@ -250,7 +248,7 @@
                                     <textarea name="message" class="form-control" rows="3" placeholder="Message" required></textarea>
                                 </div>
                             </div>
-                            <div type="submit" class="mt-4">
+                            <div type="submit" class="mt-4" style="cursor: auto;">
                                 <button type="submit" class="button button--filled">
                                     <span>Send Message</span>
                                     <i class="fa-solid fa-caret-right"></i>

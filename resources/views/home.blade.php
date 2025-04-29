@@ -42,7 +42,7 @@
         <div class="container-fluid">
             <div class="home-banner-content ms-sm-5">
                 <h2>The Right Features-At The Right Price</h2>
-                <p>Most phones are too complex and pricey or too limited. Northlight gives young users the just right features—at the just right price.</p>
+                <p class="text-shadow">Most phones are too complex and pricey or too limited. Northlight gives young users the just right features—at the just right price.</p>
             </div>
         </div>
     </div>
@@ -51,8 +51,8 @@
         <img src="{{ asset('img/home/inova_phone_senior.jpg') }}" alt="Senior Device" class="banner-bg-img">
         <div class="container-fluid d-flex justify-content-end">
             <div class="home-banner-content me-sm-5">
-                <h2>Bring Back the Features You Missed</h2>
-                <p>Bringing back trusted features like headphone jacks and swappable batteries—so even seniors can easily pick it up.</p>
+                <h2>Bring Back the Features You Loved</h2>
+                <p class="text-shadow">Bringing back trusted features like headphone jacks and swappable batteries—so even seniors can easily pick it up.</p>
             </div>
         </div>
     </div>
@@ -61,8 +61,8 @@
         <img src="{{ asset('img/home/inova_phone_business.jpg') }}" alt="Business Device" class="banner-bg-img">
         <div class="container-fluid">
             <div class="home-banner-content ms-sm-5">
-                <h2>Your Device. Your Data. Your Choice.</h2>
-                <p>Manage two numbers with Dual SIMs and secure files locally with microSD—your work, your data, protected and under your control.</p>
+                <h2>Store What You Want. Switch When You Need.</h2>
+                <p class="text-shadow">Manage two numbers with Dual SIMs and secure files locally with microSD—your work, your data, protected and under your control.</p>
             </div>
         </div>
     </div>
