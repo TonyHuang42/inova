@@ -19,6 +19,16 @@
         left: 0;
     }
 
+    /* @media only screen and (max-width: 575px) {
+        .northlight-banner-container {
+            min-height: 700px;
+        }
+
+        .phone-banner {
+            min-height: 700px;
+        }
+    } */
+
     .phone-banner-phone {
         position: absolute;
         bottom: 0;

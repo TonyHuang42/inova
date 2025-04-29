@@ -83,11 +83,6 @@
             transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
         }
 
-        /* .toggle-content.open {
-                max-height: 72px;
-                opacity: 1;
-        } */
-
         .form-control,
         .form-control:focus {
             /* padding-left: 0; */

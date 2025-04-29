@@ -129,11 +129,11 @@
         const features = document.querySelectorAll('.phone-banner-features');
 
         function updateFeaturePosition() {
+            if (window.innerWidth <= 768) return;
             const viewportHeight = window.innerHeight;
             const containerHeight = container.offsetHeight;
 
             features.forEach(feature => {
-                //feature.classList.remove('position-fixed');
                 if (containerHeight > viewportHeight) {
                     feature.classList.add('position-fixed');
                 } else {
@@ -143,6 +143,7 @@
         }
 
         function handleScroll() {
+            if (window.innerWidth <= 768) return;
             const containerHeight = container.offsetHeight;
 
             if (window.scrollY > containerHeight) {
@@ -154,16 +155,20 @@
             }
         }
 
-        window.addEventListener('load', () => {
+        function initFeatureBehavior() {
+            if (window.innerWidth <= 768) {
+                features.forEach(feature => {
+                    feature.classList.remove('position-fixed');
+                });
+                return;
+            }
+
             updateFeaturePosition();
             handleScroll();
-        });
+        }
 
-        window.addEventListener('resize', () => {
-            updateFeaturePosition();
-            handleScroll();
-        });
-
+        window.addEventListener('load', initFeatureBehavior);
+        window.addEventListener('resize', initFeatureBehavior);
         window.addEventListener('scroll', handleScroll);
     </script>
 @endpush
