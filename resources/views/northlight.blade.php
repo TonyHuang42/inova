@@ -122,3 +122,48 @@
 
     @include('inc.northlight-spec')
 @endsection
+
+@push('scripts')
+    <script>
+        const container = document.querySelector('.northlight-banner-container');
+        const features = document.querySelectorAll('.phone-banner-features');
+
+        function updateFeaturePosition() {
+            const viewportHeight = window.innerHeight;
+            const containerHeight = container.offsetHeight;
+
+            features.forEach(feature => {
+                //feature.classList.remove('position-fixed');
+                if (containerHeight > viewportHeight) {
+                    feature.classList.add('position-fixed');
+                } else {
+                    feature.classList.remove('position-fixed');
+                }
+            });
+        }
+
+        function handleScroll() {
+            const containerHeight = container.offsetHeight;
+
+            if (window.scrollY > containerHeight) {
+                features.forEach(feature => {
+                    feature.classList.remove('position-fixed');
+                });
+            } else {
+                updateFeaturePosition();
+            }
+        }
+
+        window.addEventListener('load', () => {
+            updateFeaturePosition();
+            handleScroll();
+        });
+
+        window.addEventListener('resize', () => {
+            updateFeaturePosition();
+            handleScroll();
+        });
+
+        window.addEventListener('scroll', handleScroll);
+    </script>
+@endpush
