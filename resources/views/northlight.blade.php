@@ -38,6 +38,17 @@
             object-fit: cover;
             display: block;
         }
+
+        .key-features-description {
+            font-weight: 100;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .key-features-description strong {
+            font-weight: 600; 
+            color: white;
+        }
     </style>
 @endpush
 
@@ -60,61 +71,60 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row section-padding">
-            <div class="col-12">
-                <h1 class="text-center mb-3">What Makes It Truly Different</h1>
-                {{-- <div class="col-12">
-                    <p class="mb-0">Northlight is designed to be practical, dependable, and easy to live with. It brings together the essentials—performance, storage, flexibility, and power—in a way that makes sense for everyday use. From the processor to the battery, every part is thoughtfully chosen to help you stay connected, productive, and in control—whether at home, at work, or on the move. Built for simplicity, shaped by purpose, and ready to meet the demands of real life. No clutter, no distractions—just the features you need, when you need them.</p>
-                </div> --}}
-            </div>
-        </div>
-        <div class="row bottom-padding-sm gx-lg-5">
-            <div class="col-lg-5 d-flex align-items-center justify-content-center justify-content-lg-start">
-                <img src="{{ asset('img/northlight/Inova_spec_parts_chip.png') }}" alt="chip" style="max-width: 350px;">
-            </div>
-            <div class="col-lg-7 d-flex align-items-center">
-                <div>
-                    <p class="my-2 theme-color">RELIABLE CHIP</p>
-                    <h3 class="key-features-description">2.0GHz <strong>quad-core MediaTek Helio A22</strong>, built on <strong>12nm</strong> architecture, delivers stable, efficient performance. <strong>TSMC</strong> made for trusted quality.</h3>
+    <div class="text-white" style="background-color: #1f354a">
+        <div class="container">
+            <div class="row section-padding">
+                <div class="col-12">
+                    <h1 class="text-center mb-3">What Makes It Truly Different</h1>
+                    {{-- <div class="col-12">
+                        <p class="mb-0">Northlight is designed to be practical, dependable, and easy to live with. It brings together the essentials—performance, storage, flexibility, and power—in a way that makes sense for everyday use. From the processor to the battery, every part is thoughtfully chosen to help you stay connected, productive, and in control—whether at home, at work, or on the move. Built for simplicity, shaped by purpose, and ready to meet the demands of real life. No clutter, no distractions—just the features you need, when you need them.</p>
+                    </div> --}}
                 </div>
             </div>
-        </div>
-
-        <div class="row bottom-padding-sm gx-xl-0 gx-lg-5">
-            <div class="col-lg-7 d-flex align-items-center order-2 order-lg-1">
-                <div>
-                    <p class="my-2 theme-color">REPLACEABLE BATTERY</p>
-                    <h3 class="key-features-description">Includes a <strong>2500mAh removable battery</strong> with <strong>tool-free latch</strong> for quick swaps. Easily replace degraded units to extend your device’s lifespan.</h3>
+            <div class="row bottom-padding-sm gx-lg-5">
+                <div class="col-lg-5 d-flex align-items-center justify-content-center justify-content-lg-start">
+                    <img src="{{ asset('img/northlight/Inova_spec_parts_chip.png') }}" alt="chip" style="max-width: 350px;">
+                </div>
+                <div class="col-lg-7 d-flex align-items-center">
+                    <div>
+                        <p class="my-2 text-white">RELIABLE CHIP</p>
+                        <div class="key-features-description">2.0GHz <strong>quad-core MediaTek Helio A22</strong>, built on <strong>12nm</strong> architecture, delivers stable, efficient performance. <strong>TSMC</strong> made for trusted quality.</div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-5 d-flex align-items-center justify-content-center justify-content-lg-end order-1 order-lg-2">
-                <img src="{{ asset('img/northlight/Inova_spec_parts_battery.png') }}" alt="battery" style="max-width: 350px;">
-            </div>
-        </div>
-
-        <div class="row bottom-padding-sm gx-xl-0 gx-lg-5">
-            <div class="col-lg-5 d-flex align-items-center justify-content-center justify-content-lg-start">
-                <img src="{{ asset('img/northlight/Inova_spec_parts_dualSIM.png') }}" alt="dual SIM cards" style="max-width: 350px;">
-            </div>
-            <div class="col-lg-7 d-flex align-items-center">
-                <div>
-                    <p class="my-2 theme-color">DUAL SIMs</p>
-                    <h3 class="key-features-description">Supports <strong>Micro + Nano SIMs</strong> with <strong>simultaneous microSD</strong> use. Dual active lines with software switching—no slot-sharing or physical swaps.</h3>
+            <div class="row bottom-padding-sm gx-xl-0 gx-lg-5">
+                <div class="col-lg-7 d-flex align-items-center order-2 order-lg-1">
+                    <div>
+                        <p class="my-2 text-white">REPLACEABLE BATTERY</p>
+                        <div class="key-features-description">Includes a <strong>2500mAh removable battery</strong> with <strong>tool-free latch</strong> for quick swaps. Easily replace degraded units to extend your device’s lifespan.</div>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-flex align-items-center justify-content-center justify-content-lg-end order-1 order-lg-2">
+                    <img src="{{ asset('img/northlight/Inova_spec_parts_battery.png') }}" alt="battery" style="max-width: 350px;">
                 </div>
             </div>
-        </div>
-
-        <div class="row bottom-padding-sm gx-xl-0 gx-lg-5">
-            <div class="col-lg-7 d-flex align-items-center order-2 order-lg-1">
-                <div>
-                    <p class="my-2 theme-color">microSD CARD</p>
-                    <h3 class="key-features-description">Expandable storage via <strong>microSD card up to 512GB</strong>. Plug-and-play support, no formatting needed. Data stored <strong>physically</strong>, not online.</h3>
+            <div class="row bottom-padding-sm gx-xl-0 gx-lg-5">
+                <div class="col-lg-5 d-flex align-items-center justify-content-center justify-content-lg-start">
+                    <img src="{{ asset('img/northlight/Inova_spec_parts_dualSIM.png') }}" alt="dual SIM cards" style="max-width: 350px;">
+                </div>
+                <div class="col-lg-7 d-flex align-items-center">
+                    <div>
+                        <p class="my-2 text-white">DUAL SIMs</p>
+                        <div class="key-features-description">Supports <strong>Micro + Nano SIMs</strong> with <strong>simultaneous microSD</strong> use. Dual active lines with software switching—no slot-sharing or physical swaps.</div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-5 d-flex align-items-center justify-content-center justify-content-lg-end order-1 order-lg-2">
-                <div class="highlight-features-img-wrap">
-                    <img src="{{ asset('img/northlight/Inova_spec_parts_microSD.png') }}" alt="microSD" style="max-width: 350px;">
+            <div class="row bottom-padding-sm gx-xl-0 gx-lg-5">
+                <div class="col-lg-7 d-flex align-items-center order-2 order-lg-1">
+                    <div>
+                        <p class="my-2 text-white">microSD CARD</p>
+                        <div class="key-features-description">Expandable storage via <strong>microSD card up to 512GB</strong>. Plug-and-play support, no formatting needed. Data stored <strong>physically</strong>, not online.</div>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-flex align-items-center justify-content-center justify-content-lg-end order-1 order-lg-2">
+                    <div class="highlight-features-img-wrap">
+                        <img src="{{ asset('img/northlight/Inova_spec_parts_microSD.png') }}" alt="microSD" style="max-width: 350px;">
+                    </div>
                 </div>
             </div>
         </div>

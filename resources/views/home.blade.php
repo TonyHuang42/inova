@@ -41,7 +41,7 @@
         <img src="{{ asset('img/home/inova_phone_teenage.jpg') }}" alt="Teen Device" class="banner-bg-img">
         <div class="container-fluid">
             <div class="home-banner-content ms-sm-5">
-                <h2>The Right Features-At The Right Price</h2>
+                <h2>The Right Features<br>At The Right Price</h2>
                 <p class="text-shadow">Most phones are too complex and pricey or too limited. Northlight gives young users the just right features—at the just right price.</p>
             </div>
         </div>
@@ -71,7 +71,7 @@
         <div class="container">
             <div class="row section-padding">
                 <div class="col-lg-7">
-                    <h2>It's Not About Less - It's About Enough</h2>
+                    <h2>It's Not About Less <br> It's About Enough</h2>
                 </div>
 
                 <div class="col-lg-5 border-start-lg ps-lg-5">
