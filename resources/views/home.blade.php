@@ -25,11 +25,22 @@
 @endpush
 
 @section('content')
+    <script>
+        function hideSkeleton(video) {
+            const skeleton = video.previousElementSibling;
+            if (skeleton) {
+                skeleton.style.display = 'none';
+            }
+        }
+    </script>
+
     <div class="bg-black text-white">
         <div class="home-banner-container">
             {{-- <img class="home-banner" src="{{ asset('img/home/banner_home.jpg') }}" alt="Banner"> --}}
             <div class="video-skeleton"></div>
-            <video src="{{ asset('video/INOVA.mp4') }}" autoplay muted class="home-video-banner"></video>
+            <video autoplay muted loop preload="auto" class="home-video-banner" onloadeddata="hideSkeleton(this)">
+                <source src="{{ asset('video/INOVA.mp4') }}" type="video/mp4">
+            </video>
         </div>
 
         <div class="container raised-section">
@@ -137,15 +148,6 @@
 @endsection
 
 @push('scripts')
-    <script>
-        function hideSkeleton(video) {
-            const skeleton = video.previousElementSibling;
-            if (skeleton) {
-                skeleton.style.display = 'none';
-            }
-        }
-    </script>
-
     <script>
         window.addEventListener('scroll', function() {
             const banners = document.querySelectorAll('.home-user-banner');

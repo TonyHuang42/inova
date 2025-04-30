@@ -9,6 +9,16 @@
         min-height: 900px;
     }
 
+    .video-skeleton {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        z-index: 1;
+    }
+
     .phone-banner {
         width: 100%;
         /* height: 100vh; */
@@ -17,6 +27,7 @@
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 2;
     }
 
     /* @media only screen and (max-width: 575px) {
@@ -29,7 +40,7 @@
         }
     } */
 
-    .phone-banner-phone {
+    /* .phone-banner-phone {
         position: absolute;
         bottom: 0;
         left: 50%;
@@ -37,12 +48,14 @@
         max-width: 100%;
         min-height: 900px;
         object-fit: cover;
-    }
+    } */
 
     .phone-banner-features {
         position: absolute;
         transform: translate(-50%, -50%);
         max-height: 70px;
+        z-index: 3;
+        display: none;
     }
 
     .phone-banner-northlight {
@@ -53,6 +66,8 @@
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 3;
+        display: none;
     }
 
     .phone-banner-slogan {
@@ -63,6 +78,8 @@
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 3;
+        display: none;
     }
 
     @media only screen and (max-width: 1199px) {
@@ -84,10 +101,22 @@
     }
 </style>
 
+<script>
+    function hideSkeleton() {
+        // document.querySelector('.video-skeleton').style.display = 'none';
+        document.querySelector('.phone-banner-northlight').style.display = 'block';
+        document.querySelector('.phone-banner-slogan').style.display = 'block';
+        let features = document.querySelectorAll('.phone-banner-features');
+        features.forEach(function(el) {
+            el.style.display = 'block';
+        });
+    }
+</script>
+
 <div class="northlight-banner-container">
     {{-- <img src="{{ asset('img/northlight/banner/BG.jpg') }}" alt="banner" class="phone-banner">
     <img src="{{ asset('img/northlight/banner/phone.png') }}" alt="phone" class="phone-banner-phone"> --}}
-    <video playsinline loop muted autoplay class="phone-banner">
+    <video playsinline loop muted autoplay class="phone-banner" onloadeddata="hideSkeleton()">
         <source src="{{ asset('video/Northlight.mp4') }}" type="video/mp4" />
     </video>
     <img src="{{ asset('img/northlight/banner/northlight.png') }}" alt="northlight" class="phone-banner-northlight">

@@ -177,7 +177,7 @@
             handleScroll();
         }
 
-        window.addEventListener('load', initFeatureBehavior);
+        window.addEventListener('DOMContentLoaded', initFeatureBehavior);
         window.addEventListener('resize', initFeatureBehavior);
         window.addEventListener('scroll', handleScroll);
     </script>
