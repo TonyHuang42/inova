@@ -71,7 +71,7 @@
         </div>
     </div>
 
-    <div class="text-white" style="background-color: #1f354a">
+    <div class="bg-black text-white">
         <div class="container">
             <div class="row section-padding">
                 <div class="col-12">
@@ -118,7 +118,10 @@
                 <div class="col-lg-7 d-flex align-items-center order-2 order-lg-1">
                     <div>
                         <p class="my-2 text-white">microSD CARD</p>
-                        <div class="key-features-description">Expandable storage via <strong>microSD card up to 512GB</strong>. Plug-and-play support, no formatting needed. Data stored <strong>physically</strong>, not online.</div>
+                        <div class="position-relative">
+                            <h3 id="counter">0</h3>
+                            <h3 style="position: absolute; top: 0; left: 75px;">GB</h3>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-5 d-flex align-items-center justify-content-center justify-content-lg-end order-1 order-lg-2">
@@ -134,6 +137,31 @@
 @endsection
 
 @push('scripts')
+    <script>
+        const counterElement = document.getElementById('counter');
+        const start = 0;
+        const end = 512;
+        const duration = 1000; // in milliseconds (1 second)
+    
+        let startTime = null;
+    
+        function animateCounter(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const progress = timestamp - startTime;
+        const percent = Math.min(progress / duration, 1); // cap at 1
+        const eased = percent * (2 - percent); // easeOutQuad
+    
+        const current = Math.floor(start + (end - start) * eased);
+        counterElement.textContent = current;
+    
+        if (percent < 1) {
+            requestAnimationFrame(animateCounter);
+        }
+        }
+    
+        requestAnimationFrame(animateCounter);
+    </script>
+
     <script>
         const container = document.querySelector('.northlight-banner-container');
         const features = document.querySelectorAll('.phone-banner-features');

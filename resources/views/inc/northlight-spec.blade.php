@@ -1,14 +1,4 @@
-{{-- @extends('layouts.app')
-
-@section('title', 'INOVA')
-@section('meta_description', 'INOVA')
-@push('styles') --}}
 <style>
-    /* .navbar {
-        background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
-        margin-bottom: 0;
-    } */
-
     .spec {
         /* background-image: url('../img/northlight/img_spec.png'); */
         background-size: cover;
@@ -18,6 +8,8 @@
         background-attachment: fixed;
         display: flex;
         justify-content: center;
+        background-color: #233445;
+        color: white;
     }
 
     .spec-wrap {
@@ -25,7 +17,7 @@
     }
 
     hr {
-        border-top: 1px solid black;
+        border-top: 1px solid white;
         margin: 27px 0 !important;
     }
 
@@ -39,7 +31,7 @@
     }
 
     .spec-title {
-        font-weight: 600;
+        font-weight: 400;
     }
 
     /* .row {
@@ -60,19 +52,12 @@
         left: 0;
     }
 
-    /* .spec {
-        overflow: hidden;
-        max-height: 0;
-        transition: height 0.5s ease;
-    } */
-
-    .spec-toggle {
-        /* cursor: pointer; */
+    /* .spec-toggle {
         display: flex;
         align-items: center;
         user-select: none;
-        margin: 27px 0;
-    }
+        padding: 27px 0;
+    } */
 
     .spec-toggle .arrow {
         font-size: 24px;
@@ -85,21 +70,10 @@
         transform: rotate(180deg);
     }
 </style>
-{{-- @endpush
-
-@section('content') --}}
-{{-- @include('inc.phone-nav') --}}
-
-
-<div class="container">
-    <div id="spec-toggle" class="spec-toggle">
-        <h3 class="mb-0">Specifications</h3>
-        {{-- <i class="fa-solid fa-caret-down arrow"></i> --}}
-    </div>
-</div>
 
 <div class="spec">
     <div class="container">
+        <h3 class="my-4">Specifications</h3>
         <div class="pt-0 section-padding-sm">
             <hr class="mt-0">
             <div class="row">
@@ -382,53 +356,3 @@
         </div>
     </div>
 </div>
-
-{{-- <script>
-    const toggle = document.getElementById('spec-toggle');
-    const spec = document.querySelector('.spec');
-
-    // Toggle open/close
-    toggle.addEventListener('click', function() {
-        if (!spec.classList.contains('open')) {
-            spec.style.maxHeight = spec.scrollHeight + "px";
-            spec.classList.add('open');
-            toggle.classList.add('open');
-        } else {
-            spec.style.maxHeight = '0';
-            spec.classList.remove('open');
-            toggle.classList.remove('open');
-        }
-    });
-
-    // Update max-height on window resize if open
-    let resizeTimeout;
-    window.addEventListener('resize', function() {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(function() {
-            if (spec.classList.contains('open')) {
-                spec.style.maxHeight = spec.scrollHeight + "px";
-            }
-        }, 200); // wait 200ms after resizing stops
-    });
-</script> --}}
-
-
-{{-- @endsection
-
-@push('scripts')
-<script>
-    document.addEventListener("scroll", () => {
-        const navbar = document.getElementById("phone-nav-container");
-        const spec = document.querySelector(".spec");
-        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-
-        if (scrollPosition > 50) {
-            navbar.classList.add("fixed");
-            spec.style.paddingTop = "50px";
-        } else {
-            navbar.classList.remove("fixed");
-            spec.style.paddingTop = "0px";
-        }
-    });
-</script>
-@endpush --}}
