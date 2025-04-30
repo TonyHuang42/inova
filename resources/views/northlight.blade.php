@@ -61,7 +61,7 @@
         <div class="northlight-banner-section section-2">
             <div class="banner-video-container">
                 <video playsinline loop muted autoplay class="fullscreen-video">
-                    <source src="https://cdn.vidzflow.com/v/iN7fAS3EUL_1080p_1697633777.mp4" type="video/mp4" />
+                    <source src="{{ asset('video/Northlight-details.mp4') }}" type="video/mp4" />
                 </video>
             </div>
         </div>
@@ -81,17 +81,17 @@
                     </div> --}}
                 </div>
             </div>
-            <div class="row bottom-padding-sm gx-lg-5">
-                <div class="col-lg-5 d-flex align-items-center justify-content-center justify-content-lg-start">
-                    <img src="{{ asset('img/northlight/Inova_spec_parts_chip.png') }}" alt="chip" style="max-width: 350px;">
+
+            <div class="row bottom-padding-sm">
+                <div class="col-lg-3 col-6">
+                    <img src="{{ asset('img/northlight/Inova_spec_parts_chip.png') }}" alt="battery" class="img-fluid">
                 </div>
-                <div class="col-lg-7 d-flex align-items-center">
-                    <div>
-                        <p class="my-2 text-white">RELIABLE CHIP</p>
-                        <div class="key-features-description">2.0GHz <strong>quad-core MediaTek Helio A22</strong>, built on <strong>12nm</strong> architecture, delivers stable, efficient performance. <strong>TSMC</strong> made for trusted quality.</div>
-                    </div>
+                <div class="col-lg-3 col-6">
+                    <h2>Power You Can Count On</h2>
+                    <p>Northlight is powered by a 2.0GHz quad-core MediaTek Helio A22, delivering stable and efficient performance for everyday tasks. Built on 12nm architecture and manufactured by TSMC, it runs cool and conserves power. </p>
                 </div>
             </div>
+
             <div class="row bottom-padding-sm gx-xl-0 gx-lg-5">
                 <div class="col-lg-7 d-flex align-items-center order-2 order-lg-1">
                     <div>
@@ -103,6 +103,7 @@
                     <img src="{{ asset('img/northlight/Inova_spec_parts_battery.png') }}" alt="battery" style="max-width: 350px;">
                 </div>
             </div>
+
             <div class="row bottom-padding-sm gx-xl-0 gx-lg-5">
                 <div class="col-lg-5 d-flex align-items-center justify-content-center justify-content-lg-start">
                     <img src="{{ asset('img/northlight/Inova_spec_parts_dualSIM.png') }}" alt="dual SIM cards" style="max-width: 350px;">
@@ -114,6 +115,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="row bottom-padding-sm gx-xl-0 gx-lg-5">
                 <div class="col-lg-7 d-flex align-items-center order-2 order-lg-1">
                     <div>
