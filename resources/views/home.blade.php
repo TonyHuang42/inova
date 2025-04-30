@@ -49,17 +49,17 @@
             <div class="row pt-3 text-center gx-lg-5 bottom-padding">
                 <div class="col-12 col-lg-4">
                     <img src="{{ asset('img/home/inova_feature_1.svg') }}" alt="accessibility" style="width: 73px; margin-top: 6px;">
-                    <h4 style="padding-top: 11px;">Replaceable Battery</h4>
+                    <h5 style="padding-top: 11px;">Replaceable Battery</h5>
                     <p class="mb-0" style="margin-top: 20px;">Power up in seconds. Swap batteries anytime and extend your phone’s life—no tools, no charge time, no need to replace the whole device.</p>
                 </div>
                 <div class="col-12 col-lg-4">
                     <img src="{{ asset('img/home/inova_feature_2.svg') }}" alt="simplicity" style="width: 80px;">
-                    <h4 style="padding-top: 10px;">Dual SIM + MicroSD</h4>
+                    <h5 style="padding-top: 10px;">Dual SIM + MicroSD</h5>
                     <p class="mb-0" style="margin-top: 20px;">Experience dual SIM capabilities and expand your storage with microSD at the same time, fully control how you connect and store data</p>
                 </div>
                 <div class="col-12 col-lg-4">
                     <img src="{{ asset('img/home/inova_feature_3.svg') }}" alt="community" style="width: 65px; margin-top: 13px;">
-                    <h4 style="padding-top: 12px;">Reliable Chip</h4>
+                    <h5 style="padding-top: 12px;">Reliable Chip</h5>
                     <p class="mb-0" style="margin-top: 20px;">Northlight runs on a reliable MediaTek chip made by TSMC— the trusted chipmaker behind many major tech brands in the industry.</p>
                 </div>
             </div>
@@ -119,7 +119,7 @@
         <div class="custom-container">
             <div class="row section-padding gx-xl-5 gy-xxl-0 gy-4">
                 <div class="col-xxl-5 col-xl-6 d-flex flex-column">
-                    <h4>Simple Add-Ons That Make a Big Difference</h4>
+                    <h5>Simple Add-Ons That Make a Big Difference</h5>
                     <p class="pt-3">Don’t upgrade your phone—upgrade your setup. Swappable batteries, microSD cards, and fast chargers keep you powered, backed up, and in control.</p>
                     <div class="pt-4">
                         <a class="button button--filled" href="" target="_self">

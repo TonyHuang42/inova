@@ -130,7 +130,7 @@
 
     .disclaimer {
         padding-top: 10px;
-        color: #666;
+        color: #b6b6b6;
         font-size: 12px;
         font-weight: 300;
     }
@@ -437,7 +437,7 @@
             <div class="image-wrapper content" id="case">
                 <img src="{{ asset('img/northlight/phone_case.png') }}" alt="case" class="engineering-drawing">
                 <div class="text-overlay">
-                    <h4>Phone Case</h4>
+                    <h5>Phone Case</h5>
                     <div class="toggle-container">
                         <div class="feature-description">Durable & Lightweight Design</div>
                         <i class="fa-solid fa-angle-right arrow"></i>
@@ -462,7 +462,7 @@
             <div class="image-wrapper content" id="battery">
                 <img src="{{ asset('img/northlight/battery.png') }}" alt="Detachable Battery" class="engineering-drawing">
                 <div class="text-overlay">
-                    <h4>Detachable Battery</h4>
+                    <h5>Detachable Battery</h5>
                     <div class="toggle-container">
                         <div class="feature-description">Easily Replaceable</div>
                         <i class="fa-solid fa-angle-right arrow"></i>
@@ -487,7 +487,7 @@
             <div class="image-wrapper content" id="microSD">
                 <img src="{{ asset('img/northlight/microSD_card.png') }}" alt="microSD Card" class="engineering-drawing">
                 <div class="text-overlay">
-                    <h4>microSD Card</h4>
+                    <h5>microSD Card</h5>
                     <div class="toggle-container">
                         <div class="feature-description">Affordable Expansion</div>
                         <i class="fa-solid fa-angle-right arrow"></i>
@@ -512,7 +512,7 @@
             <div class="image-wrapper content" id="sim-card">
                 <img src="{{ asset('img/northlight/dualSIM_card.png') }}" alt="Dual SIM card" class="engineering-drawing">
                 <div class="text-overlay">
-                    <h4>Dual Sim Card</h4>
+                    <h5>Dual Sim Card</h5>
                     <div class="toggle-container">
                         <div class="feature-description">Simplified Travel</div>
                         <i class="fa-solid fa-angle-right arrow"></i>
@@ -537,7 +537,7 @@
             <div class="image-wrapper content" id="camera">
                 <img src="{{ asset('img/northlight/camera.png') }}" alt="camera" class="engineering-drawing">
                 <div class="text-overlay">
-                    <h4>Camera</h4>
+                    <h5>Camera</h5>
                     <div class="toggle-container">
                         <div class="feature-description">5MP Rear Camera & 2MP Front Camera</div>
                         <i class="fa-solid fa-angle-right arrow"></i>
@@ -562,7 +562,7 @@
             <div class="image-wrapper content" id="chip">
                 <img src="{{ asset('img/northlight/chip.png') }}" alt="Chip" class="engineering-drawing">
                 <div class="text-overlay">
-                    <h4>Chip</h4>
+                    <h5>Chip</h5>
                     <div class="toggle-container">
                         <div class="feature-description">Mediatek Helio A22 MT6761</div>
                         <i class="fa-solid fa-angle-right arrow"></i>
@@ -587,7 +587,7 @@
             <div class="image-wrapper content" id="3.5mm">
                 <img src="{{ asset('img/northlight/headphone_jack.png') }}" alt="3.5mm Headphone Jack" class="engineering-drawing">
                 <div class="text-overlay">
-                    <h4>3.5mm Headphone Jack</h4>
+                    <h5>3.5mm Headphone Jack</h5>
                     <div class="toggle-container">
                         <div class="feature-description">Universal Compatibility</div>
                         <i class="fa-solid fa-angle-right arrow"></i>
@@ -612,7 +612,7 @@
             <div class="image-wrapper content" id="usb-c">
                 <img src="{{ asset('img/northlight/usb_c.png') }}" alt="USB-C" class="engineering-drawing">
                 <div class="text-overlay">
-                    <h4>USB-C</h4>
+                    <h5>USB-C</h5>
                     <div class="toggle-container">
                         <div class="feature-description">Universal Simplicity</div>
                         <i class="fa-solid fa-angle-right arrow"></i>
@@ -637,7 +637,7 @@
             <div class="image-wrapper content" id="display">
                 <img src="{{ asset('img/northlight/display.png') }}" alt="display" class="engineering-drawing">
                 <div class="text-overlay">
-                    <h4>Display</h4>
+                    <h5>Display</h5>
                     <div class="toggle-container">
                         <div class="feature-description">TFT LCD</div>
                         <i class="fa-solid fa-angle-right arrow"></i>
@@ -730,7 +730,7 @@
                 <i class="fa-solid fa-xmark xmark"></i>
                 <img src="{{ asset('img/northlight/phone_case.png') }}" alt="Case" class="feature-background-mobile">
                 <div class="text-overlay-mobile">
-                    <h4>Phone Case</h4>
+                    <h5>Phone Case</h5>
                     <div class="toggle-container">
                         <div class="feature-description">Durable & Lightweight Design</div>
                         <i class="fa-solid fa-angle-right arrow"></i>
@@ -756,7 +756,7 @@
                 <i class="fa-solid fa-xmark xmark"></i>
                 <img src="{{ asset('img/northlight/battery.png') }}" alt="Detachable Battery" class="feature-background-mobile">
                 <div class="text-overlay-mobile">
-                    <h4>Detachable Battery</h4>
+                    <h5>Detachable Battery</h5>
                     <div class="toggle-container">
                         <div class="feature-description">Easily Replaceable</div>
                         <i class="fa-solid fa-angle-right arrow"></i>
@@ -782,7 +782,7 @@
                 <i class="fa-solid fa-xmark xmark"></i>
                 <img src="{{ asset('img/northlight/microSD_card.png') }}" alt="microSD Card" class="engineering-drawing-mobile">
                 <div class="text-overlay-mobile">
-                    <h4>microSD Card</h4>
+                    <h5>microSD Card</h5>
                     <div class="toggle-container">
                         <div class="feature-description">Affordable Expansion</div>
                         <i class="fa-solid fa-angle-right arrow"></i>
@@ -808,7 +808,7 @@
                 <i class="fa-solid fa-xmark xmark"></i>
                 <img src="{{ asset('img/northlight/dualSIM_card.png') }}" alt="SIM card" class="engineering-drawing-mobile">
                 <div class="text-overlay-mobile">
-                    <h4>Dual Sim Card</h4>
+                    <h5>Dual Sim Card</h5>
                     <div class="toggle-container">
                         <div class="feature-description">Simplified Travel</div>
                         <i class="fa-solid fa-angle-right arrow"></i>
@@ -834,7 +834,7 @@
                 <i class="fa-solid fa-xmark xmark"></i>
                 <img src="{{ asset('img/northlight/camera.png') }}" alt="Camera" class="engineering-drawing-mobile">
                 <div class="text-overlay-mobile">
-                    <h4>Camera</h4>
+                    <h5>Camera</h5>
                     <div class="toggle-container">
                         <div class="feature-description">5MP Rear Camera & 2MP Front Camera</div>
                         <i class="fa-solid fa-angle-right arrow"></i>
@@ -860,7 +860,7 @@
                 <i class="fa-solid fa-xmark xmark"></i>
                 <img src="{{ asset('img/northlight/chip.png') }}" alt="Chip" class="engineering-drawing-mobile">
                 <div class="text-overlay-mobile">
-                    <h4>Chip</h4>
+                    <h5>Chip</h5>
                     <div class="toggle-container">
                         <div class="feature-description">Mediatek Helio A22 MT6761</div>
                         <i class="fa-solid fa-angle-right arrow"></i>
@@ -886,7 +886,7 @@
                 <i class="fa-solid fa-xmark xmark"></i>
                 <img src="{{ asset('img/northlight/headphone_jack.png') }}" alt="3.5mm Headphone Jack" class="engineering-drawing-mobile">
                 <div class="text-overlay-mobile">
-                    <h4>3.5mm Headphone Jack</h4>
+                    <h5>3.5mm Headphone Jack</h5>
                     <div class="toggle-container">
                         <div class="feature-description">Universal Compatibility</div>
                         <i class="fa-solid fa-angle-right arrow"></i>
@@ -912,7 +912,7 @@
                 <i class="fa-solid fa-xmark xmark"></i>
                 <img src="{{ asset('img/northlight/usb_c.png') }}" alt="USB-C" class="engineering-drawing-mobile">
                 <div class="text-overlay-mobile">
-                    <h4>USB-C</h4>
+                    <h5>USB-C</h5>
                     <div class="toggle-container">
                         <div class="feature-description">Universal Simplicity</div>
                         <i class="fa-solid fa-angle-right arrow"></i>
@@ -938,7 +938,7 @@
                 <i class="fa-solid fa-xmark xmark"></i>
                 <img src="{{ asset('img/northlight/display.png') }}" alt="display" class="engineering-drawing-mobile">
                 <div class="text-overlay-mobile">
-                    <h4>Display</h4>
+                    <h5>Display</h5>
                     <div class="toggle-container">
                         <div class="feature-description">TFT LCD</div>
                         <i class="fa-solid fa-angle-right arrow"></i>

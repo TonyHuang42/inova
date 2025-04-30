@@ -46,8 +46,32 @@
         }
 
         .key-features-description strong {
-            font-weight: 600; 
+            font-weight: 600;
             color: white;
+        }
+
+        .circle-container {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            display: inline-block;
+            /* margin: 10px; */
+        }
+
+        .progress-circle-svg {
+            width: 100px;
+            height: 100px;
+        }
+
+        .circle-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 16px;
+            font-weight: 400;
+            color: #fff;
+            text-align: center;
         }
     </style>
 @endpush
@@ -72,7 +96,7 @@
     </div>
 
     <div class="bg-black text-white">
-        <div class="container">
+        <div class="custom-container">
             <div class="row section-padding">
                 <div class="col-12">
                     <h1 class="text-center mb-3">What Makes It Truly Different</h1>
@@ -83,12 +107,32 @@
             </div>
 
             <div class="row bottom-padding-sm">
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-2 col-6">
                     <img src="{{ asset('img/northlight/Inova_spec_parts_chip.png') }}" alt="battery" class="img-fluid">
                 </div>
-                <div class="col-lg-3 col-6">
-                    <h2>Power You Can Count On</h2>
-                    <p>Northlight is powered by a 2.0GHz quad-core MediaTek Helio A22, delivering stable and efficient performance for everyday tasks. Built on 12nm architecture and manufactured by TSMC, it runs cool and conserves power. </p>
+
+                <div class="col-lg-4 col-6">
+                    <h4>Power You Can Count On</h4>
+                    <p class="mb-3">Northlight is powered by a 2.0GHz quad-core MediaTek Helio A22, delivering stable and efficient performance for everyday tasks. Built on 12nm architecture and manufactured by TSMC, it runs cool and conserves power. </p>
+                    <p>With Bluetooth 5, you get faster connections, longer range, and more data capacity—all built in.</p>
+                </div>
+
+                <div class="col-lg-2 col-4 d-flex flex-column align-items-center">
+                    <div class="circle-container" data-target="50" data-label="2X<br>Speed"></div>
+                    <h5>Faster Pairing</h5>
+                    <p class="text-center">Connect to devices with 2× the speed</p>
+                </div>
+
+                <div class="col-lg-2 col-4 d-flex flex-column align-items-center">
+                    <div class="circle-container" data-target="75" data-label="4X<br>Range"></div>
+                    <h5>Stronger Signal</h5>
+                    <p class="text-center">Stay linked with up to 4× the range</p>
+                </div>
+
+                <div class="col-lg-2 col-4 d-flex flex-column align-items-center">
+                    <div class="circle-container" data-target="100" data-label="8X<br>Capacity"></div>
+                    <h5>Faster Pairing</h5>
+                    <p class="text-center">Broadcast to more devices with 8× the data</p>
                 </div>
             </div>
 
@@ -140,29 +184,51 @@
 
 @push('scripts')
     <script>
-        const counterElement = document.getElementById('counter');
-        const start = 0;
-        const end = 512;
-        const duration = 1000; // in milliseconds (1 second)
-    
-        let startTime = null;
-    
-        function animateCounter(timestamp) {
-        if (!startTime) startTime = timestamp;
-        const progress = timestamp - startTime;
-        const percent = Math.min(progress / duration, 1); // cap at 1
-        const eased = percent * (2 - percent); // easeOutQuad
-    
-        const current = Math.floor(start + (end - start) * eased);
-        counterElement.textContent = current;
-    
-        if (percent < 1) {
-            requestAnimationFrame(animateCounter);
+        const radius = 45;
+        const center = 50;
+        const circumference = 2 * Math.PI * radius;
+        const duration = 1500;
+
+        function createCircle(container, target, label) {
+            container.innerHTML = `
+                <svg class="progress-circle-svg">
+                    <circle cx="${center}" cy="${center}" r="${radius}" stroke="#282828" stroke-width="2" fill="none" />
+                    <circle class="progress-circle" cx="${center}" cy="${center}" r="${radius}" stroke="#ffffff" stroke-width="2"
+                    fill="none" stroke-linecap="round" transform="rotate(-90 ${center} ${center})"
+                    stroke-dasharray="${2 * Math.PI * radius}" stroke-dashoffset="${2 * Math.PI * radius}" />
+                </svg>
+                <div class="circle-label">${label}</div>
+                `;
+
+            const circle = container.querySelector('.progress-circle');
+            let startTime = null;
+
+            function animate(timestamp) {
+                if (!startTime) startTime = timestamp;
+                const elapsed = timestamp - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = progress * (2 - progress);
+                const current = target * eased;
+
+                const offset = circumference * (1 - current / 100);
+                circle.style.strokeDashoffset = offset;
+
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                }
+            }
+
+            requestAnimationFrame(animate);
         }
-        }
-    
-        requestAnimationFrame(animateCounter);
+
+        // Setup example
+        document.querySelectorAll('.circle-container').forEach(container => {
+            const target = parseInt(container.getAttribute('data-target'), 10);
+            const label = container.getAttribute('data-label') || ''; // e.g., "HTML", "Skill A", etc.
+            createCircle(container, target, label);
+        });
     </script>
+
 
     <script>
         const container = document.querySelector('.northlight-banner-container');

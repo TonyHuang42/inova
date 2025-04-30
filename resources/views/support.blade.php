@@ -148,7 +148,7 @@
                     <div class="faq pt-3">
                         <div class="faq-item">
                             <div class="toggle-container">
-                                <h4 class="faq-question">Can I use dual SIMs and a microSD at the same time?</h4>
+                                <h5 class="faq-question">Can I use dual SIMs and a microSD at the same time?</h5>
                                 <i class="fa-solid fa-caret-down arrow"></i>
                             </div>
                             <p class="toggle-content">Yes, Northlight supports dual SIMs and a microSD card simultaneously. You don’t have to sacrifice one for the other.</p>
@@ -156,7 +156,7 @@
 
                         <div class="faq-item">
                             <div class="toggle-container">
-                                <h4 class="faq-question">How do I replace my battery?</h4>
+                                <h5 class="faq-question">How do I replace my battery?</h5>
                                 <i class="fa-solid fa-caret-down arrow"></i>
                             </div>
                             <p class="toggle-content">Simply remove your phone case and you will see the battery with a slot at the bottom. Lift the bottom of the battery up and replace it with a new one. </p>
@@ -164,7 +164,7 @@
 
                         <div class="faq-item">
                             <div class="toggle-container">
-                                <h4 class="faq-question">How do I know which SIM card I'm using?</h4>
+                                <h5 class="faq-question">How do I know which SIM card I'm using?</h5>
                                 <i class="fa-solid fa-caret-down arrow"></i>
                             </div>
                             <p class="toggle-content">You can check and switch your active SIM through your phone’s SIM settings. Go to Settings > Network & Internet > SIMs to manage preferences for calls, texts, and data. </p>
@@ -172,7 +172,7 @@
 
                         <div class="faq-item">
                             <div class="toggle-container">
-                                <h4 class="faq-question">How do I manage storage with a microSD card?</h4>
+                                <h5 class="faq-question">How do I manage storage with a microSD card?</h5>
                                 <i class="fa-solid fa-caret-down arrow"></i>
                             </div>
                             <p class="toggle-content">Once inserted, your microSD card will appear in your device storage settings. In the Files app, you can move images, downloads, documents, videos, and audio between internal and external storage. Note that apps cannot be moved to external storage. </p>
@@ -180,7 +180,7 @@
 
                         <div class="faq-item">
                             <div class="toggle-container">
-                                <h4 class="faq-question">How do I access files saved on my microSD card?</h4>
+                                <h5 class="faq-question">How do I access files saved on my microSD card?</h5>
                                 <i class="fa-solid fa-caret-down arrow"></i>
                             </div>
                             <p class="toggle-content">You can access those files by inserting the microSD card back into your phone, or by using a microSD card reader connected to a laptop, PC, or other devices. </p>
@@ -188,7 +188,7 @@
 
                         <div class="faq-item">
                             <div class="toggle-container">
-                                <h4 class="faq-question">What is the storage capacity?</h4>
+                                <h5 class="faq-question">What is the storage capacity?</h5>
                                 <i class="fa-solid fa-caret-down arrow"></i>
                             </div>
                             <p class="toggle-content">Northlight comes with 32GB of built-in storage and supports microSD cards up to 512GB for additional space. </p>
@@ -196,7 +196,7 @@
 
                         <div class="faq-item">
                             <div class="toggle-container">
-                                <h4 class="faq-question">How do I remove or insert my SIM or microSD card?</h4>
+                                <h5 class="faq-question">How do I remove or insert my SIM or microSD card?</h5>
                                 <i class="fa-solid fa-caret-down arrow"></i>
                             </div>
                             <div class="toggle-content question-7">
@@ -212,7 +212,7 @@
 
                         <div class="faq-item mb-0">
                             <div class="toggle-container">
-                                <h4 class="faq-question">Where can I buy INOVA products?</h4>
+                                <h5 class="faq-question">Where can I buy INOVA products?</h5>
                                 <i class="fa-solid fa-caret-down arrow"></i>
                             </div>
                             <p class="toggle-content">We’re currently available on the Best Buy Marketplace. You can find us on the Best Buy website or contact us directly at sales@i-nova.ca for more details. </p>
