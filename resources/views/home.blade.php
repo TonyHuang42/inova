@@ -5,13 +5,31 @@
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/custom-container.css') }}">
+    <style>
+        .video-skeleton {
+            position: absolute;
+            inset: 0;
+            background: #000;
+            z-index: 1;
+        }
+
+        .home-video-banner {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 2;
+        }
+    </style>
 @endpush
 
 @section('content')
     <div class="bg-black text-white">
         <div class="home-banner-container">
             {{-- <img class="home-banner" src="{{ asset('img/home/banner_home.jpg') }}" alt="Banner"> --}}
-            <video src="{{ asset('video/INOVA.mp4') }}" autoplay muted data-wf-ignore="true" class="img-fluid"></video>
+            <div class="video-skeleton"></div>
+            <video src="{{ asset('video/INOVA.mp4') }}" autoplay muted class="home-video-banner"></video>
         </div>
 
         <div class="container raised-section">
@@ -119,6 +137,15 @@
 @endsection
 
 @push('scripts')
+    <script>
+        function hideSkeleton(video) {
+            const skeleton = video.previousElementSibling;
+            if (skeleton) {
+                skeleton.style.display = 'none';
+            }
+        }
+    </script>
+
     <script>
         window.addEventListener('scroll', function() {
             const banners = document.querySelectorAll('.home-user-banner');

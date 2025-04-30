@@ -60,7 +60,7 @@
 
         <div class="northlight-banner-section section-2">
             <div class="banner-video-container">
-                <video playsinline loop muted autoplay data-wf-ignore="true" class="fullscreen-video">
+                <video playsinline loop muted autoplay class="fullscreen-video">
                     <source src="https://cdn.vidzflow.com/v/iN7fAS3EUL_1080p_1697633777.mp4" type="video/mp4" />
                 </video>
             </div>
