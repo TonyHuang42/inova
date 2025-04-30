@@ -64,7 +64,7 @@
 
 @media only screen and (max-width: 575px) {
     .navbar {
-        background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+        background-color: black !important;
         margin-bottom: 0;
     }
 

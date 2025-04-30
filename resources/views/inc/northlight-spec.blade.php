@@ -60,18 +60,18 @@
         left: 0;
     }
 
-    .spec {
+    /* .spec {
         overflow: hidden;
         max-height: 0;
         transition: height 0.5s ease;
-    }
+    } */
 
     .spec-toggle {
-        cursor: pointer;
+        /* cursor: pointer; */
         display: flex;
         align-items: center;
         user-select: none;
-        margin-bottom: 27px;
+        margin: 27px 0;
     }
 
     .spec-toggle .arrow {
@@ -92,10 +92,9 @@
 
 
 <div class="container">
-    <hr>
     <div id="spec-toggle" class="spec-toggle">
         <h3 class="mb-0">Specifications</h3>
-        <i class="fa-solid fa-caret-down arrow"></i>
+        {{-- <i class="fa-solid fa-caret-down arrow"></i> --}}
     </div>
 </div>
 
@@ -384,7 +383,7 @@
     </div>
 </div>
 
-<script>
+{{-- <script>
     const toggle = document.getElementById('spec-toggle');
     const spec = document.querySelector('.spec');
 
@@ -411,7 +410,7 @@
             }
         }, 200); // wait 200ms after resizing stops
     });
-</script>
+</script> --}}
 
 
 {{-- @endsection

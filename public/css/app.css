@@ -93,7 +93,9 @@ a {
 }
 
 .navbar {
-    background-color: transparent !important;
+    /* background-color: transparent !important; */
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
     z-index: 10;
     margin-bottom: -56px;
 }

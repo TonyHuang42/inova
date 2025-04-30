@@ -6,14 +6,14 @@
 @push('styles')
     <style>
         .navbar {
-            background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+            background-color: black !important;
             margin-bottom: 0;
         }
     </style>
 @endpush
 
 @section('content')
-    <div class="container">
+    <div class="container pt-5">
         <div class="row">
             <div class="col-12 col-lg-10 col-xl-8 mx-auto">
                 <h1 class="py-5">Privacy Policy</h1>

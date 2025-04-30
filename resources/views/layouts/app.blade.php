@@ -22,12 +22,12 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     @stack('styles')
     <style>
-        /* #back-to-top {
+        #back-to-top {
             position: fixed;
             bottom: 20px;
             right: 20px;
             display: none;
-            background-color: #aa182c;
+            background-color: black;
             color: white;
             border: none;
             padding: 14px 20px;
@@ -35,13 +35,13 @@
             cursor: pointer;
             z-index: 1000;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        } */
+        }
     </style>
 </head>
 
 <body class="overflow-x-hidden">
     <header>
-        <nav class="navbar navbar-expand-sm bg-dark" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-sm" data-bs-theme="dark">
             <div class="container d-flex justify-content-between align-items-center">
                 <a class="navbar-brand me-5 d-flex align-items-center gap-2" href="/">
                     <img src="{{ asset('img/logo/inova_logo.svg') }}" alt="logo" class="logo">
@@ -100,9 +100,21 @@
         </div>
     </section>
 
-    <!-- <button id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button> -->
+    {{-- <button id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button> --}}
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    {{-- <script>
+        const navbar = document.querySelector('.navbar');
+    
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const maxScroll = 200; // Adjust how far it takes to become fully opaque
+            const opacity = Math.min(scrollY / maxScroll, 1);
+            navbar.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+        });
+    </script> --}}
+    
     @stack('scripts')
     {{-- <script>
         // Show the button when the user scrolls down 20px from the top of the document
