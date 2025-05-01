@@ -213,7 +213,7 @@
                         </div>
                         <div class="col-md-3 col-6">
                             <div class="spec-title">Bluetooth Version</div>
-                            <p>5.2</p>
+                            <p>5.0</p>
                         </div>
                         <div class="col-md-3 col-6">
                             <div class="spec-title">Audio Jack</div>

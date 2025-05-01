@@ -215,7 +215,7 @@
                                 <h5 class="faq-question">Where can I buy INOVA products?</h5>
                                 <i class="fa-solid fa-caret-down arrow"></i>
                             </div>
-                            <p class="toggle-content">We’re currently available on the Best Buy Marketplace. You can find us on the Best Buy website or contact us directly at sales@i-nova.ca for more details. </p>
+                            <p class="toggle-content">We’re currently available on the Best Buy Marketplace. You can find us on the Best Buy website or contact us directly at marketing@i-nova.ca for more details. </p>
                         </div>
                     </div>
                 </div>
