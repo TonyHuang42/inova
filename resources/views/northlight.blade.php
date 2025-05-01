@@ -119,8 +119,8 @@
         .banner-video-container {
             position: relative;
             /* width: 100%;
-            height: 100vh;
-            overflow: hidden; */
+                    height: 100vh;
+                    overflow: hidden; */
         }
 
         .banner-video-slogan {
@@ -196,20 +196,25 @@
                 <div class="col-lg-2 col-4 d-flex flex-column align-items-center">
                     <div class="circle-container" data-target="80" data-label=
                     "<div class='circle-label-content'><span class='big'>8X</span><span class='small'>CAPACITY</span></div>"></div>
-                    <h5 class="mt-3" style="font-size: 18px;">Faster Pairing</h5>
+                    <h5 class="mt-3" style="font-size: 18px;">Better Sharing</h5>
                     <p class="text-center">Broadcast to more devices with 8× the data</p>
                 </div>
             </div>
 
-            <div class="row bottom-padding-sm gx-xl-0 gx-lg-5">
+            <div class="row bottom-padding-sm">
                 <div class="col-lg-7 d-flex align-items-center order-2 order-lg-1">
                     <div>
-                        <p class="my-2 text-white">REPLACEABLE BATTERY</p>
-                        <div class="key-features-description">Includes a <strong>2500mAh removable battery</strong> with <strong>tool-free latch</strong> for quick swaps. Easily replace degraded units to extend your device’s lifespan.</div>
+                        <p class="my-2 text-white">microSD CARD</p>
+                        <div class="position-relative">
+                            <h3 id="microSD-counter">0</h3>
+                            <h3 style="position: absolute; top: 0; left: 75px;">GB</h3>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-5 d-flex align-items-center justify-content-center justify-content-lg-end order-1 order-lg-2">
-                    <img src="{{ asset('img/northlight/Inova_spec_parts_microSD_card.png') }}" alt="battery" style="max-width: 350px;">
+                    <div class="highlight-features-img-wrap">
+                        <img src="{{ asset('img/northlight/Inova_spec_parts_microSD_card.png') }}" alt="INOVA Dual SIM" style="max-width: 350px;">
+                    </div>
                 </div>
             </div>
 
@@ -269,17 +274,12 @@
             <div class="row bottom-padding-sm gx-xl-0 gx-lg-5">
                 <div class="col-lg-7 d-flex align-items-center order-2 order-lg-1">
                     <div>
-                        <p class="my-2 text-white">microSD CARD</p>
-                        <div class="position-relative">
-                            <h3 id="counter">0</h3>
-                            <h3 style="position: absolute; top: 0; left: 75px;">GB</h3>
-                        </div>
+                        <p class="my-2 text-white">REPLACEABLE BATTERY</p>
+                        <div class="key-features-description">Includes a <strong>2500mAh removable battery</strong> with <strong>tool-free latch</strong> for quick swaps. Easily replace degraded units to extend your device’s lifespan.</div>
                     </div>
                 </div>
                 <div class="col-lg-5 d-flex align-items-center justify-content-center justify-content-lg-end order-1 order-lg-2">
-                    <div class="highlight-features-img-wrap">
-                        <img src="{{ asset('img/northlight/Inova_spec_parts_dualSIM_card.png') }}" alt="microSD" style="max-width: 350px;">
-                    </div>
+                    <img src="{{ asset('img/northlight/Inova_spec_parts_dualSIM_card.png') }}" alt="INOVA microSD Card" style="max-width: 350px;">
                 </div>
             </div>
         </div>
@@ -379,6 +379,32 @@
         });
     </script>
 
+    <script>
+        const counterElement = document.getElementById('microSD-counter');
+        const start = 0;
+        const end = 512;
+        const microSDDuration = 1500; // in milliseconds (1 second)
+
+        let startTime = null;
+
+        function animateCounter(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const progress = timestamp - startTime;
+            const percent = Math.min(progress / microSDDuration, 1); // cap at 1
+            const eased = percent * (2 - percent); // easeOutQuad
+
+            const current = Math.floor(start + (end - start) * eased);
+            counterElement.textContent = current;
+
+            if (percent < 1) {
+                requestAnimationFrame(animateCounter);
+            }
+        }
+
+        requestAnimationFrame(animateCounter);
+    </script>
+
+    {{-- scripts for features position --}}
     <script>
         const container = document.querySelector('.northlight-banner-container');
         const features = document.querySelectorAll('.phone-banner-features');

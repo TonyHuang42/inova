@@ -78,7 +78,7 @@
             <hr class="mt-0">
             <div class="row">
                 <div class="col-xl-2 col-lg-3">
-                    <div class="spec-type">Storage and Memory</div>
+                    <div class="spec-type">Storage & Memory</div>
                 </div>
                 <div class="col-xl-10 col-lg-9">
                     <div class="row">
@@ -92,7 +92,7 @@
                         </div>
                         <div class="col-md-3 col-6">
                             <div class="spec-title">External Storage</div>
-                            <p>microSD Card(Up to 512GB)</p>
+                            <p>microSD Card<br>(Up to 512GB)</p>
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
             <hr>
             <div class="row">
                 <div class="col-xl-2 col-lg-3">
-                    <div class="spec-type">Technical Details</div>
+                    <div class="spec-type">Technical <br>Details</div>
                 </div>
                 <div class="col-xl-10 col-lg-9">
                     <div class="row">
@@ -316,7 +316,7 @@
                 <div class="col-xl-10 col-lg-9">
                     <div class="row">
                         <div class="col-md-3 col-6">
-                            <div class="spec-title">Google Account (required for some features)</div>
+                            <div class="spec-title">Google Account <br>(required for some features)</div>
                         </div>
                         <div class="col-md-3 col-6">
                             <div class="spec-title">Internet Access</div>

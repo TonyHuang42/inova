@@ -9,6 +9,10 @@
             background-color: black !important;
             margin-bottom: 0;
         }
+
+        p {
+            color: black;
+        }
     </style>
 @endpush
 
