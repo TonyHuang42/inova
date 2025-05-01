@@ -94,6 +94,16 @@
         }
     }
 
+    @media only screen and (max-width: 767px) {
+        .northlight-banner-container {
+            min-height: 700px;
+        }
+
+        .phone-banner {
+            min-height: 700px;
+        }
+    }
+
     @media only screen and (max-width: 167) {
         .phone-banner-features {
             max-height: 50px;

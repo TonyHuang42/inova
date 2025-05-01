@@ -14,11 +14,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
+            /* transition: all 0.3s ease; */
         }
 
         .section-1 {
-            /* background: black; */
             z-index: 1;
         }
 
@@ -119,8 +118,8 @@
         .banner-video-container {
             position: relative;
             /* width: 100%;
-                    height: 100vh;
-                    overflow: hidden; */
+            height: 100vh;
+            overflow: hidden; */
         }
 
         .banner-video-slogan {
@@ -131,8 +130,13 @@
             transform: translate(-50%, -50%);
             color: white;
             text-align: center;
-            font-size: 40px;
             z-index: 1;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .section-1 {
+                min-height: 700px;
+            }
         }
     </style>
 @endpush
@@ -148,7 +152,7 @@
                 <video playsinline loop muted autoplay class="fullscreen-video">
                     <source src="{{ asset('video/Northlight-details.mp4') }}" type="video/mp4" />
                 </video>
-                <div class="banner-video-slogan">FORM THAT FITS.<br class="d-block d-md-none"> FEATURES THAT LAST.</div>
+                <h3 class="banner-video-slogan">FORM THAT FITS.<br class="d-block d-sm-none"> FEATURES THAT LAST.</h3>
             </div>
         </div>
 
@@ -169,34 +173,34 @@
             </div>
 
             <div class="row bottom-padding-sm">
-                <div class="col-lg-2 col-6 px-0">
+                <div class="col-xl-2 col-sm-6 px-0 d-flex flex-column justify-content-center">
                     <img src="{{ asset('img/northlight/Inova_spec_parts_chip.png') }}" alt="battery" class="img-fluid">
                 </div>
 
-                <div class="col-lg-4 col-6 px-4">
+                <div class="col-xl-4 col-sm-6 px-4 d-flex flex-column justify-content-center">
                     <h4>Power You Can Count On</h4>
                     <p class="mb-3" style="font-size:15px;">Northlight is powered by a 2.0GHz quad-core MediaTek Helio A22, delivering stable and efficient performance for everyday tasks. Built on 12nm architecture and manufactured by TSMC, it runs cool and conserves power. </p>
                     <p style="font-size:15px;">With Bluetooth 5, you get faster connections, longer range, and more data capacity—all built in.</p>
                 </div>
 
-                <div class="col-lg-2 col-4 d-flex flex-column align-items-center">
+                <div class="col-xl-2 col-sm-4 d-flex flex-column align-items-center">
                     <div class="circle-container" data-target="20" data-label=
-                    "<div class='circle-label-content'><span class='big'>2X</span><span class='small'>SPEED</span></div>"></div>
-                    <h5 class="mt-3" style="font-size: 18px;">Faster Pairing</h5>
+                    "<div class='circle-label-content'><span class='big'>2×</span><span class='small'>SPEED</span></div>"></div>
+                    <h5 class="mt-3 text-center" style="font-size: 18px;">Faster Pairing</h5>
                     <p class="text-center">Connect to devices with 2× the speed</p>
                 </div>
 
-                <div class="col-lg-2 col-4 d-flex flex-column align-items-center">
+                <div class="col-xl-2 col-sm-4 d-flex flex-column align-items-center">
                     <div class="circle-container" data-target="40" data-label=
-                    "<div class='circle-label-content'><span class='big'>4X</span><span class='small'>RANGE</span></div>"></div>
-                    <h5 class="mt-3" style="font-size: 18px;">Stronger Signal</h5>
+                    "<div class='circle-label-content'><span class='big'>4×</span><span class='small'>RANGE</span></div>"></div>
+                    <h5 class="mt-3 text-center" style="font-size: 18px;">Stronger Signal</h5>
                     <p class="text-center">Stay linked with up to 4× the range</p>
                 </div>
 
-                <div class="col-lg-2 col-4 d-flex flex-column align-items-center">
+                <div class="col-xl-2 col-sm-4 d-flex flex-column align-items-center">
                     <div class="circle-container" data-target="80" data-label=
-                    "<div class='circle-label-content'><span class='big'>8X</span><span class='small'>CAPACITY</span></div>"></div>
-                    <h5 class="mt-3" style="font-size: 18px;">Better Sharing</h5>
+                    "<div class='circle-label-content'><span class='big'>8×</span><span class='small'>CAPACITY</span></div>"></div>
+                    <h5 class="mt-3 text-center" style="font-size: 18px;">Better Sharing</h5>
                     <p class="text-center">Broadcast to more devices with 8× the data</p>
                 </div>
             </div>
@@ -219,16 +223,16 @@
             </div>
 
             <div class="row bottom-padding-sm">
-                <div class="col-lg-2 col-6 px-0">
+                <div class="col-xl-2 col-sm-6 px-0 d-flex flex-column justify-content-center">
                     <img src="{{ asset('img/northlight/Inova_spec_parts_battery.png') }}" alt="battery" class="img-fluid">
                 </div>
 
-                <div class="col-lg-4 col-6 px-4">
+                <div class="col-xl-4 col-sm-6 px-4 d-flex flex-column justify-content-center">
                     <h4>Power That’s Easy to Replace</h4>
                     <p style="font-size:15px;">The removable battery swaps out in seconds with no tools needed, letting users easily replace a drained battery anytime. It offers enough capacity for everyday use, and the full device remains noticeably lighter than most modern phones—many of which push over 200g, making it easier to use without hand fatigue.</p>
                 </div>
 
-                <div class="col-lg-6 d-flex flex-column justify-content-between">
+                <div class="col-xl-6 d-flex flex-column justify-content-between">
                     <div class="progress-bar-wrapper">
                         <div class="progress-bar-label">
                             <span>Capacity</span>

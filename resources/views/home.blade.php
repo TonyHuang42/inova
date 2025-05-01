@@ -21,6 +21,10 @@
             object-fit: cover;
             z-index: 2;
         }
+
+        .text-shadow {
+            color: #eee
+        }
     </style>
 @endpush
 
@@ -38,13 +42,13 @@
         <div class="home-banner-container">
             {{-- <img class="home-banner" src="{{ asset('img/home/banner_home.jpg') }}" alt="Banner"> --}}
             <div class="video-skeleton"></div>
-            <video autoplay muted loop preload="auto" class="home-video-banner" onloadeddata="hideSkeleton(this)">
+            <video autoplay muted preload="auto" class="home-video-banner" onloadeddata="hideSkeleton(this)">
                 <source src="{{ asset('video/INOVA.mp4') }}" type="video/mp4">
             </video>
         </div>
 
         <div class="container raised-section">
-            <h1 class="mb-5 text-center home-slogan">Essential Technology. <br>Exceptional Value.</h1>
+            <h1 class="mb-lg-5 mb-3 text-center home-slogan">Essential Technology. <br>Exceptional Value.</h1>
 
             <div class="row pt-3 text-center gx-lg-5 bottom-padding">
                 <div class="col-12 col-lg-4">
