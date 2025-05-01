@@ -115,6 +115,25 @@
             line-height: 24px;
             transition: width 1.5s ease;
         }
+
+        .banner-video-container {
+            position: relative;
+            /* width: 100%;
+            height: 100vh;
+            overflow: hidden; */
+        }
+
+        .banner-video-slogan {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            font-size: 40px;
+            z-index: 1;
+        }
     </style>
 @endpush
 
@@ -129,6 +148,7 @@
                 <video playsinline loop muted autoplay class="fullscreen-video">
                     <source src="{{ asset('video/Northlight-details.mp4') }}" type="video/mp4" />
                 </video>
+                <div class="banner-video-slogan">FORM THAT FITS.<br class="d-block d-md-none"> FEATURES THAT LAST.</div>
             </div>
         </div>
 
@@ -200,10 +220,10 @@
 
                 <div class="col-lg-4 col-6 px-4">
                     <h4>Power That’s Easy to Replace</h4>
-                    <p class="mb-3" style="font-size:15px;">The removable battery swaps out in seconds with no tools needed, letting users easily replace a drained battery anytime. It offers enough capacity for everyday use, and the full device remains noticeably lighter than most modern phones—many of which push over 200g, making it easier to use without hand fatigue.</p>
+                    <p style="font-size:15px;">The removable battery swaps out in seconds with no tools needed, letting users easily replace a drained battery anytime. It offers enough capacity for everyday use, and the full device remains noticeably lighter than most modern phones—many of which push over 200g, making it easier to use without hand fatigue.</p>
                 </div>
 
-                <div class="col-lg-6">
+                <div class="col-lg-6 d-flex flex-column justify-content-between">
                     <div class="progress-bar-wrapper">
                         <div class="progress-bar-label">
                             <span>Capacity</span>
@@ -213,7 +233,7 @@
                             <div class="progress-bar" data-target="70"></div>
                         </div>
                     </div>
-                
+
                     <div class="progress-bar-wrapper">
                         <div class="progress-bar-label">
                             <span>Standby Time</span>
@@ -223,7 +243,7 @@
                             <div class="progress-bar" data-target="87"></div>
                         </div>
                     </div>
-                
+
                     <div class="progress-bar-wrapper">
                         <div class="progress-bar-label">
                             <span>Talking time</span>
@@ -233,7 +253,7 @@
                             <div class="progress-bar" data-target="30"></div>
                         </div>
                     </div>
-                
+
                     <div class="progress-bar-wrapper">
                         <div class="progress-bar-label">
                             <span>Device Weight</span>
@@ -319,15 +339,14 @@
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting && !container.dataset.animated) {
-                        const rect = entry.boundingClientRect;
-                        const thresholdY = window.innerHeight * 0.25;
-
-                        if (rect.top >= thresholdY) {
-                            container.dataset.animated = "true"; // prevent multiple runs
-                            animateCircle(circle, target);
-                        }
+                        container.dataset.animated = "true";
+                        animateCircle(circle, target);
                     }
                 });
+            }, {
+                root: null,
+                threshold: 0,
+                rootMargin: "0px 0px -20% 0px" // bottom 20% of viewport
             });
 
             observer.observe(container);
@@ -336,13 +355,27 @@
 
     {{-- scripts for progress bar --}}
     <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.progress-bar').forEach(bar => {
-                const target = parseInt(bar.getAttribute('data-target'));
-                setTimeout(() => {
-                    bar.style.width = target + '%';
-                }, 200);
+        document.addEventListener('DOMContentLoaded', () => {
+            const bars = document.querySelectorAll('.progress-bar');
+
+            const observer = new IntersectionObserver((entries, obs) => {
+                if (entries[0].isIntersecting) {
+                    bars.forEach(bar => {
+                        const target = parseInt(bar.getAttribute('data-target'));
+                        bar.style.width = target + '%';
+                    });
+                    obs.disconnect(); // Stop observing after triggering once
+                }
+            }, {
+                root: null,
+                threshold: 0,
+                rootMargin: '0px 0px -20% 0px'
             });
+
+            // Observe only the first progress bar
+            if (bars.length > 0) {
+                observer.observe(bars[0]);
+            }
         });
     </script>
 
