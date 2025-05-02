@@ -123,6 +123,8 @@
         }
 
         .banner-video-slogan {
+            font-family: "Bropotic", sans-serif;
+            font-size: clamp(1rem, 3vw, 2rem);
             position: absolute;
             width: 100%;
             top: 50%;
@@ -131,6 +133,19 @@
             color: white;
             text-align: center;
             z-index: 1;
+        }
+
+        #microSD-counter {
+            font-size: 105px;
+            font-weight: 400;
+        }
+
+        .microSD-GB {
+            position: absolute;
+            bottom: 21px;
+            left: 200px;
+            font-size: 50px;
+            font-weight: 400;
         }
 
         @media only screen and (max-width: 767px) {
@@ -152,7 +167,7 @@
                 <video playsinline loop muted autoplay class="fullscreen-video">
                     <source src="{{ asset('video/Northlight-details.mp4') }}" type="video/mp4" />
                 </video>
-                <h3 class="banner-video-slogan">FORM THAT FITS.<br class="d-block d-sm-none"> FEATURES THAT LAST.</h3>
+                <div class="banner-video-slogan">FORM THAT FITS.<br>FEATURES THAT LAST.</div>
             </div>
         </div>
 
@@ -172,7 +187,7 @@
                 </div>
             </div>
 
-            <div class="row bottom-padding-sm">
+            <div class="row bottom-padding">
                 <div class="col-xl-2 col-sm-6 px-0 d-flex flex-column justify-content-center">
                     <img src="{{ asset('img/northlight/Inova_spec_parts_chip.png') }}" alt="battery" class="img-fluid">
                 </div>
@@ -205,24 +220,27 @@
                 </div>
             </div>
 
-            <div class="row bottom-padding-sm">
-                <div class="col-lg-7 d-flex align-items-center order-2 order-lg-1">
-                    <div>
-                        <p class="my-2 text-white">microSD CARD</p>
-                        <div class="position-relative">
-                            <h3 id="microSD-counter">0</h3>
-                            <h3 style="position: absolute; top: 0; left: 75px;">GB</h3>
-                        </div>
+            {{-- MicroSD --}}
+            <div class="row bottom-padding">
+                <div class="col-xl-3 d-flex flex-column justify-content-center order-xl-0 order-2">
+                    <p>up to</p>
+                    <div class="position-relative" style="margin-top: -20px;">
+                        <div id="microSD-counter">0</div>
+                        <div class="microSD-GB">GB</div>
                     </div>
                 </div>
-                <div class="col-lg-5 d-flex align-items-center justify-content-center justify-content-lg-end order-1 order-lg-2">
-                    <div class="highlight-features-img-wrap">
-                        <img src="{{ asset('img/northlight/Inova_spec_parts_microSD_card.png') }}" alt="INOVA Dual SIM" style="max-width: 350px;">
-                    </div>
+
+                <div class="col-xl-7 col-sm-6 px-xl-5 d-flex flex-column justify-content-center order-sm-0 order-1">
+                    <h4>Space When You Need It</h4>
+                    <p style="font-size:15px;">Add up to 512GB of extra space with a microSD card—no setup, no cloud, no hassle. Store photos, videos, and files directly on your device and expand only when you need to. Your data stays with you, fully under your control and safely offline—no logins, no subscriptions, and no forced upgrades.</p>
+                </div>
+
+                <div class="col-xl-2 col-sm-6 px-0 d-flex flex-column justify-content-center order-xl-2 order-sm-1 order-0">
+                    <img src="{{ asset('img/northlight/Inova_spec_parts_microSD_card.png') }}" alt="INOVA Dual SIM" class="img-fluid">
                 </div>
             </div>
 
-            <div class="row bottom-padding-sm">
+            <div class="row bottom-padding">
                 <div class="col-xl-2 col-sm-6 px-0 d-flex flex-column justify-content-center">
                     <img src="{{ asset('img/northlight/Inova_spec_parts_battery.png') }}" alt="battery" class="img-fluid">
                 </div>
@@ -239,7 +257,7 @@
                             <span>2500mAh</span>
                         </div>
                         <div class="progress-bar-container">
-                            <div class="progress-bar" data-target="70"></div>
+                            <div class="progress-bar" data-target="95"></div>
                         </div>
                     </div>
 
@@ -259,7 +277,7 @@
                             <span>10hr</span>
                         </div>
                         <div class="progress-bar-container">
-                            <div class="progress-bar" data-target="30"></div>
+                            <div class="progress-bar" data-target="90"></div>
                         </div>
                     </div>
 
@@ -269,21 +287,19 @@
                             <span>163g</span>
                         </div>
                         <div class="progress-bar-container">
-                            <div class="progress-bar" data-target="40"></div>
+                            <div class="progress-bar" data-target="16"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="row bottom-padding-sm gx-xl-0 gx-lg-5">
-                <div class="col-lg-7 d-flex align-items-center order-2 order-lg-1">
-                    <div>
-                        <p class="my-2 text-white">REPLACEABLE BATTERY</p>
-                        <div class="key-features-description">Includes a <strong>2500mAh removable battery</strong> with <strong>tool-free latch</strong> for quick swaps. Easily replace degraded units to extend your device’s lifespan.</div>
-                    </div>
+            <div class="row bottom-padding">
+                <div class="col-xl-8 col-sm-6 d-flex flex-column justify-content-center order-sm-1 order-2">
+                    <h4>Two Numbers. One Smart Setup.</h4>
+                    <p style="font-size:15px;">With dual SIM support, you can use two phone numbers on one device—perfect for work and personal lines, or keeping your main number active while adding a local SIM when traveling. And unlike most phones, Northlight lets you use both SIMs and a microSD card at the same time—no slot-sharing, no switching, no compromises.</p>
                 </div>
-                <div class="col-lg-5 d-flex align-items-center justify-content-center justify-content-lg-end order-1 order-lg-2">
-                    <img src="{{ asset('img/northlight/Inova_spec_parts_dualSIM_card.png') }}" alt="INOVA microSD Card" style="max-width: 350px;">
+                <div class="col-xl-2 offset-xl-2 col-sm-6 px-0 d-flex flex-column justify-content-center order-sm-2 order-1">
+                    <img src="{{ asset('img/northlight/Inova_spec_parts_dualSIM_card.png') }}" alt="INOVA microSD Card" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -383,11 +399,12 @@
         });
     </script>
 
+    {{-- scripts for microSD counter animation --}}
     <script>
         const counterElement = document.getElementById('microSD-counter');
         const start = 0;
         const end = 512;
-        const microSDDuration = 1500; // in milliseconds (1 second)
+        const microSDDuration = 1500;
 
         let startTime = null;
 
@@ -405,7 +422,21 @@
             }
         }
 
-        requestAnimationFrame(animateCounter);
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Prevent re-trigger
+                    obs.unobserve(entry.target);
+                    requestAnimationFrame(animateCounter);
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0,
+            rootMargin: '0px 0px -20% 0px' // triggers when entering bottom 20%
+        });
+
+        observer.observe(counterElement);
     </script>
 
     {{-- scripts for features position --}}
