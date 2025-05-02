@@ -227,9 +227,6 @@
                         <p class="text-white">Email: <a href="mailto:marketing@i-nova.ca">marketing@i-nova.ca</a></p>
                     </div>
                     <div class="row mt-1">
-                        @if (session('success'))
-                            <div class="alert alert-secondary">{{ session('success') }}</div>
-                        @endif
                         <form action="{{ route('support.submit') }}" method="POST">
                             @csrf
                             <div class="row gy-0">
@@ -243,12 +240,16 @@
                                     <textarea name="message" class="form-control" rows="3" placeholder="Message" required></textarea>
                                 </div>
                             </div>
-                            <div type="submit" class="mt-4" style="cursor: auto;">
+                            <div type="submit" class="mt-4 d-flex flex-row justify-content-center" style="cursor: auto;">
                                 <button type="submit" class="button button--filled">
                                     <span>Send Message</span>
                                     <i class="fa-solid fa-caret-right"></i>
                                 </button>
                             </div>
+                            @if (session('success'))
+                                <div class="mt-3 d-flex flex-row justify-content-center">{{ session('success') }}</div>
+                            @endif
+                            {{-- <div class="mt-3 d-flex flex-row justify-content-center">your message has been sent</div> --}}
                         </form>
                     </div>
                 </div>

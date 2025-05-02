@@ -130,9 +130,28 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: white;
             text-align: center;
             z-index: 1;
+
+            background: linear-gradient(to right, #444, white, #444);
+            background-size: 200% auto;
+            animation: gradient-slide 5s linear infinite;
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            background-clip: text;
+            color: transparent;
+        }
+
+        @keyframes gradient-slide {
+            0% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: -100% 50%;
+            }
         }
 
         #microSD-counter {
@@ -240,17 +259,18 @@
                 </div>
             </div>
 
+            {{-- Battery --}}
             <div class="row bottom-padding">
                 <div class="col-xl-2 col-sm-6 px-0 d-flex flex-column justify-content-center">
                     <img src="{{ asset('img/northlight/Inova_spec_parts_battery.png') }}" alt="battery" class="img-fluid">
                 </div>
 
-                <div class="col-xl-4 col-sm-6 px-4 d-flex flex-column justify-content-center">
+                <div class="col-xl-6 col-sm-6 px-4 d-flex flex-column justify-content-center">
                     <h4>Power That’s Easy to Replace</h4>
                     <p style="font-size:15px;">The removable battery swaps out in seconds with no tools needed, letting users easily replace a drained battery anytime. It offers enough capacity for everyday use, and the full device remains noticeably lighter than most modern phones—many of which push over 200g, making it easier to use without hand fatigue.</p>
                 </div>
 
-                <div class="col-xl-6 d-flex flex-column justify-content-between">
+                <div class="col-xl-4 d-flex flex-column justify-content-between">
                     <div class="progress-bar-wrapper">
                         <div class="progress-bar-label">
                             <span>Capacity</span>
@@ -294,11 +314,15 @@
             </div>
 
             <div class="row bottom-padding">
-                <div class="col-xl-8 col-sm-6 d-flex flex-column justify-content-center order-sm-1 order-2">
+                <div class="col-xl-3 d-flex flex-column justify-content-center order-xl-0 order-2">
+                    <img src="{{ asset('img/northlight/Inova_dual.svg') }}" alt="INOVA Northlight Dual SIM" style="width: 60%;">
+                </div>
+
+                <div class="col-xl-7 col-sm-6 px-xl-5 d-flex flex-column justify-content-center order-sm-1 order-2">
                     <h4>Two Numbers. One Smart Setup.</h4>
                     <p style="font-size:15px;">With dual SIM support, you can use two phone numbers on one device—perfect for work and personal lines, or keeping your main number active while adding a local SIM when traveling. And unlike most phones, Northlight lets you use both SIMs and a microSD card at the same time—no slot-sharing, no switching, no compromises.</p>
                 </div>
-                <div class="col-xl-2 offset-xl-2 col-sm-6 px-0 d-flex flex-column justify-content-center order-sm-2 order-1">
+                <div class="col-xl-2 col-sm-6 px-0 d-flex flex-column justify-content-center order-sm-2 order-1">
                     <img src="{{ asset('img/northlight/Inova_spec_parts_dualSIM_card.png') }}" alt="INOVA microSD Card" class="img-fluid">
                 </div>
             </div>
@@ -358,15 +382,22 @@
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting && !container.dataset.animated) {
+                    const container = entry.target;
+                    const circle = container.querySelector('.progress-circle');
+                    const target = parseInt(container.getAttribute('data-target'), 10);
+
+                    if (entry.isIntersecting && container.dataset.animated !== "true") {
                         container.dataset.animated = "true";
                         animateCircle(circle, target);
+                    } else if (!entry.isIntersecting) {
+                        // Reset stroke and allow animation to re-trigger
+                        circle.style.strokeDashoffset = circumference;
+                        container.dataset.animated = "false";
                     }
                 });
             }, {
                 root: null,
-                threshold: 0,
-                rootMargin: "0px 0px -20% 0px" // bottom 20% of viewport
+                threshold: 0
             });
 
             observer.observe(container);
@@ -377,27 +408,52 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const bars = document.querySelectorAll('.progress-bar');
-
-            const observer = new IntersectionObserver((entries, obs) => {
-                if (entries[0].isIntersecting) {
-                    bars.forEach(bar => {
-                        const target = parseInt(bar.getAttribute('data-target'));
-                        bar.style.width = target + '%';
-                    });
-                    obs.disconnect(); // Stop observing after triggering once
-                }
-            }, {
-                root: null,
-                threshold: 0,
-                rootMargin: '0px 0px -20% 0px'
-            });
-
-            // Observe only the first progress bar
-            if (bars.length > 0) {
-                observer.observe(bars[0]);
+            let hasAnimated = false;
+    
+            function animateBars() {
+                bars.forEach(bar => {
+                    const target = parseInt(bar.getAttribute('data-target'), 10);
+                    bar.style.width = target + '%';
+                });
             }
+    
+            function resetBars() {
+                bars.forEach(bar => {
+                    bar.style.width = '0%';
+                });
+            }
+    
+            function checkBarsInView() {
+                const windowHeight = window.innerHeight;
+                let anyInView = false;
+                let allOutOfView = true;
+    
+                bars.forEach(bar => {
+                    const rect = bar.getBoundingClientRect();
+                    const fullyOut = rect.bottom < 0 || rect.top > windowHeight;
+    
+                    if (!fullyOut) {
+                        anyInView = true;
+                        allOutOfView = false;
+                    }
+                });
+    
+                if (anyInView && !hasAnimated) {
+                    hasAnimated = true;
+                    animateBars();
+                }
+    
+                if (allOutOfView && hasAnimated) {
+                    hasAnimated = false;
+                    resetBars();
+                }
+            }
+    
+            window.addEventListener('scroll', checkBarsInView);
+            window.addEventListener('resize', checkBarsInView);
+            checkBarsInView(); // Initial check in case already visible
         });
-    </script>
+    </script>    
 
     {{-- scripts for microSD counter animation --}}
     <script>
@@ -405,39 +461,49 @@
         const start = 0;
         const end = 512;
         const microSDDuration = 1500;
-
+    
         let startTime = null;
-
+        let isAnimating = false;
+    
         function animateCounter(timestamp) {
             if (!startTime) startTime = timestamp;
             const progress = timestamp - startTime;
             const percent = Math.min(progress / microSDDuration, 1); // cap at 1
             const eased = percent * (2 - percent); // easeOutQuad
-
+    
             const current = Math.floor(start + (end - start) * eased);
             counterElement.textContent = current;
-
+    
             if (percent < 1) {
                 requestAnimationFrame(animateCounter);
             }
         }
-
+    
         const observer = new IntersectionObserver((entries, obs) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // Prevent re-trigger
-                    obs.unobserve(entry.target);
-                    requestAnimationFrame(animateCounter);
+                    // Start the animation when the element comes into view
+                    if (!isAnimating) {
+                        isAnimating = true;
+                        startTime = null;  // Reset start time to ensure the animation starts from 0
+                        requestAnimationFrame(animateCounter);
+                    }
+                } else {
+                    // Reset the animation when the element leaves the viewport
+                    if (isAnimating) {
+                        isAnimating = false;
+                        counterElement.textContent = start; // Reset counter to initial value
+                        startTime = null; // Reset the start time to restart the animation from 0
+                    }
                 }
             });
         }, {
             root: null,
-            threshold: 0,
-            rootMargin: '0px 0px -20% 0px' // triggers when entering bottom 20%
+            threshold: 0
         });
-
+    
         observer.observe(counterElement);
-    </script>
+    </script>    
 
     {{-- scripts for features position --}}
     <script>

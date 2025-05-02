@@ -126,7 +126,7 @@
                     <h5>Simple Add-Ons That Make a Big Difference</h5>
                     <p class="pt-3">Don’t upgrade your phone—upgrade your setup. Swappable batteries, microSD cards, and fast chargers keep you powered, backed up, and in control.</p>
                     <div class="pt-4">
-                        <a class="button button--filled" href="" target="_self">
+                        <a class="button button--filled" href="/northlight" target="_self">
                             <span>Discover our products</span>
                             <i class="fa-solid fa-caret-right"></i>
                         </a>
