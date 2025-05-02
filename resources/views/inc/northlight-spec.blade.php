@@ -106,7 +106,7 @@
                 <div class="col-xl-10 col-lg-9">
                     <div class="row">
                         <div class="col-6">
-                            <img src="{{ asset('img/northlight/spec_size_drawing.png') }}" alt="" class="img-fluid" style="max-height: 600px;">
+                            <img src="{{ asset('img/northlight/inova-northlight-spec_size_drawing.png') }}" alt="" class="img-fluid" style="max-height: 600px;">
                             <div class="disclaimer">*Measurements are approximate; results may vary.</div>
                         </div>
 

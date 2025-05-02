@@ -43,7 +43,7 @@
             {{-- <img class="home-banner" src="{{ asset('img/home/banner_home.jpg') }}" alt="Banner"> --}}
             <div class="video-skeleton"></div>
             <video autoplay muted preload="auto" class="home-video-banner" onloadeddata="hideSkeleton(this)">
-                <source src="{{ asset('video/INOVA.mp4') }}" type="video/mp4">
+                <source src="{{ asset('video/INOVA-banner.mp4') }}" type="video/mp4">
             </video>
         </div>
 
@@ -52,17 +52,17 @@
 
             <div class="row pt-3 text-center gx-lg-5 bottom-padding">
                 <div class="col-12 col-lg-4">
-                    <img src="{{ asset('img/home/inova_feature_1.svg') }}" alt="accessibility" style="width: 73px; margin-top: 6px;">
+                    <img src="{{ asset('img/home/inova_feature_1.svg') }}" alt="Replaceable Battery" style="width: 73px; margin-top: 6px;">
                     <h5 style="padding-top: 11px;">Replaceable Battery</h5>
                     <p class="mb-0" style="margin-top: 20px;">Power up in seconds. Swap batteries anytime and extend your phone’s life—no tools, no charge time, no need to replace the whole device.</p>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <img src="{{ asset('img/home/inova_feature_2.svg') }}" alt="simplicity" style="width: 80px;">
+                    <img src="{{ asset('img/home/inova_feature_2.svg') }}" alt="Dual SIM + MicroSD" style="width: 80px;">
                     <h5 style="padding-top: 10px;">Dual SIM + MicroSD</h5>
                     <p class="mb-0" style="margin-top: 20px;">Experience dual SIM capabilities and expand your storage with microSD at the same time, fully control how you connect and store data</p>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <img src="{{ asset('img/home/inova_feature_3.svg') }}" alt="community" style="width: 65px; margin-top: 13px;">
+                    <img src="{{ asset('img/home/inova_feature_3.svg') }}" alt="Reliable Chip" style="width: 65px; margin-top: 13px;">
                     <h5 style="padding-top: 12px;">Reliable Chip</h5>
                     <p class="mb-0" style="margin-top: 20px;">Northlight runs on a reliable MediaTek chip made by TSMC— the trusted chipmaker behind many major tech brands in the industry.</p>
                 </div>
@@ -114,10 +114,10 @@
         </div>
     </div>
 
-    <div class="home-banner-5">
+    <a href="/northlight">
         {{-- <img src="{{ asset('img/home/banner_northlight.png') }}" alt="northlight" class="w-100"> --}}
         @include('inc.northlight-banner')
-    </div>
+    </a>
 
     <div class="bg-black text-white">
         <div class="custom-container">
@@ -139,10 +139,10 @@
                             <img src="{{ asset('img/home/inova_accessory_battery.jpg') }}" alt="inova accessory battery" class="img-fluid">
                         </div>
                         <div class="col-4">
-                            <img src="{{ asset('img/home/inova_accessory_charger.jpg') }}" alt="inova accessory charger" class="img-fluid">
+                            <img src="{{ asset('img/home/inova_accessory_microSDcard.jpg') }}" alt="inova accessory charger" class="img-fluid">
                         </div>
                         <div class="col-4">
-                            <img src="{{ asset('img/home/inova_accessory_microSDcard.jpg') }}" alt="inova accessory microSD card" class="img-fluid">
+                            <img src="{{ asset('img/home/inova_accessory_charger.jpg') }}" alt="inova accessory microSD card" class="img-fluid">
                         </div>
                     </div>
                 </div>

@@ -435,7 +435,7 @@
 
             <!-- Case -->
             <div class="image-wrapper content" id="case">
-                <img src="{{ asset('img/northlight/phone_case.png') }}" alt="case" class="engineering-drawing">
+                <img src="{{ asset('img/northlight/inova-northlight-phone_case.png') }}" alt="INOVA Northlight Case" class="engineering-drawing">
                 <div class="text-overlay">
                     <h5>Phone Case</h5>
                     <div class="toggle-container">
@@ -460,7 +460,7 @@
 
             <!-- Battery -->
             <div class="image-wrapper content" id="battery">
-                <img src="{{ asset('img/northlight/battery.png') }}" alt="Detachable Battery" class="engineering-drawing">
+                <img src="{{ asset('img/northlight/inova-northlight-battery.png') }}" alt="INOVA Northlight Detachable Battery" class="engineering-drawing">
                 <div class="text-overlay">
                     <h5>Detachable Battery</h5>
                     <div class="toggle-container">
@@ -485,7 +485,7 @@
 
             <!-- microSD Card -->
             <div class="image-wrapper content" id="microSD">
-                <img src="{{ asset('img/northlight/microSD_card.png') }}" alt="microSD Card" class="engineering-drawing">
+                <img src="{{ asset('img/northlight/inova-northlight-microSD_card.png') }}" alt="INOVA Northlight microSD Card" class="engineering-drawing">
                 <div class="text-overlay">
                     <h5>microSD Card</h5>
                     <div class="toggle-container">
@@ -510,7 +510,7 @@
 
             <!-- Dual SIM Card -->
             <div class="image-wrapper content" id="sim-card">
-                <img src="{{ asset('img/northlight/dualSIM_card.png') }}" alt="Dual SIM card" class="engineering-drawing">
+                <img src="{{ asset('img/northlight/inova-northlight-dualSIM_card.png') }}" alt="INOVA Northlight Dual SIM card" class="engineering-drawing">
                 <div class="text-overlay">
                     <h5>Dual Sim Card</h5>
                     <div class="toggle-container">
@@ -535,7 +535,7 @@
 
             <!-- Camera -->
             <div class="image-wrapper content" id="camera">
-                <img src="{{ asset('img/northlight/camera.png') }}" alt="camera" class="engineering-drawing">
+                <img src="{{ asset('img/northlight/inova-northlight-camera.png') }}" alt="INOVA Northlight Camera" class="engineering-drawing">
                 <div class="text-overlay">
                     <h5>Camera</h5>
                     <div class="toggle-container">
@@ -560,7 +560,7 @@
 
             <!-- Chip -->
             <div class="image-wrapper content" id="chip">
-                <img src="{{ asset('img/northlight/chip.png') }}" alt="Chip" class="engineering-drawing">
+                <img src="{{ asset('img/northlight/inova-northlight-chip.png') }}" alt="INOVA Northlight Chip" class="engineering-drawing">
                 <div class="text-overlay">
                     <h5>Chip</h5>
                     <div class="toggle-container">
@@ -585,7 +585,7 @@
 
             <!-- 3.5mm -->
             <div class="image-wrapper content" id="3.5mm">
-                <img src="{{ asset('img/northlight/headphone_jack.png') }}" alt="3.5mm Headphone Jack" class="engineering-drawing">
+                <img src="{{ asset('img/northlight/inova-northlight-headphone_jack.png') }}" alt="INOVA Northlight 3.5mm Headphone Jack" class="engineering-drawing">
                 <div class="text-overlay">
                     <h5>3.5mm Headphone Jack</h5>
                     <div class="toggle-container">
@@ -610,7 +610,7 @@
 
             <!-- USB-C -->
             <div class="image-wrapper content" id="usb-c">
-                <img src="{{ asset('img/northlight/usb_c.png') }}" alt="USB-C" class="engineering-drawing">
+                <img src="{{ asset('img/northlight/inova-northlight-usb_c.png') }}" alt="INOVA Northlight USB-C" class="engineering-drawing">
                 <div class="text-overlay">
                     <h5>USB-C</h5>
                     <div class="toggle-container">
@@ -635,7 +635,7 @@
 
             <!-- Display -->
             <div class="image-wrapper content" id="display">
-                <img src="{{ asset('img/northlight/display.png') }}" alt="display" class="engineering-drawing">
+                <img src="{{ asset('img/northlight/inova-northlight-display.png') }}" alt="INOVA Northlight Display" class="engineering-drawing">
                 <div class="text-overlay">
                     <h5>Display</h5>
                     <div class="toggle-container">
@@ -728,7 +728,7 @@
             <!-- Case -->
             <div class="feature-wrapper-mobile" id="case-mobile">
                 <i class="fa-solid fa-xmark xmark"></i>
-                <img src="{{ asset('img/northlight/phone_case.png') }}" alt="Case" class="feature-background-mobile">
+                <img src="{{ asset('img/northlight/inova-northlight-phone_case.png') }}" alt="INOVA Northlight Case" class="feature-background-mobile">
                 <div class="text-overlay-mobile">
                     <h5>Phone Case</h5>
                     <div class="toggle-container">
@@ -754,7 +754,7 @@
             <!-- Battery -->
             <div class="feature-wrapper-mobile" id="battery-mobile">
                 <i class="fa-solid fa-xmark xmark"></i>
-                <img src="{{ asset('img/northlight/battery.png') }}" alt="Detachable Battery" class="feature-background-mobile">
+                <img src="{{ asset('img/northlight/inova-northlight-battery.png') }}" alt="INOVA Northlight Detachable Battery" class="feature-background-mobile">
                 <div class="text-overlay-mobile">
                     <h5>Detachable Battery</h5>
                     <div class="toggle-container">
@@ -780,7 +780,7 @@
             <!-- microSD Card -->
             <div class="feature-wrapper-mobile" id="microSD-mobile">
                 <i class="fa-solid fa-xmark xmark"></i>
-                <img src="{{ asset('img/northlight/microSD_card.png') }}" alt="microSD Card" class="engineering-drawing-mobile">
+                <img src="{{ asset('img/northlight/inova-northlight-microSD_card.png') }}" alt="INOVA Northlight microSD Card" class="engineering-drawing-mobile">
                 <div class="text-overlay-mobile">
                     <h5>microSD Card</h5>
                     <div class="toggle-container">
@@ -806,7 +806,7 @@
             <!-- Dual SIM Card -->
             <div class="feature-wrapper-mobile" id="sim-card-mobile">
                 <i class="fa-solid fa-xmark xmark"></i>
-                <img src="{{ asset('img/northlight/dualSIM_card.png') }}" alt="SIM card" class="engineering-drawing-mobile">
+                <img src="{{ asset('img/northlight/inova-northlight-dualSIM_card.png') }}" alt="INOVA Northlight Dual SIM card" class="engineering-drawing-mobile">
                 <div class="text-overlay-mobile">
                     <h5>Dual Sim Card</h5>
                     <div class="toggle-container">
@@ -832,7 +832,7 @@
             <!-- Camera -->
             <div class="feature-wrapper-mobile" id="camera-mobile">
                 <i class="fa-solid fa-xmark xmark"></i>
-                <img src="{{ asset('img/northlight/camera.png') }}" alt="Camera" class="engineering-drawing-mobile">
+                <img src="{{ asset('img/northlight/inova-northlight-camera.png') }}" alt="INOVA Northlight Camera" class="engineering-drawing-mobile">
                 <div class="text-overlay-mobile">
                     <h5>Camera</h5>
                     <div class="toggle-container">
@@ -858,7 +858,7 @@
             <!-- Chip -->
             <div class="feature-wrapper-mobile" id="chip-mobile">
                 <i class="fa-solid fa-xmark xmark"></i>
-                <img src="{{ asset('img/northlight/chip.png') }}" alt="Chip" class="engineering-drawing-mobile">
+                <img src="{{ asset('img/northlight/inova-northlight-chip.png') }}" alt="INOVA Northlight Chip" class="engineering-drawing-mobile">
                 <div class="text-overlay-mobile">
                     <h5>Chip</h5>
                     <div class="toggle-container">
@@ -884,7 +884,7 @@
             <!-- 3.5mm -->
             <div class="feature-wrapper-mobile" id="3.5mm-mobile">
                 <i class="fa-solid fa-xmark xmark"></i>
-                <img src="{{ asset('img/northlight/headphone_jack.png') }}" alt="3.5mm Headphone Jack" class="engineering-drawing-mobile">
+                <img src="{{ asset('img/northlight/inova-northlight-headphone_jack.png') }}" alt="INOVA Northlight 3.5mm Headphone Jack" class="engineering-drawing-mobile">
                 <div class="text-overlay-mobile">
                     <h5>3.5mm Headphone Jack</h5>
                     <div class="toggle-container">
@@ -910,7 +910,7 @@
             <!-- USB-C -->
             <div class="feature-wrapper-mobile" id="usb-c-mobile">
                 <i class="fa-solid fa-xmark xmark"></i>
-                <img src="{{ asset('img/northlight/usb_c.png') }}" alt="USB-C" class="engineering-drawing-mobile">
+                <img src="{{ asset('img/northlight/inova-northlight-usb_c.png') }}" alt="INOVA Northlight USB-C" class="engineering-drawing-mobile">
                 <div class="text-overlay-mobile">
                     <h5>USB-C</h5>
                     <div class="toggle-container">
@@ -936,7 +936,7 @@
             <!-- Display -->
             <div class="feature-wrapper-mobile" id="display-mobile">
                 <i class="fa-solid fa-xmark xmark"></i>
-                <img src="{{ asset('img/northlight/display.png') }}" alt="display" class="engineering-drawing-mobile">
+                <img src="{{ asset('img/northlight/inova-northlight-display.png') }}" alt="INOVA Northlight Display" class="engineering-drawing-mobile">
                 <div class="text-overlay-mobile">
                     <h5>Display</h5>
                     <div class="toggle-container">
