@@ -22,7 +22,7 @@
             transition: background-position .8s cubic-bezier(.25, .1, .14, .91);
         }
 
-        .toggle-container:hover .faq-question{
+        .toggle-container:hover .faq-question {
             background-position-x: 0;
         }
 
@@ -114,6 +114,12 @@
             flex-direction: column;
             justify-content: center;
             height: 636px;
+        }
+
+        .form-control.is-invalid,
+        .was-validated .form-control:invalid {
+            border-color: #282828;
+            background-image: none;
         }
 
         @media only screen and (max-width: 1399px) {
@@ -227,7 +233,7 @@
                         <p class="text-white">Email: <a href="mailto:marketing@i-nova.ca">marketing@i-nova.ca</a></p>
                     </div>
                     <div class="row mt-1">
-                        <form action="{{ route('support.submit') }}" method="POST">
+                        <form action="{{ route('support.submit') }}" method="POST" novalidate>
                             @csrf
                             <div class="row gy-0">
                                 <div class="col-lg-12 col-6">
@@ -315,5 +321,41 @@
                 });
             });
         });
+    </script>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            let name = this.name.value.trim();
+            let email = this.email.value.trim();
+            let message = this.message.value.trim();
+            let hasError = false;
+
+            document.querySelectorAll('.error-msg').forEach(el => el.remove());
+
+            if (!name) {
+                showError(this.name, 'Please enter your name');
+                hasError = true;
+            }
+
+            if (!email || !email.includes('@')) {
+                showError(this.email, 'Please enter a valid email');
+                hasError = true;
+            }
+
+            if (!message) {
+                showError(this.message, 'Please enter your message');
+                hasError = true;
+            }
+
+            if (hasError) e.preventDefault();
+        });
+
+        function showError(input, message) {
+            let error = document.createElement('div');
+            error.className = 'error-msg text-primary mt-1';
+            error.innerText = message;
+            input.classList.add('is-invalid');
+            input.parentNode.appendChild(error);
+        }
     </script>
 @endpush

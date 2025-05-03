@@ -127,7 +127,7 @@
             font-size: clamp(1rem, 3vw, 2rem);
             position: absolute;
             width: 100%;
-            top: 50%;
+            top: 30%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
@@ -155,15 +155,15 @@
         }
 
         #microSD-counter {
-            font-size: 105px;
+            font-size: 64px;
             font-weight: 400;
         }
 
         .microSD-GB {
             position: absolute;
-            bottom: 21px;
-            left: 200px;
-            font-size: 50px;
+            bottom: 13px;
+            left: 130px;
+            font-size: 32px;
             font-weight: 400;
         }
 
@@ -212,9 +212,8 @@
                 </div>
 
                 <div class="col-xl-4 col-sm-6 px-4 d-flex flex-column justify-content-center">
-                    <h4>Power You Can Count On</h4>
-                    <p class="mb-3" style="font-size:15px;">Northlight is powered by a 2.0GHz quad-core MediaTek Helio A22, delivering stable and efficient performance for everyday tasks. Built on 12nm architecture and manufactured by TSMC, it runs cool and conserves power. </p>
-                    <p style="font-size:15px;">With Bluetooth 5, you get faster connections, longer range, and more data capacity—all built in.</p>
+                    <h4>The Processor You Can Rely On</h4>
+                    <p class="mb-3" style="font-size:15px;">Northlight is powered by a 2.0GHz quad-core MediaTek Helio A22, delivering stable and efficient performance for everyday tasks. Built on 12nm architecture and manufactured by TSMC, it runs cool and conserves power. With Bluetooth 5, you get faster connections, longer range, and more data capacity—all built in.</p>
                 </div>
 
                 <div class="col-xl-2 col-sm-4 d-flex flex-column align-items-center">
@@ -241,7 +240,7 @@
 
             {{-- MicroSD --}}
             <div class="row bottom-padding">
-                <div class="col-xl-3 d-flex flex-column justify-content-center order-xl-0 order-2">
+                <div class="col-xl-2 d-flex flex-column justify-content-center order-xl-0 order-2">
                     <p>up to</p>
                     <div class="position-relative" style="margin-top: -20px;">
                         <div id="microSD-counter">0</div>
@@ -249,8 +248,8 @@
                     </div>
                 </div>
 
-                <div class="col-xl-7 col-sm-6 px-xl-5 d-flex flex-column justify-content-center order-sm-0 order-1">
-                    <h4>Space When You Need It</h4>
+                <div class="col-xl-8 col-sm-6 px-xl-4 d-flex flex-column justify-content-center order-sm-0 order-1">
+                    <h4>Extra Space When You Need It</h4>
                     <p style="font-size:15px;">Add up to 512GB of extra space with a microSD card—no setup, no cloud, no hassle. Store photos, videos, and files directly on your device and expand only when you need to. Your data stays with you, fully under your control and safely offline—no logins, no subscriptions, and no forced upgrades.</p>
                 </div>
 
@@ -267,7 +266,7 @@
 
                 <div class="col-xl-6 col-sm-6 px-4 d-flex flex-column justify-content-center">
                     <h4>Power That’s Easy to Replace</h4>
-                    <p style="font-size:15px;">The removable battery swaps out in seconds with no tools needed, letting users easily replace a drained battery anytime. It offers enough capacity for everyday use, and the full device remains noticeably lighter than most modern phones—many of which push over 200g, making it easier to use without hand fatigue.</p>
+                    <p style="font-size:15px;">The removable battery swaps out in seconds with no tools needed, letting users easily replace their battery anytime. It offers enough capacity for everyday use, and the full device remains noticeably lighter than most modern phones—many of which push over 200g, making it easier to use without hand fatigue.</p>
                 </div>
 
                 <div class="col-xl-4 d-flex flex-column justify-content-between">
@@ -313,13 +312,14 @@
                 </div>
             </div>
 
+            {{-- Dual SIM --}}
             <div class="row bottom-padding">
-                <div class="col-xl-3 d-flex flex-column justify-content-center order-xl-0 order-2">
-                    <img src="{{ asset('img/northlight/Inova_dual.svg') }}" alt="INOVA Northlight Dual SIM" style="width: 60%;">
+                <div class="col-xl-2 d-flex flex-column justify-content-center order-xl-0 order-2">
+                    <img src="{{ asset('img/northlight/Inova_dual.svg') }}" alt="INOVA Northlight Dual SIM" style="width: 80%;">
                 </div>
 
-                <div class="col-xl-7 col-sm-6 px-xl-5 d-flex flex-column justify-content-center order-sm-1 order-2">
-                    <h4>Two Numbers. One Smart Setup.</h4>
+                <div class="col-xl-8 col-sm-6 px-xl-4 d-flex flex-column justify-content-center order-sm-0 order-1">
+                    <h4>Dual SIMs. Zero Compromises.</h4>
                     <p style="font-size:15px;">With dual SIM support, you can use two phone numbers on one device—perfect for work and personal lines, or keeping your main number active while adding a local SIM when traveling. And unlike most phones, Northlight lets you use both SIMs and a microSD card at the same time—no slot-sharing, no switching, no compromises.</p>
                 </div>
                 <div class="col-xl-2 col-sm-6 px-0 d-flex flex-column justify-content-center order-sm-2 order-1">
