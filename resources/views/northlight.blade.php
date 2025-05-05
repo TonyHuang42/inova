@@ -23,6 +23,7 @@
 
         .section-2 {
             z-index: 2;
+            min-height: 900px;
         }
 
         .section-3 {
@@ -33,9 +34,8 @@
         .banner-video-container {
             position: relative;
             width: 100%;
-            height: 700;
+            height: 900px;
             overflow: hidden;
-            object-fit: cover;
         }
 
         .banner-video-slogan {
@@ -61,11 +61,13 @@
         }
 
         .fullscreen-video {
-            width: 100%;
-            /* height: 100vh; */
-            min-height: 900px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
             object-fit: cover;
-            display: block;
         }
 
         .key-features-description {
