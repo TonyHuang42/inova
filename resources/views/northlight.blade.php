@@ -23,7 +23,7 @@
 
         .section-2 {
             z-index: 2;
-            min-height: 900px;
+            min-height: 0px;
         }
 
         .section-3 {
@@ -38,7 +38,35 @@
             overflow: hidden;
         }
 
-        .banner-video-slogan {
+        .fullscreen-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        @media (max-width: 1200px) {
+            .banner-video-container {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 10 / 9;
+            }
+
+            .fullscreen-video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transform: none;
+            }
+        }
+
+        /* .banner-video-slogan {
             font-family: "Bropotic", sans-serif;
             font-size: clamp(1rem, 3vw, 2rem);
             position: absolute;
@@ -58,17 +86,7 @@
 
             background-clip: text;
             color: transparent;
-        }
-
-        .fullscreen-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-        }
+        } */
 
         .key-features-description {
             font-weight: 100;
@@ -314,7 +332,7 @@
 
                     <div class="progress-bar-wrapper">
                         <div class="progress-bar-label">
-                            <span>Talking time</span>
+                            <span>Talking Time</span>
                             <span>10hr</span>
                         </div>
                         <div class="progress-bar-container">
@@ -522,7 +540,7 @@
             if (!container || features.length === 0) return;
 
             function updateFeaturePosition() {
-                if (window.innerWidth <= 768) return;
+                if (window.innerWidth <= 992) return;
 
                 const viewportHeight = window.innerHeight;
                 const containerHeight = container.offsetHeight;
@@ -537,7 +555,7 @@
             }
 
             function handleScroll() {
-                if (window.innerWidth <= 768) return;
+                if (window.innerWidth <= 992) return;
 
                 const containerHeight = container.offsetHeight;
 
@@ -549,7 +567,7 @@
             }
 
             function init() {
-                if (window.innerWidth <= 768) {
+                if (window.innerWidth <= 992) {
                     features.forEach(feature => feature.classList.remove('position-fixed'));
                 } else {
                     updateFeaturePosition();

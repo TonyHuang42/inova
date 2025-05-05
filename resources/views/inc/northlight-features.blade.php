@@ -296,16 +296,6 @@
         .disclaimer-desktop {
             display: none;
         }
-
-        .phone-banner-features {
-            max-height: 60px;
-        }
-    }
-
-    @media only screen and (max-width: 991px) {
-        .phone-banner-features {
-            max-height: 45px;
-        }
     }
 </style>
 

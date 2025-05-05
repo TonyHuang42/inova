@@ -84,13 +84,13 @@
 
     @media only screen and (max-width: 1199px) {
         .phone-banner-features {
-            max-height: 60px;
+            max-height: 50px;
         }
     }
 
     @media only screen and (max-width: 991px) {
         .phone-banner-features {
-            max-height: 45px;
+            max-height: 50px;
         }
     }
 
@@ -101,6 +101,10 @@
 
         .phone-banner {
             min-height: 700px;
+        }
+
+        .phone-banner-features {
+            max-height: 45px;
         }
     }
 
@@ -132,7 +136,7 @@
     <img src="{{ asset('img/northlight/banner/northlight.png') }}" alt="northlight" class="phone-banner-northlight">
     <img src="{{ asset('img/northlight/banner/slogan.png') }}" alt="slogan" class="phone-banner-slogan">
 
-    <div class="d-md-flex d-none">
+    <div class="d-lg-flex d-none">
         <img src="{{ asset('img/northlight/banner/desktop_bubbles/bubble_camera.png') }}" alt="features" class="phone-banner-features" style="top: 42%; left: 19%;">
 
         <img src="{{ asset('img/northlight/banner/desktop_bubbles/bubble_screen.png') }}" alt="features" class="phone-banner-features" style="top: 42%; left: 77%;">
@@ -146,17 +150,17 @@
         <img src="{{ asset('img/northlight/banner/desktop_bubbles/bubble_SDCard.png') }}" alt="features" class="phone-banner-features" style="top: 86%; left: 82%;">
     </div>
 
-    <div class="d-md-none">
-        <img src="{{ asset('img/northlight/banner/mobile_bubbles/bubble_camera.png') }}" alt="features" class="phone-banner-features" style="top: 27%; left: 25%;">
+    <div class="d-lg-none">
+        <img src="{{ asset('img/northlight/banner/mobile_bubbles/bubble_camera.png') }}" alt="features" class="phone-banner-features" style="top: 21%; left: 25%;">
 
-        <img src="{{ asset('img/northlight/banner/mobile_bubbles/bubble_screen.png') }}" alt="features" class="phone-banner-features" style="top: 27%; left: 50%;">
+        <img src="{{ asset('img/northlight/banner/mobile_bubbles/bubble_screen.png') }}" alt="features" class="phone-banner-features" style="top: 21%; left: 50%;">
 
-        <img src="{{ asset('img/northlight/banner/mobile_bubbles/bubble_battery.png') }}" alt="features" class="phone-banner-features" style="top: 27%; left: 75%;">
+        <img src="{{ asset('img/northlight/banner/mobile_bubbles/bubble_battery.png') }}" alt="features" class="phone-banner-features" style="top: 21%; left: 75%;">
 
-        <img src="{{ asset('img/northlight/banner/mobile_bubbles/bubble_SIMs.png') }}" alt="features" class="phone-banner-features" style="top: 37%; left: 25%;">
+        <img src="{{ asset('img/northlight/banner/mobile_bubbles/bubble_SIMs.png') }}" alt="features" class="phone-banner-features" style="top: 30%; left: 25%;">
 
-        <img src="{{ asset('img/northlight/banner/mobile_bubbles/bubble_chip.png') }}" alt="features" class="phone-banner-features" style="top: 37%; left: 50%;">
+        <img src="{{ asset('img/northlight/banner/mobile_bubbles/bubble_chip.png') }}" alt="features" class="phone-banner-features" style="top: 30%; left: 50%;">
 
-        <img src="{{ asset('img/northlight/banner/mobile_bubbles/bubble_SDCard.png') }}" alt="features" class="phone-banner-features" style="top: 37%; left: 75%;">
+        <img src="{{ asset('img/northlight/banner/mobile_bubbles/bubble_SDCard.png') }}" alt="features" class="phone-banner-features" style="top: 30%; left: 75%;">
     </div>
 </div>
