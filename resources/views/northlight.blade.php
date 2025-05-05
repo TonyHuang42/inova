@@ -30,6 +30,36 @@
             z-index: 3;
         }
 
+        .banner-video-container {
+            position: relative;
+            width: 100%;
+            height: 700;
+            overflow: hidden;
+            object-fit: cover;
+        }
+
+        .banner-video-slogan {
+            font-family: "Bropotic", sans-serif;
+            font-size: clamp(1rem, 3vw, 2rem);
+            position: absolute;
+            width: 100%;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1;
+
+            background: linear-gradient(to right, #444, white, #444);
+            background-size: 200% auto;
+            animation: gradient-slide 5s linear infinite;
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            background-clip: text;
+            color: transparent;
+        }
+
         .fullscreen-video {
             width: 100%;
             /* height: 100vh; */
@@ -115,35 +145,6 @@
             transition: width 1.5s ease;
         }
 
-        .banner-video-container {
-            position: relative;
-            /* width: 100%;
-            height: 100vh;
-            overflow: hidden; */
-        }
-
-        .banner-video-slogan {
-            font-family: "Bropotic", sans-serif;
-            font-size: clamp(1rem, 3vw, 2rem);
-            position: absolute;
-            width: 100%;
-            top: 30%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            z-index: 1;
-
-            background: linear-gradient(to right, #444, white, #444);
-            background-size: 200% auto;
-            animation: gradient-slide 5s linear infinite;
-
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-
-            background-clip: text;
-            color: transparent;
-        }
-
         @keyframes gradient-slide {
             0% {
                 background-position: 100% 50%;
@@ -162,7 +163,7 @@
         .microSD-GB {
             position: absolute;
             bottom: 13px;
-            left: 125px;
+            left: 118px;
             font-size: 32px;
             font-weight: 400;
         }

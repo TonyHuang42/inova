@@ -122,6 +122,12 @@
             background-image: none;
         }
 
+        .form-control.is-invalid:focus,
+        .was-validated .form-control:invalid:focus {
+            border-color: #282828;
+            box-shadow: none;
+        }
+
         @media only screen and (max-width: 1399px) {
             .form-container {
                 height: 655px;

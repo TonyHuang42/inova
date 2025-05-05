@@ -21,10 +21,6 @@
             object-fit: cover;
             z-index: 2;
         }
-
-        .text-shadow {
-            color: #eee
-        }
     </style>
 @endpush
 
