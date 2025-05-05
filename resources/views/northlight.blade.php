@@ -208,7 +208,7 @@
                 <video playsinline loop muted autoplay class="fullscreen-video">
                     <source src="{{ asset('video/Northlight-details.mp4') }}" type="video/mp4" />
                 </video>
-                <div class="banner-video-slogan">FORM THAT FITS.<br>FEATURES THAT LAST.</div>
+                {{-- <div class="banner-video-slogan">FORM THAT FITS.<br>FEATURES THAT LAST.</div> --}}
             </div>
         </div>
 
@@ -355,241 +355,231 @@
 @endsection
 
 @push('scripts')
-    {{-- scripts for progress circle --}}
     <script>
-        const radius = 60;
-        const center = 65;
-        const circumference = 2 * Math.PI * radius;
-        const duration = 1500;
+        // === Circle Progress Animation ===
+        (() => {
+            const radius = 60;
+            const center = 65;
+            const circumference = 2 * Math.PI * radius;
+            const duration = 1500;
 
-        function createCircle(container, target, label) {
-            container.innerHTML = `
-            <svg class="progress-circle-svg" width="100" height="100">
-                <circle cx="${center}" cy="${center}" r="${radius}" stroke="#282828" stroke-width="2" fill="none" />
-                <circle class="progress-circle" cx="${center}" cy="${center}" r="${radius}" stroke="#ffffff" stroke-width="2"
-                    fill="none" stroke-linecap="round" transform="rotate(-90 ${center} ${center})"
-                    stroke-dasharray="${circumference}" stroke-dashoffset="${circumference}" />
-            </svg>
-            <div class="circle-label">${label}</div>
-        `;
-        }
-
-        function animateCircle(circleEl, target) {
-            let startTime = null;
-
-            function animate(timestamp) {
-                if (!startTime) startTime = timestamp;
-                const elapsed = timestamp - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                const eased = progress * (2 - progress);
-                const current = target * eased;
-
-                const offset = circumference * (1 - current / 100);
-                circleEl.style.strokeDashoffset = offset;
-
-                if (progress < 1) {
-                    requestAnimationFrame(animate);
+            function createCircle(container, target, label) {
+                if (!container.querySelector('svg')) {
+                    container.innerHTML = `
+                    <svg class="progress-circle-svg" width="100" height="100">
+                        <circle cx="${center}" cy="${center}" r="${radius}" stroke="#282828" stroke-width="2" fill="none" />
+                        <circle class="progress-circle" cx="${center}" cy="${center}" r="${radius}" stroke="#ffffff" stroke-width="2"
+                            fill="none" stroke-linecap="round" transform="rotate(-90 ${center} ${center})"
+                            stroke-dasharray="${circumference}" stroke-dashoffset="${circumference}" />
+                    </svg>
+                    <div class="circle-label">${label}</div>
+                `;
                 }
             }
 
-            requestAnimationFrame(animate);
-        }
+            function animateCircle(circleEl, target) {
+                let startTime = null;
 
-        document.querySelectorAll('.circle-container').forEach(container => {
-            const target = parseInt(container.getAttribute('data-target'), 10);
-            const label = container.getAttribute('data-label') || '';
-            createCircle(container, target, label);
+                function animate(timestamp) {
+                    if (!startTime) startTime = timestamp;
+                    const elapsed = timestamp - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = progress * (2 - progress);
+                    const current = target * eased;
+                    const offset = circumference * (1 - current / 100);
+                    circleEl.style.strokeDashoffset = offset;
 
-            const circle = container.querySelector('.progress-circle');
+                    if (progress < 1) {
+                        requestAnimationFrame(animate);
+                    }
+                }
+
+                requestAnimationFrame(animate);
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelectorAll('.circle-container').forEach(container => {
+                    const target = parseInt(container.getAttribute('data-target'), 10);
+                    const label = container.getAttribute('data-label') || '';
+                    createCircle(container, target, label);
+
+                    const circle = container.querySelector('.progress-circle');
+
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (!circle) return;
+
+                            if (entry.isIntersecting && container.dataset.animated !== "true") {
+                                container.dataset.animated = "true";
+                                animateCircle(circle, target);
+                            } else if (!entry.isIntersecting) {
+                                circle.style.strokeDashoffset = circumference;
+                                container.dataset.animated = "false";
+                            }
+                        });
+                    }, {
+                        threshold: 0
+                    });
+
+                    observer.observe(container);
+                });
+            });
+        })();
+
+        // === Progress Bar Animation ===
+        (() => {
+            document.addEventListener('DOMContentLoaded', () => {
+                const bars = document.querySelectorAll('.progress-bar');
+                let hasAnimated = false;
+
+                function animateBars() {
+                    bars.forEach(bar => {
+                        const target = parseInt(bar.getAttribute('data-target'), 10);
+                        bar.style.width = target + '%';
+                    });
+                }
+
+                function resetBars() {
+                    bars.forEach(bar => bar.style.width = '0%');
+                }
+
+                function checkBarsInView() {
+                    const windowHeight = window.innerHeight;
+                    let anyInView = false;
+                    let allOutOfView = true;
+
+                    bars.forEach(bar => {
+                        const rect = bar.getBoundingClientRect();
+                        const out = rect.bottom < 0 || rect.top > windowHeight;
+
+                        if (!out) {
+                            anyInView = true;
+                            allOutOfView = false;
+                        }
+                    });
+
+                    if (anyInView && !hasAnimated) {
+                        hasAnimated = true;
+                        animateBars();
+                    } else if (allOutOfView && hasAnimated) {
+                        hasAnimated = false;
+                        resetBars();
+                    }
+                }
+
+                window.addEventListener('scroll', checkBarsInView);
+                window.addEventListener('resize', checkBarsInView);
+                checkBarsInView();
+            });
+        })();
+
+        // === microSD Counter Animation ===
+        (() => {
+            const counterElement = document.getElementById('microSD-counter');
+            if (!counterElement) return;
+
+            const start = 0;
+            const end = 512;
+            const duration = 1500;
+            let startTime = null;
+            let isAnimating = false;
+
+            function animateCounter(timestamp) {
+                if (!startTime) startTime = timestamp;
+                const progress = timestamp - startTime;
+                const percent = Math.min(progress / duration, 1);
+                const eased = percent * (2 - percent);
+                const current = Math.floor(start + (end - start) * eased);
+                counterElement.textContent = current;
+
+                if (percent < 1) {
+                    requestAnimationFrame(animateCounter);
+                }
+            }
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    const container = entry.target;
-                    const circle = container.querySelector('.progress-circle');
-                    const target = parseInt(container.getAttribute('data-target'), 10);
-
-                    if (entry.isIntersecting && container.dataset.animated !== "true") {
-                        container.dataset.animated = "true";
-                        animateCircle(circle, target);
-                    } else if (!entry.isIntersecting) {
-                        // Reset stroke and allow animation to re-trigger
-                        circle.style.strokeDashoffset = circumference;
-                        container.dataset.animated = "false";
-                    }
-                });
-            }, {
-                root: null,
-                threshold: 0
-            });
-
-            observer.observe(container);
-        });
-    </script>
-
-    {{-- scripts for progress bar --}}
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const bars = document.querySelectorAll('.progress-bar');
-            let hasAnimated = false;
-
-            function animateBars() {
-                bars.forEach(bar => {
-                    const target = parseInt(bar.getAttribute('data-target'), 10);
-                    bar.style.width = target + '%';
-                });
-            }
-
-            function resetBars() {
-                bars.forEach(bar => {
-                    bar.style.width = '0%';
-                });
-            }
-
-            function checkBarsInView() {
-                const windowHeight = window.innerHeight;
-                let anyInView = false;
-                let allOutOfView = true;
-
-                bars.forEach(bar => {
-                    const rect = bar.getBoundingClientRect();
-                    const fullyOut = rect.bottom < 0 || rect.top > windowHeight;
-
-                    if (!fullyOut) {
-                        anyInView = true;
-                        allOutOfView = false;
-                    }
-                });
-
-                if (anyInView && !hasAnimated) {
-                    hasAnimated = true;
-                    animateBars();
-                }
-
-                if (allOutOfView && hasAnimated) {
-                    hasAnimated = false;
-                    resetBars();
-                }
-            }
-
-            window.addEventListener('scroll', checkBarsInView);
-            window.addEventListener('resize', checkBarsInView);
-            checkBarsInView(); // Initial check in case already visible
-        });
-    </script>
-
-    {{-- scripts for microSD counter animation --}}
-    <script>
-        const counterElement = document.getElementById('microSD-counter');
-        const start = 0;
-        const end = 512;
-        const microSDDuration = 1500;
-
-        let startTime = null;
-        let isAnimating = false;
-
-        function animateCounter(timestamp) {
-            if (!startTime) startTime = timestamp;
-            const progress = timestamp - startTime;
-            const percent = Math.min(progress / microSDDuration, 1); // cap at 1
-            const eased = percent * (2 - percent); // easeOutQuad
-
-            const current = Math.floor(start + (end - start) * eased);
-            counterElement.textContent = current;
-
-            if (percent < 1) {
-                requestAnimationFrame(animateCounter);
-            }
-        }
-
-        const observer = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Start the animation when the element comes into view
-                    if (!isAnimating) {
+                    if (entry.isIntersecting && !isAnimating) {
                         isAnimating = true;
-                        startTime = null; // Reset start time to ensure the animation starts from 0
+                        startTime = null;
                         requestAnimationFrame(animateCounter);
-                    }
-                } else {
-                    // Reset the animation when the element leaves the viewport
-                    if (isAnimating) {
+                    } else if (!entry.isIntersecting && isAnimating) {
                         isAnimating = false;
-                        counterElement.textContent = start; // Reset counter to initial value
-                        startTime = null; // Reset the start time to restart the animation from 0
+                        counterElement.textContent = start;
+                        startTime = null;
                     }
-                }
+                });
             });
-        }, {
-            root: null,
-            threshold: 0
-        });
 
-        observer.observe(counterElement);
-    </script>
+            observer.observe(counterElement);
+        })();
 
-    {{-- scripts for features position --}}
-    <script>
-        const container = document.querySelector('.northlight-banner-container');
-        const features = document.querySelectorAll('.phone-banner-features');
+        // === Features Fixed Position Behavior ===
+        (() => {
+            const container = document.querySelector('.northlight-banner-container');
+            const features = document.querySelectorAll('.phone-banner-features');
 
-        function updateFeaturePosition() {
-            if (window.innerWidth <= 768) return;
-            const viewportHeight = window.innerHeight;
-            const containerHeight = container.offsetHeight;
+            if (!container || features.length === 0) return;
 
-            features.forEach(feature => {
-                if (containerHeight > viewportHeight) {
-                    feature.classList.add('position-fixed');
+            function updateFeaturePosition() {
+                if (window.innerWidth <= 768) return;
+
+                const viewportHeight = window.innerHeight;
+                const containerHeight = container.offsetHeight;
+
+                features.forEach(feature => {
+                    if (containerHeight > viewportHeight) {
+                        feature.classList.add('position-fixed');
+                    } else {
+                        feature.classList.remove('position-fixed');
+                    }
+                });
+            }
+
+            function handleScroll() {
+                if (window.innerWidth <= 768) return;
+
+                const containerHeight = container.offsetHeight;
+
+                if (window.scrollY > containerHeight) {
+                    features.forEach(feature => feature.classList.remove('position-fixed'));
                 } else {
-                    feature.classList.remove('position-fixed');
+                    updateFeaturePosition();
                 }
-            });
-        }
-
-        function handleScroll() {
-            if (window.innerWidth <= 768) return;
-            const containerHeight = container.offsetHeight;
-
-            if (window.scrollY > containerHeight) {
-                features.forEach(feature => {
-                    feature.classList.remove('position-fixed');
-                });
-            } else {
-                updateFeaturePosition();
-            }
-        }
-
-        function initFeatureBehavior() {
-            if (window.innerWidth <= 768) {
-                features.forEach(feature => {
-                    feature.classList.remove('position-fixed');
-                });
-                return;
             }
 
-            updateFeaturePosition();
-            handleScroll();
-        }
+            function init() {
+                if (window.innerWidth <= 768) {
+                    features.forEach(feature => feature.classList.remove('position-fixed'));
+                } else {
+                    updateFeaturePosition();
+                    handleScroll();
+                }
+            }
 
-        window.addEventListener('DOMContentLoaded', initFeatureBehavior);
-        window.addEventListener('resize', initFeatureBehavior);
-        window.addEventListener('scroll', handleScroll);
-    </script>
+            window.addEventListener('DOMContentLoaded', init);
+            window.addEventListener('resize', init);
+            window.addEventListener('scroll', handleScroll);
+        })();
 
-    {{-- scripts for navbar fixed to first section --}}
-    <script>
-        window.addEventListener('scroll', function() {
+        // === Navbar Visibility Toggle ===
+        (() => {
             const navbar = document.querySelector('.navbar');
             const section1 = document.querySelector('.section-1');
-            const section1Height = section1.offsetHeight;
 
-            if (window.scrollY < section1Height) {
-                navbar.classList.add('visible');
-                navbar.classList.remove('hidden');
-            } else {
-                navbar.classList.remove('visible');
-                navbar.classList.add('hidden');
-            }
-        });
+            if (!navbar || !section1) return;
+
+            window.addEventListener('scroll', () => {
+                const section1Height = section1.offsetHeight;
+
+                if (window.scrollY < section1Height) {
+                    navbar.classList.add('visible');
+                    navbar.classList.remove('hidden');
+                } else {
+                    navbar.classList.remove('visible');
+                    navbar.classList.add('hidden');
+                }
+            });
+        })();
     </script>
 @endpush
