@@ -162,7 +162,7 @@
         .microSD-GB {
             position: absolute;
             bottom: 13px;
-            left: 130px;
+            left: 125px;
             font-size: 32px;
             font-weight: 400;
         }
@@ -170,6 +170,25 @@
         @media only screen and (max-width: 767px) {
             .section-1 {
                 min-height: 700px;
+            }
+        }
+
+        @media only screen and (min-width: 576px) {
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1030;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .navbar.hidden {
+                transform: translateY(-100%);
+            }
+
+            .navbar.visible {
+                transform: translateY(0);
             }
         }
     </style>
@@ -314,7 +333,7 @@
 
             {{-- Dual SIM --}}
             <div class="row bottom-padding">
-                <div class="col-xl-2 d-flex flex-column justify-content-center order-xl-0 order-2">
+                <div class="col-xl-2 d-xl-flex flex-column justify-content-center order-xl-0 order-2 d-none">
                     <img src="{{ asset('img/northlight/Inova_dual.svg') }}" alt="INOVA Northlight Dual SIM" style="width: 80%;">
                 </div>
 
@@ -322,7 +341,7 @@
                     <h4>Dual SIMs. Zero Compromises.</h4>
                     <p style="font-size:15px;">With dual SIM support, you can use two phone numbers on one device—perfect for work and personal lines, or keeping your main number active while adding a local SIM when traveling. And unlike most phones, Northlight lets you use both SIMs and a microSD card at the same time—no slot-sharing, no switching, no compromises.</p>
                 </div>
-                <div class="col-xl-2 col-sm-6 px-0 d-flex flex-column justify-content-center order-sm-2 order-1">
+                <div class="col-xl-2 col-sm-6 px-0 d-flex flex-column justify-content-center order-xl-2 order-sm-1 order-0">
                     <img src="{{ asset('img/northlight/Inova_spec_parts_dualSIM_card.png') }}" alt="INOVA microSD Card" class="img-fluid">
                 </div>
             </div>
@@ -409,51 +428,51 @@
         document.addEventListener('DOMContentLoaded', () => {
             const bars = document.querySelectorAll('.progress-bar');
             let hasAnimated = false;
-    
+
             function animateBars() {
                 bars.forEach(bar => {
                     const target = parseInt(bar.getAttribute('data-target'), 10);
                     bar.style.width = target + '%';
                 });
             }
-    
+
             function resetBars() {
                 bars.forEach(bar => {
                     bar.style.width = '0%';
                 });
             }
-    
+
             function checkBarsInView() {
                 const windowHeight = window.innerHeight;
                 let anyInView = false;
                 let allOutOfView = true;
-    
+
                 bars.forEach(bar => {
                     const rect = bar.getBoundingClientRect();
                     const fullyOut = rect.bottom < 0 || rect.top > windowHeight;
-    
+
                     if (!fullyOut) {
                         anyInView = true;
                         allOutOfView = false;
                     }
                 });
-    
+
                 if (anyInView && !hasAnimated) {
                     hasAnimated = true;
                     animateBars();
                 }
-    
+
                 if (allOutOfView && hasAnimated) {
                     hasAnimated = false;
                     resetBars();
                 }
             }
-    
+
             window.addEventListener('scroll', checkBarsInView);
             window.addEventListener('resize', checkBarsInView);
             checkBarsInView(); // Initial check in case already visible
         });
-    </script>    
+    </script>
 
     {{-- scripts for microSD counter animation --}}
     <script>
@@ -461,31 +480,31 @@
         const start = 0;
         const end = 512;
         const microSDDuration = 1500;
-    
+
         let startTime = null;
         let isAnimating = false;
-    
+
         function animateCounter(timestamp) {
             if (!startTime) startTime = timestamp;
             const progress = timestamp - startTime;
             const percent = Math.min(progress / microSDDuration, 1); // cap at 1
             const eased = percent * (2 - percent); // easeOutQuad
-    
+
             const current = Math.floor(start + (end - start) * eased);
             counterElement.textContent = current;
-    
+
             if (percent < 1) {
                 requestAnimationFrame(animateCounter);
             }
         }
-    
+
         const observer = new IntersectionObserver((entries, obs) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     // Start the animation when the element comes into view
                     if (!isAnimating) {
                         isAnimating = true;
-                        startTime = null;  // Reset start time to ensure the animation starts from 0
+                        startTime = null; // Reset start time to ensure the animation starts from 0
                         requestAnimationFrame(animateCounter);
                     }
                 } else {
@@ -501,9 +520,9 @@
             root: null,
             threshold: 0
         });
-    
+
         observer.observe(counterElement);
-    </script>    
+    </script>
 
     {{-- scripts for features position --}}
     <script>
@@ -552,5 +571,22 @@
         window.addEventListener('DOMContentLoaded', initFeatureBehavior);
         window.addEventListener('resize', initFeatureBehavior);
         window.addEventListener('scroll', handleScroll);
+    </script>
+
+    {{-- scripts for navbar fixed to first section --}}
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            const section1 = document.querySelector('.section-1');
+            const section1Height = section1.offsetHeight;
+
+            if (window.scrollY < section1Height) {
+                navbar.classList.add('visible');
+                navbar.classList.remove('hidden');
+            } else {
+                navbar.classList.remove('visible');
+                navbar.classList.add('hidden');
+            }
+        });
     </script>
 @endpush
