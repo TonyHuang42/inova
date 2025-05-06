@@ -98,7 +98,7 @@
                     <p>These Terms shall be governed by and construed in accordance with the laws of Canada, without regard to its conflict of law principles. Any disputes arising under these Terms shall be resolved exclusively in the courts of Canada. Users accessing this Website from outside Canada are responsible for compliance with their local laws.</p>
                 </div>
 
-                <div class="section">
+                {{-- <div class="section">
                     <h2>Contact Information</h2>
                     <div class="contact-info">
                         <p>If you have any questions about these Terms, please contact us at:</p>
@@ -107,7 +107,7 @@
                             <strong>Address:</strong> [Your Address]
                         </p>
                     </div>
-                </div>
+                </div> --}}
 
                 <p class="pb-5">By using this Website, you acknowledge that you have read, understood, and agree to be bound by these Terms.</p>
             </div>

@@ -105,7 +105,7 @@
                         <li><strong>Deletion</strong>: Request that we delete your information.</li>
                         <li><strong>Opt-Out</strong>: Opt-out of certain uses of your information, such as analytics tracking.</li>
                     </ul>
-                    <p>To exercise these rights, please contact us at <a href="mailto:[Your Contact Email]">[Your Contact Email]</a>.</p>
+                    {{-- <p>To exercise these rights, please contact us at <a href="mailto:[Your Contact Email]">[Your Contact Email]</a>.</p> --}}
                 </div>
 
                 <div class="section">
@@ -122,7 +122,7 @@
                     <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date. Your continued use of the Website after any changes constitutes your acceptance of the revised Privacy Policy.</p>
                 </div>
 
-                <div class="section">
+                {{-- <div class="section">
                     <h2>Contact Us</h2>
                     <div class="contact-info">
                         <p>If you have any questions about this Privacy Policy, please contact us at:</p>
@@ -131,7 +131,7 @@
                             <strong>Address:</strong> [Your Address]
                         </p>
                     </div>
-                </div>
+                </div> --}}
                 <p class="pb-5">By using this Website, you acknowledge that you have read, understood, and agree to this Privacy Policy.</p>
             </div>
         </div>
