@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'INOVA')
-@section('meta_description', 'INOVA')
+@section('title', 'INOVA Canada: Affordable Tech for a Connected World')
+@section('meta_description', 'INOVA: A Canadian tech company delivering affordable, high-quality solutions to empower communities. Innovating for a connected world.')
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/custom-container.css') }}">

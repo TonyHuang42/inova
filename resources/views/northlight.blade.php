@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'INOVA')
-@section('meta_description', 'INOVA')
+@section('title', 'Northlight: Canada’s Most Affordable Dual SIM Phone | INova')
+@section('meta_description', 'Northlight by INOVA: A cheap phone with Dual SIM, microSD slot, & swappable battery. Canadian-made quality at an unbeatable price.')
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/custom-container.css') }}">

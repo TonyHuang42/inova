@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'INOVA')
-@section('meta_description', 'INOVA')
+@section('title', 'INOVA Support: Warranty, FAQs & Contact | Northlight Phone')
+@section('meta_description', 'Need help? INOVA Support offers FAQs, warranty info, shipping details, and quick contact options. Reliable assistance for your Northlight device.')
 
 @push('styles')
     <style>
